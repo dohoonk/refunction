@@ -1,0 +1,20 @@
+.what_our_clients_say {
+  background-image: image-url('home_what_our_clients_say.png');
+  background-repeat: no-repeat;
+  background-size: 102%;
+
+  .title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .card-top {
+    background: #2BB3E9;
+    height: 63px;
+  }
+
+  .card {
+    height: 213px;
+    margin-bottom: 80px;
+  }
+}

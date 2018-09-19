@@ -1,0 +1,24 @@
+// Place all the styles related to the about_us controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.about-us-header {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.about-us-building {
+  height: 354px;
+}
+
+
+.message_from_director {
+  background-image: image-url('about_us_director.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 600px;
+}
+
+.about-us-card {
+  padding-top: 12px;
+}

@@ -1,0 +1,62 @@
+.bottom_cta_card {
+  background: $light-blue;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.tag-line-top-bottom-cta {
+  font-size: 3em;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.tag-line-bottom-bottom-cta {
+  font-size: 3em;
+  color: white;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+.tag-line-bottom-sub-bottom-cta {
+  color: $gray;
+  font-size: 1em;
+  font-weight: 500;
+  margin-top: -11px;
+}
+
+.parent-bottom-cta {
+  display: inline-block;
+}
+.button1-bottom-cta {
+  display: inline-block;
+  position: relative;
+  background: white;
+  width: 170px;
+  text-align: center;
+  padding: 1em 0;
+  z-index: 1;
+  color: $light-blue;
+}
+.button2-bottom-cta {
+  display: inline-block;
+  position: relative;
+  background: $light-blue;
+  width: 170px;
+  text-align: center;
+  padding: 1em 0;
+  z-index: 1;
+  color: white;
+  border: 1px solid white;
+}
+.circle-bottom-cta {
+  display: inline-block;
+  position: relative;
+  background: black;
+  text-align: center;
+  width: 46px;
+  padding: 0.7em;
+  border-radius: 27px;
+  margin: 0 -20px;
+  z-index: 2;
+  color: white;
+}

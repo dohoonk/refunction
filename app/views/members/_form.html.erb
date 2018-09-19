@@ -1,0 +1,16 @@
+<%= form_for(@member) do |f|%>
+  <%= f.label "First Name" %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label "Middle Name" %>
+  <%= f.text_field :middle_name %>
+
+  <%= f.label "Last Name" %>
+  <%= f.text_field :last_name %>
+
+  <div class="col-sm-12">
+    <%= f.label "Description" %>
+    <%= f.text_area :description %>
+  </div>
+
+<% end %>

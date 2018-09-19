@@ -1,0 +1,164 @@
+//-----------------------------------------------font------------------------------------------------
+
+//$font-size-base:1rem !default;
+$main-font: "Raleway", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+//-----------------------------------------------color------------------------------------------------
+
+// Start with assigning color names to specific hex values.
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+$yellow: #ffd500 !default;
+$green:  #5cb85c !default;
+$blue:   #0275d8 !default;
+$teal:   #5bc0de !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+$admin-box: #F9F9F9 !default;
+
+// custom colors
+$light-blue: #1BB2EB !default;
+$dark-blue: #273748 !default;
+$regular-blue: #77CAE9 !default;
+$cta-blue: #77CAE9 !default;
+
+// Create grayscale
+$gray-dark:                 #292b2c !default;
+$gray:                      #F7F7F7 !default;
+$gray-light:                #636c72 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             $blue !default;
+$brand-success:             $green !default;
+$brand-info:                $teal !default;
+$brand-warning:             $orange !default;
+$brand-danger:              $red !default;
+$brand-inverse:             $gray-dark !default;
+
+
+//-----------------------------------------------padding-margin reset------------------------------------------------
+.reset {
+  padding: 0px;
+  margin: 0px;
+}
+
+//----------------------------------------------font size bold------------------------------------------------
+
+.bold {
+  font-weight: 700;
+}
+
+.font-gray{
+  color: $gray;
+}
+.padding-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.padding-bottom {
+  padding-bottom: 100px;
+}
+
+.padding-bottom-50 {
+  padding-bottom: 50px;
+}
+
+.padding-top {
+  padding-top: 100px;
+}
+
+.padding-top-50 {
+  padding-top: 50px;
+}
+.margin-bottom-0 {
+  margin-bottom: 0px;
+}
+
+.font-lb {
+  color: $light-blue;
+}
+.main-card-padding {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.font-white {
+  color: $white;
+}
+
+.font-size-sm {
+  font-size: 0.85em;
+}
+
+.font-size-medium {
+  font-size: 1em;
+}
+
+.font-size-xlg {
+  font-size: 2em;
+}
+
+.font-size-lg {
+  font-size: 1.5em;
+}
+
+.highlight-white-thin {
+  width: 67px;
+  border-top: 1px solid white;
+  margin-bottom: 10px;
+  height: 3px;
+}
+
+.highlight-thin {
+  width: 45px;
+  border-top: 2px solid #1BB2EB;
+  margin-bottom: 10px;
+  height: 18px;
+}
+
+.highlight-small {
+  width: 60px;
+  border-top: 1px solid #1BB2EB;
+  margin-bottom: 10px;
+  height: 18px;
+}
+
+.pages-card-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.page-desc {
+  font-size: 3em;
+}
+
+.page-desc-sub {
+  color: $gray-light;
+  border-bottom: 2px solid $light-blue;
+  margin-bottom: 0px;
+}
+
+.page-headers {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.section-desc {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.card-desc {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: $light-blue
+}

@@ -1,0 +1,111 @@
+.admin-nav {
+  background-color: #263847;
+}
+
+.admin-logo {
+  height: 88px;
+}
+
+.admin-side-nav {
+  width: 200px;
+  height: 600px;
+  background-color: #263847;
+  color: white;
+  li {
+    list-style: none;
+  }
+}
+
+.admin-body {
+  background-color: grey;
+}
+
+.admin-team-search-bar {
+  border: 2px solid black;
+  padding-top: 10px;
+  margin-top: 30px;
+  background-color: $admin-box;
+  // padding-bottom: 10px;
+  // background: $light-blue;
+}
+
+.search-top {
+  border-bottom: 1px solid black;
+}
+
+.admin-search-padding {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+}
+
+.admin-search-bar-search {
+  background: $light-blue;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+// .admin-search-bar-search {
+//     height: 90px;
+// }
+
+
+.admin-search-bar-button {
+  margin-top: 12px;
+}
+
+.admin-search-bar-desc {
+  color: white;
+  font-size: 0.4em;
+  margin-bottom: 10px;
+}
+
+.admin-search-button {
+  border: 2px solid white;
+  background-color: $light-blue;
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.admin-card {
+  background-color: white;
+  margin-top: 30px;
+  border: 2px solid black;
+}
+
+.admin-staff-picture {
+  max-width: 185px;
+}
+
+.admin-staff-picture-image {
+  max-width: 225px;
+}
+
+.admin-staff-image-card {
+  margin-top: 20px;
+}
+
+.admin-staff-image-card-desc {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.admin-staff-image-button {
+  margin-top: 5px;
+}
+
+.admin-member-pic-container {
+  width: 500px;
+  height: 400px;
+  background-color: gray;
+}

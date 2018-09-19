@@ -1,0 +1,101 @@
+.home_cta_card {
+  background-color: white;
+}
+
+.tag-line-top {
+  font-size: 3em;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.tag-line-bottom {
+  font-size: 3em;
+  color: #1BB2EB;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+.tag-line-bottom-sub {
+  color: #3A87A4;
+  font-size: 1em;
+  font-weight: 500;
+  margin-top: -11px;
+}
+
+.highlight {
+  width: 67px;
+  border-top: 4px solid #1BB2EB;
+  margin-bottom: 10px;
+  height: 18px;
+}
+
+.highlight-thin {
+  width: 45px;
+  border-top: 2px solid #1BB2EB;
+  margin-bottom: 10px;
+  height: 18px;
+}
+
+.nav-cta-physio {
+  display: inline-block;
+  // width: 155px;
+  height: 60px;
+  background-color: $light-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+}
+
+.nav-cta-referral {
+  display: inline-block;
+  // width: 155px;
+  height: 60px;
+  border: 2px solid $light-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: $light-blue;
+}
+
+.services-card{
+  height: 190px;
+  margin-top: 190px;
+}
+
+.bg-lb {
+  background: $light-blue;
+}
+
+.bg-db {
+  background: $dark-blue;
+}
+
+.bg-black {
+  background: $gray-dark;
+}
+
+.home_main_card_sub_cards {
+  color: white;
+
+  .card-title {
+    font-weight: 600;
+  }
+  .services-card {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  a {
+    color: white;
+  }
+}
+
+.highlight-white {
+  width: 67px;
+  border-top: 2px solid white;
+  margin-bottom: 10px;
+  height: 3px;
+}

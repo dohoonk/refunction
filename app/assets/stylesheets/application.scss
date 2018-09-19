@@ -1,3 +1,22 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
+// @import "bootstrap-sprockets";
+@import "variables";
+@import "navbar";
 @import "bootstrap";
+@import "home";
+@import "home_cta_card";
+@import "home_our_services";
+@import "footer";
+@import "home_what_our_clients_say";
+@import "home_numbers";
+@import "home_our_team";
+@import "home_faq";
+@import "bottom_cta_card";
+@import "services";
+@import "about_us";
+@import "testimonials";
+@import "admin";
+
+p {
+  font-size: 1em;
+}

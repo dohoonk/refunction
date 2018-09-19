@@ -1,0 +1,29 @@
+.our_services {
+  background: $gray;
+  color: white;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+
+  .card {
+    color: black;
+    height: 400px;
+  }
+
+
+}
+
+.list_of_services_box {
+  background: $gray-dark;
+  padding: 25px 15px 25px 25px;
+
+  li {
+    margin-bottom: 8px;
+  }
+
+}

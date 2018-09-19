@@ -1,0 +1,157 @@
+.nav-top {
+  background-color: $light-blue;
+  min-width: 100%;
+  height: 5px;
+}
+
+.logo-bg {
+  background-color: $dark-blue;
+}
+
+.nav-bg {
+  background-colro: white;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+}
+
+.nav-blue {
+  background-color: white;
+  border-top: 5px solid $light-blue;
+}
+
+.nav-logo {
+  margin-left: 34px;
+  margin-top: -12px;
+  width: 213px;
+}
+
+.nav-cta-book-pysio {
+  background: white;
+  width: 123px;
+}
+
+.nav-cta-make-referral {
+  background: $light-blue;
+  width: 123px;
+}
+
+
+// .parent {
+//   display: inline-block;
+//   background: yellow;
+//   height: 39px;
+//
+// }
+// .button1 {
+//   display: inline-block;
+//   position: relative;
+//   background: red;
+//   width: 128px;
+//   text-align: center;
+//   padding: 1em 0;
+//   z-index: 1;
+//   height: 39px;
+// }
+// .button2 {
+//   display: inline-block;
+//   position: relative;
+//   background: blue;
+//   width: 128px;
+//   text-align: center;
+//   padding: 1em 0;
+//   z-index: 1;
+//   height: 39px;
+// }
+// .circle {
+//   display: inline-block;
+//   position: relative;
+//   background: yellow;
+//   text-align: center;
+//   width: 40px;
+//   padding: 0.7em;
+//   border-radius: 20px;
+//   margin: 0 -20px;
+//   z-index: 2;
+//   height: 30px;
+// }
+
+
+
+
+.parent {
+  display: inline-block;
+  background: black;
+  height: 41px;
+}
+.button1 {
+  display: inline-block;
+  position: relative;
+  background: $light-blue;
+  width: 130px;
+  text-align: center;
+  // padding: 1em 0;
+  z-index: 1;
+  color: white;
+  height: 41px;
+}
+.button2 {
+  display: inline-block;
+  position: relative;
+  background: $light-blue;
+  width: 130px;
+  text-align: center;
+  // padding: 1em 0;
+  z-index: 1;
+  color: white;
+  height: 41px;
+}
+.circle {
+  // display: inline-block;
+  // position: relative;
+  // background: black;
+  // text-align: center;
+  // width: 52px;
+  // padding: 0.7em;
+  // border-radius: 20px;
+  // margin: 0 -20px;
+  // z-index: 2;
+  // color: white;
+  display: inline-block;
+  position: relative;
+  background: black;
+  text-align: center;
+  border-radius: 27px;
+  margin: 0px -16px;
+  z-index: 2;
+  color: white;
+  background-color: black;
+  width: 41px;
+  height: 41px;
+}
+
+.banner_top_deco {
+  width: 100%;
+  height: 227px;
+  background-image: image-url('nav-top-banner.png');
+  background-repeat: no-repeat;
+  background-size: 102%;
+}

@@ -2,3 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+
+
+.home_main_card {
+  background: image-url('home_bg.svg');
+  // background-color: black;
+  height: 700px;
+}
+
+.main-margin {
+  margin-top: 140px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.how_we_can_help {
+  padding-top: 258px;
+  padding-bottom: 50px;
+}
+
+//////////////////////////////////////////move to careers
+.careers-image {
+  overflow: hidden;
+}
+
+.careers-box {
+  border: 2px solid $gray-lighter;
+  height: 176px;
+}
+
+.careers-card-body {
+
+}
+
+.careers-posting-date {
+  color: $gray-light;
+  font-size: 0.4em;
+}
+
+.careers-posting-title {
+  font-size: 0.8em;
+  margin-bottom: 3px;
+}
+
+.careers-posting-highlight {
+  height: 2px !important;
+  margin-bottom: 2px;
+  margin-top: 2px !important;
+}
+
+.careers-featured-opening {
+  border-bottom: 1px solid lightgray;
+  height: 267px;
+}

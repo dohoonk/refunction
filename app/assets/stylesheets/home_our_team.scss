@@ -1,0 +1,20 @@
+.our_team {
+  .card {
+    height: 340px;
+  }
+}
+
+
+.cta-see-team {
+  display: inline-block;
+  // width: 155px;
+  height: 60px;
+  border: 2px solid $light-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: $light-blue;
+  padding-left: 20px;
+  padding-right: 20px;
+}

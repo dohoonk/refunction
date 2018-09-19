@@ -1,0 +1,29 @@
+// Place all the styles related to the testimonials controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.testimonials_container {
+
+  .card-top {
+    background: $light-blue;
+  }
+  .card {
+    margin-bottom: 45px
+  }
+
+}
+
+.card-top-desc {
+  color: white;
+  padding-top: 10px;
+}
+
+.card-top-desc-sub {
+  color: #ACDFF2;
+  font-size: 0.8em;
+  padding-bottom: 10px;
+}
+
+.card-top-desc-margin {
+  margin-left: 35px;
+}

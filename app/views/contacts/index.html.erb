@@ -1,0 +1,79 @@
+<%= render "layouts/nav" %>
+<%= render "layouts/banner_top_deco" %>
+<%= render "layouts/breadcrumb" %>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <div class="row justify-content-between">
+        <div class="list_of_services_box">
+          <h5>Locations</h5>
+          <div class="highlight"></div>
+          <ul>
+            <li>Community Rehabilitation Services</li>
+            <li>Physiotherapy Services</li>
+            <li>Actve & Functional Conditioning Programs</li>
+            <li>Psychology Assessment & Counselling Services</li>
+            <li>Interdisciplinary Rehabilitation Assessments</li>
+            <li>Functional Capacity Evaluations</li>
+            <li>Cost of Future Care Evaluations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="offset-sm-1 col-sm-8">
+      <div class="row">
+        <p class="page-headers">Richmond: Head Office</p>
+        <div>
+          <%= image_tag("contact_image.jpg", class:"card-img-top") %>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div>
+              <p class="section-desc">Book an appointment by form</p>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Email">
+              </div>
+              <div class="col-sm-12">
+                <input type="text" class="form-control" placeholder="Department">
+              </div>
+              <div class="col-sm-12">
+                <input type="text" class="form-control" placeholder="Desired time and date">
+              </div>
+              <div class="col-sm-12">
+                <input type="text" class="form-control" placeholder="Department">
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Leave us a message"></textarea>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div>
+              <p class="section-desc">Where you can find us</p>
+            </div>
+            <div>
+              Richmond: Head Office
+            </div>
+            <div>
+              All Correspondence & Central Coordination
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= render "layouts/bottom_cta_card" %>

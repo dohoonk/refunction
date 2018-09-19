@@ -1,0 +1,129 @@
+<%= render "layouts/nav" %>
+<%= render "layouts/banner_top_deco" %>
+<%= render "layouts/breadcrumb" %>
+
+<div class="Welcome_to_Refunction">
+  <div class="container">
+    <div class="row">
+      <p class="about-us-header">Welcome to Re:Function</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <%= image_tag("about_us_building.jpg", class:"about-us-building") %>
+      </div>
+      <div class="col-sm-6">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <span class="bold font-size-medium">Who We Are? </span>
+                </button>
+                <!-- <div class="highlight"></div> -->
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Collapsible Group Item #2
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Collapsible Group Item #3
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="message_from_director">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <p class="font-white font-size-lg">
+          To meet the needs of our customers, it is impera)ve that we have vendors
+          that are professional, thorough and provide balanced opinions. Our dealings
+          with Re: Func)on have met these requirements, plus facilitated our need for
+          reliable and )me sensi)ve appointments. Feedback from our customers on
+          the quality of repor)ng has been favourable and we con)nue to rely on this
+          vendor partner for assessments.
+        </p>
+        <h5 class="font-lb font-size-xlg">
+          Director of Operations
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="we_care_about_you">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2>We Care About You</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <%= image_tag("team.png") %>
+        <div class="about-us-card">
+          <h5>Balanced Disability</h5>
+          <div class="highlight-thin"></div>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <%= image_tag("team.png") %>
+        <div class="about-us-card">
+          <h5>Balanced Disability</h5>
+          <div class="highlight-thin"></div>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <%= image_tag("team.png") %>
+        <div class="about-us-card">
+          <h5>Balanced Disability</h5>
+          <div class="highlight-thin"></div>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "layouts/bottom_cta_card" %>

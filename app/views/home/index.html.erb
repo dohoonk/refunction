@@ -1,17 +1,474 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= render "layouts/nav" %>
 
+<div class="home_main_card">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 home_cta_card main-margin">
+        <p class="tag-line-top">Exceptional People.</p>
+        <p class="tag-line-bottom">Exceptional Care.</p>
+        <p class="tag-line-bottom-sub">Function is our Focus</p>
+        <div class="highlight"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row justify-content-center">
+              <p>Looking for treatment?</p>
+            </div>
+            <div class="nav-cta-physio"> Book Appointment </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row justify-content-center">
+              <p>Referring someone?</p>
+            </div>
+            <div class="nav-cta-referral"> Make a Referral</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
+    <div class="row home_main_card_sub_cards">
+      <div class="col-sm-4 services-card bg-lb">
+        <div class="card-body">
+          <h5 class="card-title">Balanced Disability Analysis</h5>
+          <div class="highlight-white"></div>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="col-sm-4 services-card bg-db">
+        <div class="card-body">
+          <h5 class="card-title">Services</h5>
+          <div class="highlight-white"></div>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="col-sm-4 services-card bg-black">
+        <div class="card-body">
+          <h5 class="card-title">Top Professionals</h5>
+          <div class="highlight-white"></div>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="how_we_can_help">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="bold">How we can help you</h1>
+    </div>
+    <div class="row justify-content-center font-gray padding-bottom">
+      <p>Regain function in all life activities</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <h3>Re:<span class="font-lb">View</span></h3>
+        <p>Cost of Future Care assessments Functional Capcity Evaluations File Review Consultations</p>
+      </div>
+      <div class="col-sm-3">
+        <h3>Re:<span class="font-lb">Tool</span></h3>
+        <p>Cost of Future Care assessments Functional Capcity Evaluations File Review Consultations</p>
+      </div>
+      <div class="col-sm-3">
+        <h3>Re:<span class="font-lb">Build<span></h3>
+        <p>Cost of Future Care assessments Functional Capcity Evaluations File Review Consultations</p>
+      </div>
+      <div class="col-sm-3">
+        <h3>Re:<span class="font-lb">Think</span></h3>
+        <p>Cost of Future Care assessments Functional Capcity Evaluations File Review Consultations</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="our_services main-card-padding">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="list_of_services_box">
+        <h5>Learn about our services</h5>
+        <div class="highlight"></div>
+        <ul>
+          <li>Community Rehabilitation Services</li>
+          <li>Physiotherapy Services</li>
+          <li>Actve & Functional Conditioning Programs</li>
+          <li>Psychology Assessment & Counselling Services</li>
+          <li>Interdisciplinary Rehabilitation Assessments</li>
+          <li>Functional Capacity Evaluations</li>
+          <li>Cost of Future Care Evaluations</li>
+          <li>Medical Legal Consultations</li>
+          <li>Job Demand Analyses</li>
+          <li>Ergonomic and Risk Factor Analyses</li>
+          <li>Brain Injury Assessment and Treatment</li>
+          <li>Return to Work Support</li>
+          <li><a href="#">Visit the Services Page</a></li>
+        </ul>
+      </div>
+
+      <div class="card" style="width: 15rem;">
+        <!-- <img class="card-img-top" src="/images/home_logov2.png" alt="Card image cap"> -->
+        <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
+        <div class="card-body">
+          <h5>Balanced Disability</h5>
+          <div class="highlight-thin"></div>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 15rem;">
+        <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
+        <div class="card-body">
+          <h5>Balanced Disability</h5>
+          <div class="highlight-thin"></div>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 15rem;">
+        <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
+        <div class="card-body">
+          <h5>Balanced Disability</h5>
+          <div class="highlight-thin"></div>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="what_our_clients_say">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2 class="font-white title">What Our Clients Say</h2>
+    </div>
+    <div class="row">
+      <div class= "col-sm-4">
+        <div class="card">
+          <div class="card-top">
+            <div>
+              <%= image_tag("profile.png") %>
+              <span>Vanessa Adams</span>
+              <span>Office Cleaner</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class= "col-sm-4">
+        <div class="card">
+          <div class="card-top">
+            <div>
+              <%= image_tag("profile.png") %>
+              <span>Vanessa Adams</span>
+              <span>Office Cleaner</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class= "col-sm-4">
+        <div class="card">
+          <div class="card-top">
+            <div>
+              <%= image_tag("profile.png") %>
+              <span>Vanessa Adams</span>
+              <span>Office Cleaner</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="numbers main-card-padding">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-sm-2">
+        <div class="row justify-content-center">
+          <p class="title">100%</p>
+        </div>
+        <div class="row justify-content-center">
+          <p class="body">Quality</p>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="row justify-content-center">
+          <p class="title">2480</p>
+        </div>
+        <div class="row justify-content-center">
+          <p class="body">Patients</p>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="row justify-content-center">
+          <p class="title">200</p>
+        </div>
+        <div class="row justify-content-center">
+          <p class="body">People Working</p>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="row justify-content-center">
+          <p class="title">38</p>
+        </div>
+        <div class="row justify-content-center">
+          <p class="body">Years of experience</p>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="row justify-content-center">
+          <p class="title">200</p>
+        </div>
+        <div class="row justify-content-center">
+          <p class="body">People Working</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
+<div class="our_team main-card-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2 class="title bold">Our Team</h2>
+    </div>
+    <div class="row justify-content-center padding-bottom-50">
+      <p class="font-gray"> Some of the friendly faces behind Re:Function</p>
+    </div>
+    <div class="row">
+      <div class= "col-sm-3">
+        <div class="card">
+          <%= image_tag("team.png") %>
+          <div class="card-body">
+            <span class="font-lb bold">Edgar Emnacen</span>
+            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class= "col-sm-3">
+        <div class="card">
+          <%= image_tag("team.png") %>
+          <div class="card-body">
+            <span class="font-lb bold">Edgar Emnacen</span>
+            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class= "col-sm-3">
+        <div class="card">
+          <%= image_tag("team.png") %>
+          <div class="card-body">
+            <span class="font-lb bold">Edgar Emnacen</span>
+            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class= "col-sm-3">
+        <div class="card">
+          <%= image_tag("team.png") %>
+          <div class="card-body">
+            <span class="font-lb bold">Edgar Emnacen</span>
+            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center padding-top-50">
+      <div class="cta-see-team"> See the rest of the team </div>
+    </div>
+  </div>
+</div>
+
+<div class="faqs main-card-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row justify-content-center">
+          <h5>General FAQ</h5>
+        </div>
+
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <span class="bold font-size-medium">What are your regular hours?</span>
+                </button>
+                <!-- <div class="highlight"></div> -->
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Collapsible Group Item #2
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Collapsible Group Item #3
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="row justify-content-center">
+          <h5>Physiotherapy FAQ</h5>
+        </div>
+        <div>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Collapsible Group Item #1
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer main-card-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h5 class="bold">Contact Information</h5>
+        <div class="highlight-small"></div>
+        <ul>
+          <li>227 Marion Street</li>
+          <li>www.refunction.ca</li>
+          <li>info@refunction.com</li>
+          <li>604-779-3987</li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5 class="bold">Doctors</h5>
+        <div class="highlight-small"></div>
+        <ul>
+          <li><span class="dot"></span>227 Marion Street</li>
+          <li><span class="dot"></span>www.</li>
+          <li><span class="dot"></span>info@refunction.com</li>
+          <li><span class="dot"></span>604-779-3987</li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5 class="bold">Services</h5>
+        <div class="highlight-small"></div>
+        <ul>
+          <li><span class="dot"></span>227 Marion Street</li>
+          <li><span class="dot"></span>www.</li>
+          <li><span class="dot"></span>info@refunction.com</li>
+          <li><span class="dot"></span>604-779-3987</li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5 class="bold">Contact Us</h5>
+        <div class="highlight-small"></div>
+        <div class="email">
+          <span>Email</span>
+        </div>
+        <div class="form-group">
+          <!-- <label for="comment">Comment:</label> -->
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <button>Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
