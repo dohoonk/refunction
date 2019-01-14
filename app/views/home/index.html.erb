@@ -379,7 +379,7 @@
       <p class="font-gray"> Some of the friendly faces behind Re:Function</p>
     </div>
     <div class="row">
-      <%= @featured_teams.each do |f| %>
+      <% @featured_teams.each do |f| %>
       <div class= "col-md-6 col-lg-3 mb-mg-bottom">
         <div class="card">
           <%= image_tag f.image.portrait_v2.url %>
@@ -393,38 +393,9 @@
       </div>
     <% end %>
 
-      <div class= "col-md-6 col-lg-3 mb-mg-bottom">
-        <div class="card">
-          <%= image_tag("Fortin_Chantelle.png", class:"mb-team-card") %>
-          <div class="card-body">
-            <span class="font-lb bold">Edgar Emnacen</span>
-            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
-            <a href="#">Learn More</a>
-          </div>
-        </div>
-      </div>
 
-      <div class= "col-md-6 col-lg-3 mb-mg-bottom">
-        <div class="card">
-          <%= image_tag("Emnacen_Edgar.png", class:"mb-team-card") %>
-          <div class="card-body">
-            <span class="font-lb bold">Edgar Emnacen</span>
-            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
-            <a href="#">Learn More</a>
-          </div>
-        </div>
-      </div>
 
-      <div class= "col-md-6 col-lg-3 mb-mg-bottom">
-        <div class="card">
-          <%= image_tag("Choudhry_Rimsha.png", class:"mb-team-card") %>
-          <div class="card-body">
-            <span class="font-lb bold">Edgar Emnacen</span>
-            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
-            <a href="#">Learn More</a>
-          </div>
-        </div>
-      </div>
+      
     </div>
 
     <div class="row justify-content-center padding-top-50">
