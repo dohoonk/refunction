@@ -378,8 +378,8 @@
     <div class="row justify-content-center padding-bottom-50">
       <p class="font-gray"> Some of the friendly faces behind Re:Function</p>
     </div>
-    <%= @featured_teams.each do |f| %>
     <div class="row">
+      <%= @featured_teams.each do |f| %>
       <div class= "col-md-6 col-lg-3 mb-mg-bottom">
         <div class="card">
           <%= image_tag f.image.portrait_v2.url %>
@@ -387,13 +387,46 @@
             <span class="font-lb bold"><%= f.first_name %> <%= f.last_name %></span>
             <p class="card-text font-size-sm"><%= f.title %></p>
             <p class="card-text font-size-sm"><%= f.occupation %></p>
-            <%= link_to "Learn More", admin_team_path(f) %>
+            <a href="#">Learn More</a>
           </div>
         </div>
       </div>
     <% end %>
 
-      
+      <div class= "col-md-6 col-lg-3 mb-mg-bottom">
+        <div class="card">
+          <%= image_tag("Fortin_Chantelle.png", class:"mb-team-card") %>
+          <div class="card-body">
+            <span class="font-lb bold">Edgar Emnacen</span>
+            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class= "col-md-6 col-lg-3 mb-mg-bottom">
+        <div class="card">
+          <%= image_tag("Emnacen_Edgar.png", class:"mb-team-card") %>
+          <div class="card-body">
+            <span class="font-lb bold">Edgar Emnacen</span>
+            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class= "col-md-6 col-lg-3 mb-mg-bottom">
+        <div class="card">
+          <%= image_tag("Choudhry_Rimsha.png", class:"mb-team-card") %>
+          <div class="card-body">
+            <span class="font-lb bold">Edgar Emnacen</span>
+            <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="row justify-content-center padding-top-50">
       <a href="/our_teams"><div class="cta-see-team"> See the rest of the team </div></a>
     </div>
