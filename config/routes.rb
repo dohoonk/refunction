@@ -26,7 +26,13 @@ Rails.application.routes.draw do
   get '/nanaimo', to: "contacts#nanaimo"
 
   resources :admin_dashboard, only: [:index]
-  resources :our_teams, only: [:index, :show]
+  resources :our_teams
+  get '/office_administration', to: "our_teams#office_administration"
+  get '/occupational_therapists', to: "our_teams#occupational_therapists"
+  get '/physiotherapists', to: "our_teams#physiotherapists"
+  get '/kinesiologist', to: "our_teams#kinesiologist"
+  get '/psychology', to: "our_teams#psychology"
+  get '/counsellors', to: "our_teams#counsellors"
   resources :users
   resources :admin_teams
   resources :members

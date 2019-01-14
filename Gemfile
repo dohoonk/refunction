@@ -41,6 +41,8 @@ gem 'mini_magick'
 gem "font-awesome-rails"
 gem "tinymce-rails"
 gem "pry"
+gem 'ransack'
+gem "fog-aws"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

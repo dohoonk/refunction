@@ -1,9 +1,11 @@
 class AdminTeamsController < ApplicationController
   def index
-    @admin_teams = AdminTeam.all
+    @search = AdminTeam.search(params[:q])
+    @teams = @search.result
   end
 
   def show
+    @search = AdminTeam.search(params[:q])
     @admin_team = AdminTeam.find(params[:id])
   end
 

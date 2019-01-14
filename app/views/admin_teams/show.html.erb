@@ -1,57 +1,12 @@
 <%= render "layouts/nav" %>
 <%= render "layouts/banner_top_deco" %>
 
-<div class="bread-crumb-border">
-  <div class="container">
-    <div class="row">
-      <div class="bread-crumb col-sm-12">
-        <div class="row justify-content-between">
-
-          <div class="col-sm-6">
-            <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" placeholder="Search" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </div>
-          </div>
-
-          <div class="col-sm-5" style="padding-right: 0px;">
-            <span style="margin-right: 24px;">Filter by Department: </span>
-              <select class="input-box" style="height: 48px; width: 265px;">
-                <option value="volvo">Occupational Therapist</option>
-                <option value="saab">Physical Therapist</option>
-                <option value="opel">Kinesiologist</option>
-                <option value="audi">Kinesiologist</option>
-              </select>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<%= render 'our_teams/filter' %>
 
 <div class="our-teams pages-card-padding">
   <div class="container">
     <div class="row">
-      <div class="col-sm-3 border-right">
-        <div class="row align-items-center">
-          <ul class="our-team-dp-list">
-            <li><span class="dp-list-header">Departments</span></li>
-            <li>All</li>
-            <li>Office & Administration</li>
-            <li>Therapists</li>
-            <li>Kinesiologist</li>
-            <li>Search</li>
-          </ul>
-        </div>
-      </div>
+      <%= render 'our_teams/side_link' %>
       <div class="col-sm-9">
         <div class="row">
           <div class="col-sm-4 mg-bt-20">

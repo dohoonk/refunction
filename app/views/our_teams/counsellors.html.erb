@@ -1,0 +1,20 @@
+<%= render "layouts/nav" %>
+<%= render "layouts/banner_top_deco" %>
+
+<%= render 'filter' %>
+
+
+<div class="our-teams pages-card-padding">
+  <div class="container">
+    <div class="row">
+        <%= render 'side_link' %>
+      <div class="col-sm-9">
+        <p class="about-us-header">Counsellors</p>
+        <%= render 'teams' %>
+      </div>
+
+    </div>
+  </div>
+</div>
+<%= render "layouts/bottom_cta_card" %>
+<%= render "layouts/footer" %>

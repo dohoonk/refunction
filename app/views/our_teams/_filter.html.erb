@@ -1,0 +1,44 @@
+<div class="bread-crumb-border">
+  <div class="container">
+    <div class="row">
+      <div class="bread-crumb col-sm-12">
+        <div class="row justify-content-between">
+
+          <div class="col-sm-6">
+            <div id="custom-search-input">
+                  <%= search_form_for @search, html: { class: "input-group col-md-12", style: "height: 37px; padding-right: 0px;" } do |f| %>
+
+                    <%= f.text_field :first_name_cont, class:"form-control input-lg" %>
+                    <%= f.submit "Search", class:"btn btn-info btn-md", style:"    height: 37px;"%>
+                  <% end %>
+
+
+                    <!-- <input type="text" class="form-control input-lg" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span> -->
+
+            </div>
+          </div>
+
+          <div class="col-sm-5" style="padding-right: 0px;">
+            <span style="margin-right: 24px;">Filter by Department: </span>
+              <select onChange="window.location.href=this.value" class="input-box" style="height: 48px; width: 265px;">
+                <option value="/office_administration">Departments</option>
+                <option value="/office_administration">Office & Administration</option>
+                <option value="/occupational_therapists">Occupational Therapists</option>
+                <option value="/physiotherapists">Physiotherapists</option>
+                <option value="/kinesiologist">Kinesiologist</option>
+                <option value="/psychology">Psychologists</option>
+                <option value="/counsellors">Counsellors</option>
+                <option value="/our_teams">All</option>
+              </select>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
