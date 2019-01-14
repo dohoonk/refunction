@@ -1,0 +1,2 @@
+class AdminTestimonial < ApplicationRecord
+end

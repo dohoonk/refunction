@@ -1,0 +1,2 @@
+class AdminEnquiry < ApplicationRecord
+end

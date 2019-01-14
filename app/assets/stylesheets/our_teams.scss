@@ -1,0 +1,17 @@
+// Place all the styles related to the our_teams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.our-team-dp-list {
+  list-style: none;
+  text-align: right;
+  margin-top: 99px;
+  li:hover {
+    color: $light-blue;
+  }
+}
+
+.dp-list-header {
+  font-size: 1.4em;
+  font-weight: 600;
+}

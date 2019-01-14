@@ -1,0 +1,24 @@
+<div class="admin-nav">
+  <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
+  </a>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <%= render 'layouts/admin_nav' %>
+
+    <div class="admin-body col-sm-10">
+      <div class="admin-card">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="search-top col-sm-12 pd-top-10">
+              <p>New Careers</p>
+            </div>
+          </div>
+        </div>
+        <%= render 'form' %>
+      </div>
+
+    </div>
+  </div>
+</div>

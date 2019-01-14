@@ -1,0 +1,93 @@
+.admin-log-out-btn {
+  width: 150px;
+  height: 40px;
+  background-color: #9f0000;
+  border: none;
+  color: white;
+  margin-top: 34px;
+  position: absolute;
+  right: 15px;
+}
+
+
+.admin-nav {
+  background-color: #263847;
+  height: 109px;
+}
+
+.admin-logo {
+  height: 111px;
+}
+
+.admin-side-nav {
+  width: 200px;
+  background-color: #263847;
+  color: white;
+  li {
+    list-style: none;
+    margin-top: 10px;
+  }
+  min-height: 700px;
+}
+
+.mg-top-30 {
+  margin-top: 30px;
+}
+
+.card-inner-padding {
+  padding: 25px;
+}
+
+.card-margin-top {
+  margin-top: 30px;
+}
+
+.mg-left {
+  margin-left: 0px;
+}
+
+.card-margin-bottom {
+  margin-bottom: 20px;
+}
+
+
+.admin-button-blue {
+  // width: 155px;
+  height: 60px;
+  border: 2px solid $light-blue;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: $light-blue;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+}
+
+.admin-button-gray {
+  // width: 155px;
+  height: 60px;
+  border: 2px solid gray;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+  background-color: gray
+}
+
+.admin-button-red {
+  // width: 155px;
+  height: 60px;
+  border: 2px solid red;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.3s;
+  background-color: red;
+}

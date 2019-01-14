@@ -1,21 +1,13 @@
 <div class="admin-nav">
   <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
   </a>
+  <button class="admin-log-out-btn"> Log out</button>
 </div>
 
 <div class="container-fluid">
   <div class="row">
 
-    <div class="admin-side-nav col-sm-2">
-      <ul>
-        <li><span></span>Teams<span></span></li>
-        <li>Testimonials</li>
-        <li>Careers</li>
-        <li>Customer Enquiry</li>
-        <li>Referrals</li>
-        <li>Admin Users</li>
-      </ul>
-    </div>
+    <%= render 'layouts/admin_nav' %>
 
 
     <div class="admin-body col-sm-10">
@@ -59,20 +51,53 @@
         <div class="container-fluid">
           <div class="row">
             <div class="search-top col-sm-12">
-              <p>Archived Members / Office & Administration </p>
+              <p class="pd-top-11">Archived Members / Office & Administration </p>
             </div>
           </div>
         </div>
         <div class="container">
           <div class="row justify-content-between">
-            <div class="col-sm-3">
+            <!-- <div class="col-sm-3">
               <div class="admin-staff-image-card">
                 <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image") %>
+                  <#%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image", style:"    width:256px;") %>
                 </div>
                 <div class="admin-staff-image-card-desc">
                   <span class="card-desc"> Edgar Emnacen </span>
-                  Registered Occupational Therapist
+                  <p>
+                    Registered Occupational Therapist
+                  </p>
+                </div>
+                <div class="admin-staff-image-button">
+                  <div class="btn btn-primary">
+                    Edit
+                  </div>
+                  <div class="btn btn-success">
+                    Publish
+                  </div>
+                  <div class="btn btn-danger">
+                    Delete
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <% @admin_teams.each do |f| %>
+            <div class="col-sm-3">
+              <div class="admin-staff-image-card">
+                <div class="admin-staff-picture">
+                  <% if f.image != nil %>
+                    <%= image_tag f.image.portrait_v2.url %>
+                  <% end %>
+                  <!-- <#%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image", style:"    width:256px;") %> -->
+                </div>
+                <div class="admin-staff-image-card-desc">
+                  <span class="card-desc"> <%= f.first_name %> <%= f.last_name %> </span>
+                  <p>
+                    <%= f.title %>
+                  </p>
+                  <p>
+                    <%= f.occupation %>
+                  </p>
                 </div>
                 <div class="admin-staff-image-button">
                   <div class="btn btn-primary">
@@ -87,96 +112,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  Registered Occupational Therapist
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  Registered Occupational Therapist
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  Registered Occupational Therapist
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
-            </div>
+            <% end %>
 
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  Registered Occupational Therapist
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
-            </div>
-            
+
+
+
           </div>
         </div>
       </div>

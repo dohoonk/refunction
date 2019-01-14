@@ -1,0 +1,2 @@
+module AdminEnquriesHelper
+end

@@ -1,7 +1,10 @@
 .what_our_clients_say {
-  background-image: image-url('home_what_our_clients_say.png');
+  // background-image: image-url('home_what_our_clients_say.png');
+  background-image: image-url('What_Our_Clients_Say.jpg');
+
   background-repeat: no-repeat;
   background-size: 102%;
+  background-color: #F7F7F7;
 
   .title {
     padding-top: 50px;
@@ -10,11 +13,28 @@
 
   .card-top {
     background: #2BB3E9;
-    height: 63px;
+    // height: 63px;
   }
 
   .card {
-    height: 213px;
+    // height: 213px;
     margin-bottom: 80px;
+    border: 0px;
   }
+}
+
+.client-testimonial-name {
+  color: white;
+  font-size: 1em
+}
+
+.client-testimonial-desc {
+  color: #e9e9f0;
+  font-size: 0.8em;
+}
+
+
+.client-desc-box {
+  margin-left: 21px;
+  margin-top: 8px;
 }

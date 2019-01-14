@@ -10,10 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180919184618) do
+ActiveRecord::Schema.define(version: 20190112020500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_careers", force: :cascade do |t|
+    t.string "title"
+    t.string "location"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "preview_description"
+    t.boolean "published"
+  end
+
+  create_table "admin_enquiries", force: :cascade do |t|
+    t.string "email"
+    t.text "content"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_teams", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "title"
+    t.string "occupation"
+    t.text "bio"
+    t.boolean "archived"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "job_category_id"
+    t.string "image"
+    t.index ["job_category_id"], name: "index_admin_teams_on_job_category_id"
+  end
+
+  create_table "admin_testimonials", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "title"
+    t.text "description"
+    t.boolean "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "job_categories", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.string "first_name"
@@ -33,6 +83,16 @@ ActiveRecord::Schema.define(version: 20180919184618) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "testimonials", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "published"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "middle_name"
@@ -43,4 +103,5 @@ ActiveRecord::Schema.define(version: 20180919184618) do
     t.string "password_digest"
   end
 
+  add_foreign_key "admin_teams", "job_categories"
 end

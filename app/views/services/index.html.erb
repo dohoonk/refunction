@@ -3,103 +3,146 @@
 <%= render "layouts/breadcrumb" %>
 
 
-<div class="our_services pages-card-padding">
+<div class="our_services main-card-padding">
   <div class="container">
-    <div class="row">
-
-      <div class="col-sm-3">
-        <div class="row justify-content-between">
-          <div class="list_of_services_box">
-            <h5>Learn about our services</h5>
-            <div class="highlight"></div>
-            <ul>
-              <li>Community Rehabilitation Services</li>
-              <li>Physiotherapy Services</li>
-              <li>Actve & Functional Conditioning Programs</li>
-              <li>Psychology Assessment & Counselling Services</li>
-              <li>Interdisciplinary Rehabilitation Assessments</li>
-              <li>Functional Capacity Evaluations</li>
-              <li>Cost of Future Care Evaluations</li>
-              <li>Medical Legal Consultations</li>
-              <li>Job Demand Analyses</li>
-              <li>Ergonomic and Risk Factor Analyses</li>
-              <li>Brain Injury Assessment and Treatment</li>
-              <li>Return to Work Support</li>
-              <li><a href="#">Visit the Services Page</a></li>
-            </ul>
-          </div>
+    <div class="row justify-content-between ">
+      <div class=" col-md-12 col-lg-3" style="margin-bottom: 20px;">
+        <div class="list_of_services_box mb-mg-bottom">
+          <h5>Learn about our services</h5>
+          <div class="highlight"></div>
+          <ul>
+            <li><a href="/functional_evaluation">Functional Capacity Evaluations</a></li>
+            <li><a href="/cost_of_future_care">Cost of Future Care Evaluations</a></li>
+            <li><a href="/medical_legal_consultation">Medical Legal Consultations</a></li>
+            <li><a href="/community_rehabilitation">Community Rehabilitation Services</a></li>
+            <li><a href="/physiotherapy">Physiotherapy Services</a></li>
+            <li><a href="/functional_conditioning">Active & Functional Conditioning Programs</a></li>
+            <li><a href="/interdisciplinary_rehabilitation">Interdisciplinary Rehabilitation Assessments</a></li>
+            <li><a href="job_demands_analyses">Job Demands Analyses</a></li>
+            <li><a href="ergononmic_risk_factor_analyses">Ergonomic and Risk Factor Analyses</a></li>
+            <li><a href="/services">Visit the Services Page</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="col-sm-9">
+      <div class="col-md-12 col-lg-9">
         <div class="row">
-          <div class="col-sm-4">
-            <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
-            <div >
-              <h5 style="color: black">Balanced Disability</h5>
+          <div class="col-12 col-sm-6 card-side-padding mb-mg-bottom">
+            <%= image_tag("Functional Capacity Evaluations.jpg", class:"card-img-top") %>
+            <div>
+              <a href="/functional_conditioning"><p class="services-card-font">Functional Capacity Evaluations</p></a>
             </div>
           </div>
 
-          <div class="col-sm-4">
-            <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
-            <div >
-              <h5 style="color: black">Balanced Disability</h5>
+          <div class="col-12 col-sm-6 card-side-padding mb-mg-bottom">
+            <%= image_tag("Cost of Future Care.jpg", class:"card-img-top") %>
+            <div>
+              <a href="/cost_of_future_care"><p class="services-card-font">Cost of Future Care Evaluation</p></a>
             </div>
           </div>
 
-          <div class="col-sm-4">
-            <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Medical Legal Consultations.jpg", class:"card-img-top") %>
             <div >
-              <h5 style="color: black">Balanced Disability</h5>
+              <a href="/medical_legal_consultation"><p class="services-card-font">Medical Legal Consultations</p></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Community Rehabilitation.jpg", class:"card-img-top") %>
+            <div >
+              <a href="/community_rehabilitation"><p class="services-card-font">Community Rehabilitation Services</p></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Physiotherapy_services.jpg", class:"card-img-top") %>
+            <div >
+              <a href="/physiotherapy"><p class="services-card-font">Physiotherapy</p></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Active and Functional Conditioning.jpg", class:"card-img-top") %>
+            <div >
+              <a href="/functional_conditioning"><p class="services-card-font">Active and Functional Conditioning</p></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Community Rehabilitation.jpg", class:"card-img-top") %>
+            <div >
+              <a href="/community_rehabilitation"><p class="services-card-font">Community Rehabilitation</p></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Interdisciplinary Rehabilitation Assessments.jpeg", class:"card-img-top") %>
+            <div >
+              <a href="/interdisciplinary_rehabilitation"><p class="services-card-font">Interdisciplinary Rehabilitation Assessments</p></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Job Demands Analyses.jpg", class:"card-img-top") %>
+            <div >
+              <a href="/job_demands_analyses"><p class="services-card-font">Job Demand Analyses</p></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("Ergonomic and Risk Factor Analysess.jpg", class:"card-img-top") %>
+            <div >
+              <a href="/ergononmic_risk_factor_analyses"><p class="services-card-font">Ergonomic and Risk Factor Analyses</p></a>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-4">
+        <!-- <div class="row">
+          <div class="col-12 col-sm-6 card-side-padding">
             <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
             <div >
-              <h5 style="color: black">Balanced Disability</h5>
+              <p class="services-card-font">Balanced Disability Assessment</p>
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-12 col-sm-6 card-side-padding">
             <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
             <div >
-              <h5 style="color: black">Balanced Disability</h5>
+              <p class="services-card-font">Balanced Disability Assessment</p>
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-12 col-sm-6 card-side-padding">
             <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
             <div >
-              <h5 style="color: black">Balanced Disability</h5>
+              <p class="services-card-font">Balanced Disability Assessment</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
-          <div class="col-sm-4">
+        <!-- <div class="row">
+          <div class="col-12 col-sm-6 card-side-padding">
             <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
             <div >
-              <h5 style="color: black">Balanced Disability</h5>
-            </div>
-          </div>
-
-          <div class="col-sm-4">
-            <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
-            <div >
-              <h5 style="color: black">Balanced Disability</h5>
+              <p class="services-card-font">Balanced Disability Assessment</p>
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-12 col-sm-6 card-side-padding">
             <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
             <div >
-              <h5 style="color: black">Balanced Disability</h5>
+              <p class="services-card-font">Balanced Disability Assessment</p>
             </div>
           </div>
-        </div>
+
+          <div class="col-12 col-sm-6 card-side-padding">
+            <%= image_tag("refunction_home_services.png", class:"card-img-top") %>
+            <div >
+              <p class="services-card-font">Balanced Disability Assessment</p>
+            </div>
+          </div>
+        </div> -->
 
       </div>
 
@@ -109,3 +152,4 @@
 </div>
 
 <%= render "layouts/bottom_cta_card" %>
+<%= render "layouts/footer" %>

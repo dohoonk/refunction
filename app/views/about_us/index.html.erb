@@ -2,22 +2,22 @@
 <%= render "layouts/banner_top_deco" %>
 <%= render "layouts/breadcrumb" %>
 
-<div class="Welcome_to_Refunction">
-  <div class="container">
+<div class="welcome_to_refunction">
+  <div class="container pages-card-padding">
     <div class="row">
       <p class="about-us-header">Welcome to Re:Function</p>
     </div>
     <div class="row">
-      <div class="col-sm-6">
-        <%= image_tag("about_us_building.jpg", class:"about-us-building") %>
+      <div class="col-sm-6 mb-mg-bottom">
+        <%= image_tag("building_2.jpg", class:"about-us-building") %>
       </div>
       <div class="col-sm-6">
         <div id="accordion">
           <div class="card">
-            <div class="card-header" id="headingOne">
+            <div class="card-header faq-card-top" id="headingOne">
               <h5 class="mb-0">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <span class="bold font-size-medium">Who We Are? </span>
+                  <span class="bold font-size-medium">About Us</span>
                 </button>
                 <!-- <div class="highlight"></div> -->
               </h5>
@@ -25,16 +25,16 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+              We are a group of like-minded health professionals dedicated to help clients overcome their challenges. Our goal is to improve function as we know this returns confidence, connectivity, purpose, happiness, and ultimately independence.
               </div>
             </div>
           </div>
 
-          <div class="card">
+          <div class="card faq-card-top">
             <div class="card-header" id="headingTwo">
               <h5 class="mb-0">
                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Collapsible Group Item #2
+                  Our Services
                 </button>
               </h5>
             </div>
@@ -46,11 +46,11 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card faq-card-top">
             <div class="card-header" id="headingThree">
               <h5 class="mb-0">
                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Collapsible Group Item #3
+                  Qualified Experts
                 </button>
               </h5>
             </div>
@@ -69,56 +69,70 @@
 <div class="message_from_director">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8">
-        <p class="font-white font-size-lg">
-          To meet the needs of our customers, it is impera)ve that we have vendors
-          that are professional, thorough and provide balanced opinions. Our dealings
-          with Re: Func)on have met these requirements, plus facilitated our need for
-          reliable and )me sensi)ve appointments. Feedback from our customers on
-          the quality of repor)ng has been favourable and we con)nue to rely on this
-          vendor partner for assessments.
+      <div class="col-sm-8" style="padding-top: 72px;">
+        <%= image_tag("quotation_mark_v2.png") %>
+        <p class="font-white font-size-lg message_from_director_content">
+          Done well, teamwork is less about work and more about positive trajectory. This is our focus
+          within our company and we use this frame of reference to assist our clients. Disabling
+          circumstances can be challenging and we feel our teamwork is the key to helping our clients
+          shift trajectories towards positive functional outcomes.
         </p>
         <h5 class="font-lb font-size-xlg">
-          Director of Operations
+          Chief Executive Officer
         </h5>
       </div>
+      <!-- <div class="col-sm-2" style="padding-top: 72px;">
+        <#%= image_tag("director.jpg") %>
+      </div> -->
     </div>
   </div>
 </div>
 
-<div class="we_care_about_you">
+<div class="we_care_about_you pages-card-padding">
   <div class="container">
     <div class="row justify-content-center">
-      <h2>We Care About You</h2>
+      <p class="we-care-about-you-header">We Care About You</p>
     </div>
     <div class="row">
-      <div class="col-sm-4">
-        <%= image_tag("team.png") %>
+      <div class="col-sm-4 mb-mg-bottom">
+        <%= image_tag("Collaboration.jpeg", class:"mb-width-100", style:"max-height: 273px") %>
         <div class="about-us-card">
-          <h5>Balanced Disability</h5>
-          <div class="highlight-thin"></div>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
+          <h5>Collaboration</h5>
+          <div class="highlight-thin" style="margin-bottom: 0px;"></div>
+          <p class="card-text font-gray-on-white">
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem
+            Ipsum is that it has a more-or-less normal
+            distribution of letters
           </p>
         </div>
       </div>
-      <div class="col-sm-4">
-        <%= image_tag("team.png") %>
+      <div class="col-sm-4 mb-mg-bottom">
+        <%= image_tag("Care.jpeg", class:"mb-width-100", style:"max-height: 273px") %>
         <div class="about-us-card">
-          <h5>Balanced Disability</h5>
-          <div class="highlight-thin"></div>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
+          <h5>Care</h5>
+          <div class="highlight-thin" style="margin-bottom: 0px;"></div>
+          <p class="card-text font-gray-on-white">
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem
+            Ipsum is that it has a more-or-less normal
+            distribution of letters
           </p>
         </div>
       </div>
-      <div class="col-sm-4">
-        <%= image_tag("team.png") %>
+      <div class="col-sm-4 mb-mg-bottom">
+        <%= image_tag("Clarity.jpeg", class:"mb-width-100", style:"max-height: 273px") %>
         <div class="about-us-card">
-          <h5>Balanced Disability</h5>
-          <div class="highlight-thin"></div>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
+          <h5>Clarity</h5>
+          <div class="highlight-thin" style="margin-bottom: 0px;"></div>
+          <p class="card-text font-gray-on-white">
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem
+            Ipsum is that it has a more-or-less normal
+            distribution of letters
           </p>
         </div>
       </div>
@@ -127,3 +141,4 @@
 </div>
 
 <%= render "layouts/bottom_cta_card" %>
+<%= render "layouts/footer" %>

@@ -1,0 +1,80 @@
+<%= render "layouts/nav" %>
+<%= render "layouts/banner_top_deco" %>
+<%= render "layouts/breadcrumb" %>
+
+<div class="why_work_with_us pages-card-padding">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-3">
+        <div class="row justify-content-between">
+          <div class="list_of_services_box">
+            <h5>Learn about our services</h5>
+            <div class="highlight"></div>
+            <ul>
+              <li><span class="current-listing-header">Kinesiologist Position</span>
+                <span class="current-listing-header-sub">Lower Mainland & Nanaimo</span>
+              </li>
+              <li><span class="current-listing-header">Occupational Therapist</span>
+                <span class="current-listing-header-sub">Lower Mainland</span>
+              </li>
+              <li><span class="current-listing-header">Occupational Therapist</span>
+                <span class="current-listing-header-sub">Nanaimo</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="offset-sm-1 col-sm-8">
+
+        <div class="row">
+          <p class="show-header"> <%= @admin_career.title %> - <%= @admin_career.location %></p>
+          <p class="show-font">
+            <%= raw(@admin_career.description) %>
+          </p>
+        </div>
+
+
+        <div class="row careers-featured-opening-empty">
+
+        </div>
+
+        <div class="row">
+            <p style="padding-top: 10px; font-weight: 700;">Send your information and CV</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+            <input type="text" class="form-control input-box" placeholder="First name">
+          </div>
+          <div class="col-sm-6 margin-bottom-11 career-pd-right-0" >
+            <input type="text" class="form-control input-box" placeholder="Last name">
+          </div>
+          <div class="col-sm-6 margin-bottom-11 career-pd-left-0" >
+            <input type="text" class="form-control input-box" placeholder="Email">
+          </div>
+          <div class="col-sm-6 margin-bottom-11 career-pd-right-0" >
+            <input type="text" class="form-control input-box" placeholder="Phone">
+          </div>
+          <div class="form-group col-sm-12 career-pd-left-0 career-pd-right-0" >
+            <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea>
+          </div>
+        </div>
+
+          <div class="row">
+            <div class="col-3" style="padding-left: 0px;">
+              <button class="cta-see-team">Upload CV</button>
+            </div>
+            <div class="col-3">
+              <button class="cta-see-team" style="width: 181px;">Submit</button>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%= render "layouts/bottom_cta_card" %>
+<%= render "layouts/footer" %>

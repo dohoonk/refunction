@@ -1,21 +1,32 @@
-<%= form_for(@user) do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
+<div class="admin-nav">
+  <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
+  </a>
+  <button class="admin-log-out-btn"> Log In </button>
+</div>
 
-  <%= f.label :middle_name %>
-  <%= f.text_field :middle_name %>
+<div class="container-fluid">
+  <div class="row">
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
+    <%= form_for(@user) do |f| %>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+      <%= f.label :middle_name %>
+      <%= f.text_field :middle_name %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
 
-  <%= f.submit %>
-<% end %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

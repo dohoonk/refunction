@@ -9,4 +9,17 @@
     background: white;
     // border-bottom: 0px;
   }
+  .card {
+    border-radius: 0px;
+  }
+  .card-header {
+    border-bottom: 0px;
+  }
+}
+
+
+.faq-card-top {
+  border-top: 3px solid $light-blue;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }

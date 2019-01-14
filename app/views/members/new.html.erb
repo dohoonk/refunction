@@ -5,18 +5,7 @@
 
 <div class="container-fluid">
   <div class="row">
-
-    <div class="admin-side-nav col-sm-2">
-      <ul>
-        <li><span></span>Teams<span></span></li>
-        <li>Testimonials</li>
-        <li>Careers</li>
-        <li>Customer Enquiry</li>
-        <li>Referrals</li>
-        <li>Admin Users</li>
-      </ul>
-    </div>
-
+    <%= render 'layouts/admin_nav' %>
 
     <div class="admin-body col-sm-10">
       <div class="admin-card">
@@ -27,7 +16,15 @@
             </div>
           </div>
         </div>
-        <div class="container">
+        <div class="container card-inner-padding">
+          <div class="row justify-content-between mg-left card-margin-bottom">
+            <div>
+              <button class="cta-see-team">Uploda Photo</button>
+            </div>
+            <div>
+              <button class="cta-see-team">Uploda CV</button>
+            </div>
+          </div>
           <div class="row">
             <div class="col-sm-6">
               <div class="admin-member-pic-container">
@@ -35,7 +32,44 @@
               </div>
             </div>
             <div class="col-sm-6">
-              <%= render 'form' %>
+              <div class="row">
+                <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="First name">
+                </div>
+                <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="Last name">
+                </div>
+                <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="Email">
+                </div>
+                <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="Phone">
+                </div>
+                <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="Email">
+                </div>
+                <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="Phone">
+                </div>
+                <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="Email">
+                </div>
+                <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+                  <input type="text" class="form-control input-box" placeholder="Phone">
+                </div>
+                <!-- <div class="form-group col-sm-12" style="padding-right: 0px; padding-left: 0px;">
+                  <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-sm-12 card-margin-top">
+
+              <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea>
+            </div>
+            <div class="col-sm-12 card-margin-top">
+              <button class="admin-button-blue">Save As Draft</button>
+              <button class="admin-button-gray">Save & Publish</button>
+              <button class="admin-button-red">Delete</button>
             </div>
           </div>
         </div>

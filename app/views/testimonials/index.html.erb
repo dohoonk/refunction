@@ -2,69 +2,49 @@
 <%= render "layouts/banner_top_deco" %>
 <%= render "layouts/breadcrumb" %>
 
-<div class="testimonials_container">
+<div class="testimonials_container pages-card-padding">
   <div class="container">
     <div class="row justify-content-center">
       <div class="page-desc">
         <h1>What our clients say about us</h1>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center margin-bottom-30">
       <div class="page-desc-sub">
-        <p class="margin-bottom-0">Why we do what we do</p>
+        <p class="">Why we do what we do</p>
       </div>
     </div>
     <div class="row">
+
+
+    <div class="row mb-testimonial-layout">
+      <% @published_testimonials.each do |f| %>
       <div class="col-sm-6">
-        <div class="card">
+        <div class="card" style="min-height: 298px;">
           <div class="card-top">
             <div class="row align-items-center">
-              <div class="col-sm-2">
-                <%= image_tag("profile.png") %>
-              </div>
+
               <div class="col-sm-10">
                 <div class="row">
-                  <span class="card-top-desc">Vanessa Adams</span>
+                  <span class="card-top-desc card-top-desc-margin"><%= f.first_name %> <%= f.last_name %></span>
                 </div>
                 <div class="row">
-                  <span class="card-top-desc-sub">Office Cleaner</span>
+                  <span class="card-top-desc-sub card-top-desc-margin"><%= f.title %></span>
                 </div>
               </div>
             </div>
           </div>
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <%= image_tag("quotation_mark_blue.png", class:"mg-right-13") %>
+            <span class="card-text"><%= f.description %></span>
           </div>
         </div>
       </div>
+      <% end %>
 
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-top">
-            <div class="row align-items-center">
-              <div class="col-sm-2">
-                <%= image_tag("profile.png") %>
-              </div>
-              <div class="col-sm-10 ">
-                <div class="row">
-                  <span class="card-top-desc">Vanessa Adams</span>
-                </div>
-                <div class="row">
-                  <span class="card-top-desc-sub">Office Cleaner</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
+      <!-- <div class="col-sm-6">
+        <div class="card" style="min-height: 298px;">
           <div class="card-top">
             <div class="row align-items-center">
 
@@ -79,31 +59,14 @@
             </div>
           </div>
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <%= image_tag("quotation_mark_blue.png", class:"mg-right-13") %>
+            <span class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</span>
           </div>
         </div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-top">
-            <div class="row align-items-center">
-
-              <div class="col-sm-10">
-                <div class="row">
-                  <span class="card-top-desc card-top-desc-margin">Vanessa Adams</span>
-                </div>
-                <div class="row">
-                  <span class="card-top-desc-sub card-top-desc-margin">Office Cleaner</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
+
+<%= render "layouts/bottom_cta_card" %>
+<%= render "layouts/footer" %>

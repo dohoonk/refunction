@@ -21,9 +21,20 @@
 .list_of_services_box {
   background: $gray-dark;
   padding: 25px 15px 25px 25px;
+  color: white;
 
   li {
     margin-bottom: 8px;
+    font-size: 0.9em;
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+
 
 }

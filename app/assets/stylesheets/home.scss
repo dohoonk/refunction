@@ -5,8 +5,13 @@
 
 
 .home_main_card {
-  background: image-url('home_bg.svg');
-  // background-color: black;
+  // background: image-url('home_bg.svg');
+  background: image-url('Main_Header.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1400px;
+  // background-size: 1800px;
+  background-color: white;
   height: 700px;
 }
 
@@ -29,6 +34,7 @@
 .careers-box {
   border: 2px solid $gray-lighter;
   height: 176px;
+  overflow: hidden;
 }
 
 .careers-card-body {
@@ -54,4 +60,9 @@
 .careers-featured-opening {
   border-bottom: 1px solid lightgray;
   height: 267px;
+}
+
+.careers-featured-opening-empty {
+  border-bottom: 1px solid lightgray;
+  height: 10px;
 }

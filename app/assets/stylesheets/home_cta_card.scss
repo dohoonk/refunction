@@ -37,6 +37,7 @@
 }
 
 .nav-cta-physio {
+  text-align: center;
   display: inline-block;
   // width: 155px;
   height: 60px;
@@ -47,6 +48,13 @@
   color: white;
   padding: 20px;
   font-weight: 600;
+  transition: 0.03s;
+}
+
+.nav-cta-physio:hover {
+  color: $light-blue;
+  background-color: white;
+  border: 2px solid $light-blue;
 }
 
 .nav-cta-referral {
@@ -59,10 +67,17 @@
   justify-content: center;
   font-weight: 600;
   color: $light-blue;
+  transition: 0.03s;
+}
+
+.nav-cta-referral:hover {
+  color: white;
+  background-color: $light-blue;
+  border: 0px;
 }
 
 .services-card{
-  height: 190px;
+  // height: 190px;
   margin-top: 190px;
 }
 
@@ -98,4 +113,8 @@
   border-top: 2px solid white;
   margin-bottom: 10px;
   height: 3px;
+}
+
+.text-middle {
+  text-align: center;
 }

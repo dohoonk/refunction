@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .show-header {
-  font-size: 3em;
+  // font-size: 3em;
+  font-size: 2.4em;
   color: $light-blue;
   padding-top: 20px;
   font-weight: 200;
@@ -11,4 +12,14 @@
 
 .show-font {
   color: $gray-dark;
+}
+
+
+.services-card-font {
+  font-size: 1.1em;
+  color: $light-blue
+}
+
+.black-with-dots {
+  color: black;
 }

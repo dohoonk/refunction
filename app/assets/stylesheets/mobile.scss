@@ -1,0 +1,228 @@
+
+.full-dp-none {
+  display: none;
+}
+
+// @media (min-width: 468px) and (max-width: 991px) {
+//   .container {
+//     margin-left: 10px !important;
+//     margin-right: 10px !important;
+//   }
+// }
+
+@media screen and (max-width: 575px) {
+// @media screen and (max-width: 991px) {
+
+  .full-dp-none {
+    display: block;
+  }
+
+  // home page
+  .mb-pd {
+    display: block
+  }
+  // 3 description cards
+  .sc-mobile-top {
+    margin-top: 20px;
+  }
+
+  .sc-mobile {
+    margin-top: 0px;
+  }
+
+  .how_we_can_help {
+    padding-top: 560px;
+  }
+
+  .list_of_services_box {
+    width: 100%;
+  }
+
+  .what_our_clients_say {
+    background-image: none;
+  }
+
+  .mb-font-black {
+    color: black;
+  }
+  .mb-dp-none {
+    display: none;
+  }
+
+  .mb-dp {
+    display: fixed;
+  }
+
+  .mb-nav {
+    height: 59px;
+    width: 100%;
+    background-image: image-url('nav-top-banner.png');
+    background-size: 336px;
+  }
+
+  .mb-pd-left-21 {
+    padding-left: 21px;
+  }
+
+  .mb-logo {
+    margin-left: -6px;
+    width: 154px;
+  }
+
+  .home_cta_card {
+    margin-top: 107px;
+    padding-bottom: 22px;
+    background-color: white;
+  }
+
+  .nav-cta-physio {
+    margin-bottom: 10px;
+  }
+
+  .how_we_can_help_title {
+    margin-top: 85px;
+  }
+
+  .our_services {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .mb-service-list {
+    margin-bottom: 10px;
+    font-size: 14px;
+    height: 80px;
+    vertical-align: middle;
+  }
+
+  .banner-top-deco-header {
+    color: black;
+  }
+
+  .about-us-header {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-left: 16px;
+  }
+
+  .pages-card-padding {
+    padding-top: 10px;
+  }
+
+  .about-us-building {
+    max-width: 100%;
+  }
+
+  .message_from_director {
+    height: 786px;
+  }
+
+  .tag-line-top-bottom-cta {
+    font-size: 2.2em;
+  }
+
+  .tag-line-bottom-bottom-cta {
+    font-size: 2.2em;
+  }
+
+  .page-desc {
+    h1 {
+      font-size: 0.5em;
+    }
+  }
+
+  .mb-testimonial-layout {
+    padding-left: 33px;
+    max-width: 100%;
+  }
+
+  .mb-max-width-100 {
+    max-width: 100%;
+  }
+
+  .main-card-padding-sm {
+    overflow: hidden;
+  }
+
+  .row {
+    margin-right: -9px;
+    margin-left: -9px;
+  }
+
+  .careers-featured-opening {
+    height: 474px;
+  }
+
+  .career-pd-left-0 {
+    padding-left: 15px;
+  }
+
+  .career-pd-right-0 {
+    padding-right: 15px;
+  }
+
+  .how_we_can_help_title {
+    font-size: 2rem;
+  }
+
+  .pd-bottom-31 {
+    padding-bottom: 31px;
+  }
+
+  .mb-fa-index {
+    font-size: 56px;
+    padding-bottom: 14px;
+  }
+
+  .ft-grey {
+    color: #787878;
+  }
+
+  .mb-side-pd {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .banner_top_deco {
+    // height: 120px;
+  }
+
+  .we-care-about-you-header {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 15px;
+  }
+
+  .home_main_card {
+    background: none;
+  }
+
+  .mb-width-100 {
+    width: 100%;
+  }
+
+  .mb-mg-bottom {
+    margin-bottom: 35px;
+  }
+
+  .our_team .card {
+    // height: 380px;
+  }
+
+  .mb-team-card {
+    // height: 266px;
+  }
+
+  .carousel-indicators {
+    z-index: 1;
+    color: b
+  }
+
+  .carousel-indicators li {
+    background-color: $light-blue;
+  }
+
+  .carousel-indicators .active {
+    background-color: $dark-blue;
+  }
+}

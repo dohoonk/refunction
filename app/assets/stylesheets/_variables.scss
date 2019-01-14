@@ -1,7 +1,7 @@
 //-----------------------------------------------font------------------------------------------------
 
 //$font-size-base:1rem !default;
-$main-font: "Raleway", Roboto, "Helvetica Neue", Arial, sans-serif;
+$main-font: "Lato", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 
 //-----------------------------------------------color------------------------------------------------
@@ -13,11 +13,12 @@ $red:    #d9534f !default;
 $orange: #f0ad4e !default;
 $yellow: #ffd500 !default;
 $green:  #5cb85c !default;
-$blue:   #0275d8 !default;
+$blue:   #1BB2EB !default;
 $teal:   #5bc0de !default;
 $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 $admin-box: #F9F9F9 !default;
+$banner-sub: #848995 !default;
 
 // custom colors
 $light-blue: #1BB2EB !default;
@@ -31,6 +32,7 @@ $gray:                      #F7F7F7 !default;
 $gray-light:                #636c72 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
+$gray-font:                 #9e9797 !default;
 
 // Reassign color vars to semantic color scheme
 $brand-primary:             $blue !default;
@@ -50,7 +52,11 @@ $brand-inverse:             $gray-dark !default;
 //----------------------------------------------font size bold------------------------------------------------
 
 .bold {
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.bold-mx{
+  font-weight: 600;
 }
 
 .font-gray{
@@ -61,6 +67,10 @@ $brand-inverse:             $gray-dark !default;
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.padding-left-0 {
+  padding-left: 0px;
 }
 
 .padding-bottom {
@@ -82,12 +92,20 @@ $brand-inverse:             $gray-dark !default;
   margin-bottom: 0px;
 }
 
+.mg-bt-20 {
+  margin-bottom: 20px;
+}
+
 .font-lb {
   color: $light-blue;
 }
 .main-card-padding {
-  padding-top: 70px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.main-card-padding-sm {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .font-white {
@@ -132,8 +150,8 @@ $brand-inverse:             $gray-dark !default;
 }
 
 .pages-card-padding {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 
@@ -160,5 +178,96 @@ $brand-inverse:             $gray-dark !default;
 .card-desc {
   font-size: 1.1em;
   font-weight: 600;
-  color: $light-blue
+  color: $light-blue;
+}
+
+.font-gray {
+  color: $gray-font;
+}
+
+.font-gray-on-white {
+  color: #888889;
+}
+
+body {
+  font-family: $main-font !important;
+}
+
+.card-text {
+  font-size: 0.8em;
+}
+
+
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
+.border-right {
+  border-right: 1px solid gray;
+  height: 336px;
+}
+
+.mg-right-13 {
+  margin-right: 13px;
+}
+
+.margin-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.padding-right-100 {
+  padding-right: 100px !important;
+}
+
+.mg-top-20 {
+  margin-top: 20px;
+}
+
+.blue-dot {
+  display: inline-block;
+  height: 5px;
+  width: 4px;
+  margin-right: 7px;
+  margin-bottom: 2px;
+  background-color: $light-blue;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+a {
+  font-weight: 550;
+}
+
+.card-side-padding {
+  padding-left: 2em !important;
+  padding-right: 2em !important;
 }

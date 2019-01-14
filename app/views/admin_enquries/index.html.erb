@@ -1,0 +1,66 @@
+<div class="admin-nav">
+  <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
+  </a>
+  <button class="admin-log-out-btn"> Log out</button>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <%= render 'layouts/admin_nav' %>
+
+
+    <div class="admin-body col-sm-10">
+      <div class="admin-team-search-bar">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="search-top col-sm-12">
+              <p>Published Job Posting</p>
+            </div>
+          </div>
+          <div class="row admin-search-padding">
+            <div class="col-sm-12">
+              <div class="row">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Phone</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Message</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Oct 1st 2018</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>dsafdsafdsafdasfdasfdasfsafdafdsafasfasfdsafd</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

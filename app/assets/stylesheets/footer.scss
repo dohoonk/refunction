@@ -39,3 +39,18 @@
   vertical-align: middle;
   margin-right: 10px;
 }
+
+.text-area-box {
+  border: 1px solid gray;
+  margin-top: 20px;
+  border-radius: 0px;
+  background: $gray-dark;
+}
+
+.footer-submit-btn {
+  background-color: black;
+  color: gray;
+  border: 1px solid gray;
+  width: 135px;
+  height: 46px;
+}

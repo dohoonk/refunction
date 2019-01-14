@@ -17,4 +17,10 @@
   color: $light-blue;
   padding-left: 20px;
   padding-right: 20px;
+  transition: 0.3s;
+}
+
+.cta-see-team:hover {
+  background-color: $light-blue;
+  color: white;
 }

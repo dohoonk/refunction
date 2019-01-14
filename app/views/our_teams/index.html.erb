@@ -1,0 +1,117 @@
+<%= render "layouts/nav" %>
+<%= render "layouts/banner_top_deco" %>
+
+<div class="bread-crumb-border">
+  <div class="container">
+    <div class="row">
+      <div class="bread-crumb col-sm-12">
+        <div class="row justify-content-between">
+
+          <div class="col-sm-6">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm-5" style="padding-right: 0px;">
+            <span style="margin-right: 24px;">Filter by Department: </span>
+              <select class="input-box" style="height: 48px; width: 265px;">
+                <option value="volvo">Office & Administration</option>
+                <option value="saab">Occupational Therapists</option>
+                <option value="opel">Physiotherapists</option>
+                <option value="audi">Kinesiologist</option>
+                <option value="audi">Psychologists</option>
+                <option value="audi">Counsellors</option>
+              </select>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="our-teams pages-card-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 border-right">
+        <div class="row align-items-center">
+          <ul class="our-team-dp-list">
+            <li><span class="dp-list-header">Departments</span></li>
+            <li>Office & Administration</li>
+            <li>Occupational Therapists</li>
+            <li>Physiotherapists</li>
+            <li>Kinesiologist</li>
+            <li>Psychologists</li>
+            <li>Counsellors</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <p class="about-us-header">Office & Administration Staff</p>
+        <div class="row">
+          <% @teams.each do |f| %>
+          <div class="col-sm-4 mg-bt-20">
+            <div class="card">
+              <%= image_tag f.image.portrait_v2.url %>
+              <div class="card-body">
+                <span class="font-lb bold"><%= f.first_name %> <%= f.last_name %></span>
+                <p class="card-text font-size-sm"><%= f.title %></p>
+                <p class="card-text font-size-sm"><%= f.occupation %></p>  
+                <%= link_to "Learn More", admin_team_path(f) %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <div class="col-sm-4 mg-bt-20">
+            <div class="card">
+              <%= image_tag("Fortin_Chantelle.png") %>
+              <div class="card-body">
+                <span class="font-lb bold">Edgar Emnacen</span>
+                <p class="card-text font-size-sm">BScOT, CWCE</p>
+                <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mg-bt-20">
+            <div class="card">
+              <%= image_tag("Choudhry_Rimsha.png") %>
+              <div class="card-body">
+                <span class="font-lb bold">Edgar Emnacen</span>
+                <p class="card-text font-size-sm">BScOT, CWCE</p>
+                <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 mg-bt-20">
+            <div class="card">
+              <%= image_tag("Emnacen_Edgar.png") %>
+              <div class="card-body">
+                <span class="font-lb bold">Edgar Emnacen</span>
+                <p class="card-text font-size-sm">BScOT, CWCE</p>
+                <p class="card-text font-size-sm">Registered Occupational Therapist</p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<%= render "layouts/bottom_cta_card" %>
+<%= render "layouts/footer" %>
