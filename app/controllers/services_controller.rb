@@ -34,4 +34,7 @@ class ServicesController < ApplicationController
 
   def ergononmic_risk_factor_analyses
   end
+
+  def clinical_counselling_services
+  end
 end
