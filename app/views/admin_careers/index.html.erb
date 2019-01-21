@@ -22,7 +22,7 @@
             <div class="col-sm-12">
               <div class="row">
                 <div class="offset-sm-9 col-sm-3">
-                  <div class="admin-search-button mg-bottom"> Add New</div>
+                    <a href="/admin_careers/new"><div class="admin-search-button mg-bottom"> Add New</div></a>
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
@@ -31,7 +31,8 @@
                       <div class="careers-box">
                         <div class="row">
                           <div class="col-sm-4 careers-image" style="padding-left: 0px; padding-right: 0px;">
-                            <%= image_tag("refunction_home_services.png") %>
+                            <!-- <#%= image_tag("refunction_home_services.png") %> -->
+                            <%= image_tag f.career.portrait.url %>
                           </div>
                           <div class="col-sm-8 reset" style="padding-left: 5px;padding-right: 0px;">
                             <div class="card-body reset" style="padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
@@ -75,7 +76,7 @@
 
 
 
-      <div class="admin-team-search-bar">
+      <div class="admin-team-search-bar" style="min-height: 400px;">
         <div class="container-fluid">
           <div class="row">
             <div class="search-top col-sm-12">
@@ -85,9 +86,6 @@
           <div class="row admin-search-padding">
             <div class="col-sm-12">
               <div class="row">
-                <div class="offset-sm-9 col-sm-3">
-                  <div class="admin-search-button mg-bottom"> Add New</div>
-                </div>
                 <div class="col-sm-12">
                   <div class="row">
 
@@ -96,7 +94,7 @@
                       <div class="careers-box">
                         <div class="row">
                           <div class="col-sm-4 careers-image" style="padding-left: 0px; padding-right: 0px;">
-                            <%= image_tag("refunction_home_services.png") %>
+                            <%= image_tag f.career.portrait.url %>
                           </div>
                           <div class="col-sm-8 reset" style="padding-left: 5px;padding-right: 0px;">
                             <div class="card-body reset" style="padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">

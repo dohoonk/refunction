@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190112020500) do
+ActiveRecord::Schema.define(version: 20190121082654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20190112020500) do
     t.datetime "updated_at", null: false
     t.string "preview_description"
     t.boolean "published"
+    t.string "career"
   end
 
   create_table "admin_enquiries", force: :cascade do |t|
@@ -31,6 +32,34 @@ ActiveRecord::Schema.define(version: 20190112020500) do
     t.string "first_name"
     t.string "last_name"
     t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "department"
+  end
+
+  create_table "admin_referrals", force: :cascade do |t|
+    t.string "category"
+    t.string "client_name"
+    t.string "name"
+    t.datetime "client_birthday"
+    t.string "company"
+    t.string "client_phone"
+    t.string "claim_number"
+    t.string "client_address"
+    t.string "address"
+    t.string "client_city"
+    t.string "phone"
+    t.string "client_postal_code"
+    t.string "email"
+    t.datetime "date_of_injury"
+    t.string "client_fax"
+    t.string "client_language"
+    t.string "realation_to_client"
+    t.string "concerns"
+    t.boolean "client_aware"
+    t.string "client_sex"
+    t.string "advertisement"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +75,7 @@ ActiveRecord::Schema.define(version: 20190112020500) do
     t.datetime "updated_at", null: false
     t.bigint "job_category_id"
     t.string "image"
+    t.boolean "published"
     t.index ["job_category_id"], name: "index_admin_teams_on_job_category_id"
   end
 

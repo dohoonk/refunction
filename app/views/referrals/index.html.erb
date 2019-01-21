@@ -28,12 +28,13 @@
         <p class="">How can we help?</p>
       </div>
     </div>
+    <%= form_for @referral do |f| %>
     <div class="row">
-
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>I am inquiring about?</p>
-        <select class="form-control input-box">
+          <%= f.select :category,  ["Active & Functional Conditioning", "Community Rehabilitation Services", "Cost of Future Care Assessment", "Functional Capacity Evaluation", "FCE with cognitive component", "FCE with Cost of Future Care", "Home Assessment", "Interdisciplinary Rehabilitation Services", "Job Demands Analysis (JDA)", "Medical Legal File Review", "Other", "Return to Work Support Services", "Work Simulation"], {},{class: 'form-control input-box'} %>
+        <!-- <select class="form-control input-box">
           <option value="volvo">Active & Functional Conditioning</option>
           <option value="saab">Community Rehabilitation Services</option>
           <option value="opel">Cost of Future Care Assessment</option>
@@ -49,95 +50,107 @@
           <option value="audi">Other</option>
           <option value="audi">Return to Work Support Services</option>
           <option value="audi">Work Simulation</option>
-        </select>
+        </select> -->
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Client Name</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :client_name, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Referral Person</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :name, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Date of Birth</p>
-        <input type="date" class="form-control input-box" placeholder="">
+        <%= f.date_field :client_birthday, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Company/Organization</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :company, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Client Phone #</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :client_phone, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Claim/File#</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :claim_number, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Client Address</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :client_address, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Referral Address</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :address, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Client City</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :client_city, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Referral Phone #</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :phone, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Client Postal Code</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :client_postal_code, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Referral Email</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :email, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Date of Injury/Disability</p>
-        <input type="date" class="form-control input-box" placeholder="">
+        <%= f.date_field :date_of_injury, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Referral Fax</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :client_fax, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Language(s) Spoken</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :client_language, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Relationship to Client</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :realation_to_client, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Diagnosis/Medical Concerns</p>
-        <input type="text" class="form-control input-box" placeholder="">
+        <%= f.text_field :concerns, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-3 margin-bottom-11 career-pd-left-0">
+        <p>Client is aware of referral</p>
+        <form>
+        <div class="radio-inline">
+          <label><%= f.radio_button :client_aware, true %>Yes</label>
+        </div>
+        <div class="radio-inline">
+          <label><%= f.radio_button :client_aware, false %>No</label>
+        </div>
+        </form>
+      </div>
+
+      <!-- <div class="col-sm-3 margin-bottom-11 career-pd-left-0">
         <p>Client is aware of referral</p>
         <form>
         <div class="radio-inline">
@@ -147,60 +160,44 @@
           <label><input type="radio" name="optradio">No</label>
         </div>
         </form>
-      </div>
-
-      <div class="col-sm-3 margin-bottom-11 career-pd-left-0">
-        <p>Client is aware of referral</p>
-        <form>
-        <div class="radio-inline">
-          <label><input type="radio" name="optradio" checked>Yes</label>
-        </div>
-        <div class="radio-inline">
-          <label><input type="radio" name="optradio">No</label>
-        </div>
-        </form>
-      </div>
+      </div> -->
 
 
       <div class="col-sm-3 margin-bottom-11 career-pd-left-0">
         <p>Sex of the Client</p>
         <form>
         <div class="radio-inline">
-          <label><input type="radio" name="optradio" checked>Male</label>
+          <label><%= f.radio_button :client_sex, "Male" %>Male</label>
         </div>
         <div class="radio-inline">
-          <label><input type="radio" name="optradio">Female</label>
+          <label><%= f.radio_button :client_sex, "Female" %>Female</label>
         </div>
         <div class="radio-inline">
-          <label><input type="radio" name="optradio">Other</label>
+          <label><%= f.radio_button :client_sex, "Other" %>Other</label>
         </div>
         </form>
       </div>
 
       <div class="col-sm-3 margin-bottom-11 career-pd-left-0">
         <p>How did you hear about us?</p>
-        <!-- <input type="" class="form-control input-box" placeholder=""> -->
-        <select class="form-control input-box">
-          <option value="volvo">Advertising</option>
-          <option value="saab">Brochure</option>
-          <option value="opel">Health Care Provider</option>
-          <option value="audi">Returning Customer</option>
-          <option value="audi">Other</option>
-          <option value="audi">Word of Mouth</option>
-        </select>
+
+        <%= f.select :advertisement,  ["Advertising", "Brochure", "Health Care Provider", "Returning Customer", "FCE with cognitive component", "FCE with Cost of Future Care", "Home Assessment", "Other", "Word of Mouth"], {},{class: 'form-control input-box'} %>
+
       </div>
 
       <div class="form-group col-sm-12 career-pd-left-0 career-pd-right-0" >
-        <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Additional Comment"></textarea>
+        <%= f.text_area :content, class:"form-control", style: "height: 339px; width: 100%",
+        placeholder: "Additional Comment" %>
       </div>
 
       <div class="row">
         <div class="col-3">
-          <button class="cta-see-team" style="width: 181px; margin-bottom: 20px;">Submit</button>
+          <%= f.submit "Submit", class:"cta-see-team", style:"width: 181px; margin-bottom: 20px;" %>
         </div>
       </div>
 
   </div>
+  <% end %>
 </div>
 
 <%= render "layouts/bottom_cta_card" %>

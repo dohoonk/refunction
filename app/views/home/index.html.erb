@@ -20,7 +20,7 @@
             <div class="row justify-content-center">
               <p>Referring someone?</p>
             </div>
-            <a href="/referrals"><div class="nav-cta-referral"> Make a Referral</div></a>
+            <a href="/referrals"><div class="nav-cta-referral"> Make a Service Referral</div></a>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
     </div>
     <div class="row">
       <div class="col-sm-6 text-center">
-        <i class="fas fa-hammer mb-fa-index" style="font-size: 56px"></i>
+        <i class="fas fa-search mb-fa-index" style="font-size: 56px"></i>
         <h3>Re:<span class="font-lb">View</span></h3>
           <div>
             <div class="blue-dot"></div> MedLegal Functional Capacity Evaluations
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="col-sm-6 col-xs-6 text-center mg-top-50">
-        <i class="fas fa-search mb-fa-index" style="font-size: 56px"></i>
+        <i class="fas fa-hammer mb-fa-index" style="font-size: 56px"></i>
         <h3>Re:<span class="font-lb">Build<span></h3>
           <div>
             <div class="blue-dot"></div> Functional Capacity Evaluations
@@ -227,7 +227,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="">
                   <%= image_tag("quotation_mark_blue.png", class:"mg-right-13") %>
                   <span class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build</span>
                 </div>
@@ -311,7 +311,7 @@
               </div>
             </div>
           </div>
-          <div class="card-body">
+          <div class="card-body" style="border: 1px solid #35B4E6;">
             <%= image_tag("quotation_mark_blue.png", class:"mg-right-13") %>
             <span class="card-text"><%= truncate(f.description, length: 250) %> </span>
           </div>
@@ -561,21 +561,24 @@
         </ul>
       </div>
       <div class="col-sm-6">
+        <%= form_for(@admin_enquiry) do |f| %>
         <h5 class="bold">Contact Us</h5>
         <div class="highlight-small"></div>
+
+          <%= f.text_field :first_name, class:"form-control text-area-box", placeholder: "Name" %>
+
+
+          <%= f.text_field :email, class:"form-control text-area-box", placeholder: "Email"%>
+
+
+          <%= f.text_field :phone, class:"form-control text-area-box", placeholder: "Phone" %>
+
         <div class="form-group">
-          <input type="text" class="text-area-box" placeholder="Name">
-          <input type="text" class="text-area-box" placeholder="Email">
-          <input type="text" class="text-area-box" placeholder="Phone">
-          </div>
-        <!-- <div class="email">
-          <span>Email</span>
-        </div> -->
-        <div class="form-group">
-          <!-- <label for="comment">Comment:</label> -->
-          <textarea class="form-control text-area-box" rows="5" id="comment"></textarea>
+
+          <%= f.text_area :content, class:"form-control text-area-box", rows:"5"  %>
         </div>
         <button class="footer-submit-btn">Submit</button>
+        <% end %>
       </div>
     </div>
   </div>

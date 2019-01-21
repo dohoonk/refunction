@@ -10,12 +10,12 @@
     <%= render 'layouts/admin_nav' %>
 
 
-    <div class="admin-body col-sm-10">
-      <div class="admin-team-search-bar">
+    <div class="admin-body col-sm-10" >
+      <div class="admin-team-search-bar" style="min-height: 900px;">
         <div class="container-fluid">
           <div class="row">
             <div class="search-top col-sm-12">
-              <p>Published Job Posting</p>
+              <p>Enquiries</p>
             </div>
           </div>
           <div class="row admin-search-padding">
@@ -28,31 +28,24 @@
                       <th scope="col">Name</th>
                       <th scope="col">Phone</th>
                       <th scope="col">Email</th>
-                      <th scope="col">Message</th>
-                      <th scope="col">Action</th>
+                      <th scope="col" style="width: 50%">Message</th>
+                      <th scope="col">view</th>
+                      <th scope="col">Delete</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">Oct 1st 2018</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>dsafdsafdsafdasfdasfdasfsafdafdsafasfasfdsafd</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
+                    <% @enquiries.each do |f| %>
+                      <tr>
+                        <th scope="row"><%= f.created_at.to_date %></th>
+                        <td><%= f.first_name %> <%= f.last_name %></td>
+                        <td><%= f.phone %></td>
+                        <td><%= f.email %></td>
+                        <td><%= truncate(f.content, length: 40) %></td>
+                        <td><%= link_to "Show", admin_enquiry_path(f) %></td>
+                        <td><%= link_to "Delete", admin_enquiry_path(f), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                      </tr>
+                    <% end %>
+
                   </tbody>
               </table>
               </div>

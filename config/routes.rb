@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get '/counsellors', to: "our_teams#counsellors"
   resources :users
   resources :admin_teams
+  get '/index_original', to: "admin_teams#index_original"
+  post 'team_archive/:id', to: "admin_teams#archive", as:'team_archive'
   resources :members
   resources :admin_careers
   resources :admin_testimonials
@@ -44,13 +46,14 @@ Rails.application.routes.draw do
   post 'testimonial_archive/:id', to: "admin_testimonials#archive", as:'testimonial_archive'
   post 'careers_archive/:id', to: "admin_careers#archive", as:'career_archive'
 
-  resources :admin_enquries
+  resources :admin_enquiries
   resources :referrals
 
   get '/login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  resources :admin_referrals
   root to: 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

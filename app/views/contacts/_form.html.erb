@@ -1,0 +1,30 @@
+<%= form_for @enquiry do |f| %>
+  <div class="row">
+    <div class="col-sm-6 margin-bottom-11">
+      <%= f.text_field :first_name, class:"form-control input-box", placeholder:"First Name" %>
+    </div>
+    <div class="col-sm-6 margin-bottom-11">
+      <%= f.text_field :last_name, class:"form-control input-box", placeholder:"Last Name" %>
+    </div>
+    <div class="col-sm-12 margin-bottom-11">
+      <%= f.text_field :phone, class:"form-control input-box", placeholder:"Phone" %>
+    </div>
+    <div class="col-sm-12 margin-bottom-11">
+      <%= f.text_field :email, class:"form-control input-box", placeholder:"Email" %>
+    </div>
+    <div class="col-sm-12 margin-bottom-11">
+      <%= f.text_field :department, class:"form-control input-box", placeholder:"Department" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :content, class:"form-control", placeholder:"How can we help you?", style: "height: 339px", row:"3" %>
+    <!-- <textarea class="form-control" style="height: 339px" id="exampleFormControlTextarea1" rows="3" placeholder="Leave us a message"></textarea> -->
+  </div>
+
+  <div class="row justify-content-between">
+    <div class="col-3">
+      <%= f.submit "Submit", class:"cta-see-team", style:"width: 181px" %>
+
+    </div>
+  </div>
+<% end %>

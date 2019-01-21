@@ -1,0 +1,2 @@
+class AdminReferral < ApplicationRecord
+end

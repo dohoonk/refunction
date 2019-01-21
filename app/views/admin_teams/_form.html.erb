@@ -1,0 +1,69 @@
+<div class="container card-inner-padding">
+  <%= form_for (@admin_team) do |f| %>
+  <div class="row justify-content-between mg-left card-margin-bottom">
+    <div>
+
+      <%= f.label :image %><br>
+      <%= f.file_field :image,  onchange:"readURL(this)"%>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+         <img id="img_prev" src="#" alt="Image Preview" />
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :first_name, class:"form-control input-box", placeholder: "First Name" %>
+          <!-- <input type="text" class="form-control input-box" placeholder="First name"> -->
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+          <!-- <input type="text" class="form-control input-box" placeholder="Last name"> -->
+          <%= f.text_field :last_name, class:"form-control input-box", placeholder: "last Name" %>
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :title, class:"form-control input-box", placeholder: "title" %>
+          <!-- <input type="text" class="form-control input-box" placeholder="Email"> -->
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+          <%= f.text_field :occupation, class:"form-control input-box", placeholder: "occupation" %>
+          <!-- <input type="text" class="form-control input-box" placeholder="Phone"> -->
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+          <input type="text" class="form-control input-box" placeholder="Email">
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+          <input type="text" class="form-control input-box" placeholder="Phone">
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
+          <input type="text" class="form-control input-box" placeholder="Email">
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+          <input type="text" class="form-control input-box" placeholder="Phone">
+        </div>
+        <div>
+          <%= f.collection_select :job_category_id, JobCategory.all, :id, :title %>
+        </div>
+        <!-- <div class="form-group col-sm-12" style="padding-right: 0px; padding-left: 0px;">
+          <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea>
+        </div> -->
+      </div>
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <%= f.text_area :bio, :class => "tinymce", :rows => 40, :cols => 30 %>
+      <%= tinymce %>
+      <!-- <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea> -->
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea>
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <%= f.submit "Save", class:"admin-button-gray" %>
+      <!-- <button class="admin-button-blue">Save As Draft</button> -->
+        <%= f.submit "Save & Publish", class:"admin-button-gray", value: "Save & Publish" %>
+      <button class="admin-button-red">Delete</button>
+    </div>
+    <% end %>
+  </div>
+</div>

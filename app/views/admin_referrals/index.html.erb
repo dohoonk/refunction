@@ -1,0 +1,73 @@
+<div class="admin-nav">
+  <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
+  </a>
+  <button class="admin-log-out-btn"> Log out</button>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <%= render 'layouts/admin_nav' %>
+
+
+    <div class="admin-body col-sm-10">
+      <div class="admin-team-search-bar" style="min-height: 900px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="search-top col-sm-12">
+              <p>Published Job Posting</p>
+            </div>
+          </div>
+          <div class="row admin-search-padding">
+            <div class="col-sm-12">
+              <div class="row">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Phone</th>
+                      <th scope="col">Fax</th>
+                      <th scope="col">Company</th>
+                      <th scope="col">Client Name</th>
+
+                      <th scope="col"">Client Phone</th>
+                      <th scope="col"">Client Aware</th>
+                      <th scope="col"">Category</th>
+                      <th scope="col"">Advertisement</th>
+                      <th scope="col">view</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @referrals.each do |f| %>
+                      <tr>
+                        <th scope="row"><%= f.created_at.to_date %></th>
+                        <td><%= f.name %></td>
+                        <td><%= f.email %></td>
+                        <td><%= f.phone %></td>
+                        <td><%= f.client_fax %></td>
+                        <td><%= f.company %></td>
+                        <td><%= f.client_name %></td>
+
+                        <td><%= f.client_phone %></td>
+                        <td><%= f.client_aware %></td>
+                        <td><%= f.category%></td>
+                        <td><%= f.advertisement%></td>
+                        <td><%= link_to "Show", admin_referral_path(f) %></td>
+                        <td><%= link_to "Delete", admin_referral_path(f), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                      </tr>
+                    <% end %>
+
+                  </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
