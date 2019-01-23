@@ -4,4 +4,8 @@ class HomeController < ApplicationController
     @admin_enquiry = AdminEnquiry.new
     @featured_teams = AdminTeam.order("RANDOM()").limit(4)
   end
+
+  def faq
+    @admin_enquiry = AdminEnquiry.new
+  end
 end

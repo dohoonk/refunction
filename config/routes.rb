@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'users/new'
 
   get 'home/index'
+  get 'faq', to: "home#faq", as: 'faq'
   resources :services, only: [:index, :show]
   get '/functional_evaluation', to: 'services#functional_evaluation'
   get '/cost_of_future_care', to: 'services#cost_of_future_care'

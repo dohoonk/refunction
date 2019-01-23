@@ -11,6 +11,7 @@ class AdminEnquiriesController < ApplicationController
     @enquiry = AdminEnquiry.new(admin_enquiry_params)
     if @enquiry.save
       EnquiryNotifierMailer.send_signup_email(@enquiry).deliver
+      EnquiryNotifierMailer.send_received_email(@enquiry).deliver
       flash[:notice] = 'Thank you for contacting us!'
       redirect_back(fallback_location: root_path)
     else

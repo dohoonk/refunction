@@ -7,4 +7,10 @@ class EnquiryNotifierMailer < ApplicationMailer
     mail( :to => 'tonykim.tech@gmail.com',
     :subject => 'Customer Enquiry' )
   end
+
+  def send_received_email(enquiry)
+    @enquiry = enquiry
+    mail( :to => @enquiry.email,
+    :subject => 'Thank you for contacting us' )
+  end
 end
