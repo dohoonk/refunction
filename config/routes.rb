@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/job_demands_analyses', to: 'services#job_demands_analyses'
   get '/ergononmic_risk_factor_analyses', to: 'services#ergononmic_risk_factor_analyses'
   get '/clinical_counselling_services', to: 'services#clinical_counselling_services'
+  get '/psychology_assessment', to: 'services#psychology_assessment'
   resources :about_us, only: [:index]
   resources :testimonials
   resources :careers, only: [:index, :show]

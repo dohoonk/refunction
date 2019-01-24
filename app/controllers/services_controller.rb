@@ -37,4 +37,7 @@ class ServicesController < ApplicationController
 
   def clinical_counselling_services
   end
+
+  def psychology_assessment
+  end
 end
