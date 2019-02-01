@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
   get 'faq', to: "home#faq", as: 'faq'
-  resources :services, only: [:index, :show]
+  resources :services
+  get '/service_index_admin', to: 'services#index_admin'
   get '/functional_evaluation', to: 'services#functional_evaluation'
   get '/cost_of_future_care', to: 'services#cost_of_future_care'
   get '/medical_legal_consultation', to: 'services#medical_legal_consultation'

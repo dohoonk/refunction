@@ -1,0 +1,36 @@
+<%= form_for(@service) do |f| %>
+<div class="container card-inner-padding">
+  <div class="row justify-content-between mg-left card-margin-bottom">
+    <div>
+
+      <%= f.label :picture %><br>
+      <%= f.file_field :picture,  onchange:"readURL(this)"%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+         <img id="img_prev" src="#" alt="Image Preview" />
+    </div>
+
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :title, class:"form-control input-box", placeholder: "Title" %>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <%= f.text_area :preview_description, :class => "form-control input-box", :rows => 5, :cols => 30 %>
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 30 %>
+      <%= tinymce %>
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <%= f.submit "Save", class:"admin-button-blue" %>
+      <%= f.submit "Save & Publish", class:"admin-button-gray", value: "Save & Publish" %>
+      <button class="admin-button-red">Delete</button>
+    </div>
+  </div>
+<% end %>
