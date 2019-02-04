@@ -1,6 +1,18 @@
+menubar: false
+paste_merge_formats: true
+paste_retain_style_properties: all
 toolbar:
-  - styleselect | bold italic | undo redo
-  - image | link
+  - formatselect | fontselect | fontsizeselect | bold | italic | underline | strikethrough | alignleft | aligncenter | alignjustify | alignright
+  - bullist | numlist | outdent | indent | blockquote | forecolor | backcolor | undo | redo | link | unlink | preview | hr | searchreplace
 plugins:
-  - image
   - link
+  - paste
+  - importcss
+  - autolink
+  - lists
+  - wordcount
+  - colorpicker
+  - hr
+  - preview
+  - searchreplace
+  - textcolor

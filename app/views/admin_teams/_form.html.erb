@@ -20,32 +20,29 @@
         </div>
         <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
           <!-- <input type="text" class="form-control input-box" placeholder="Last name"> -->
-          <%= f.text_field :last_name, class:"form-control input-box", placeholder: "last Name" %>
+          <%= f.text_field :last_name, class:"form-control input-box", placeholder: "Last Name" %>
         </div>
         <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
-          <%= f.text_field :title, class:"form-control input-box", placeholder: "title" %>
+          <%= f.text_field :title, class:"form-control input-box", placeholder: "Title" %>
           <!-- <input type="text" class="form-control input-box" placeholder="Email"> -->
         </div>
         <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
-          <%= f.text_field :occupation, class:"form-control input-box", placeholder: "occupation" %>
+          <%= f.text_field :occupation, class:"form-control input-box", placeholder: "Occupation" %>
           <!-- <input type="text" class="form-control input-box" placeholder="Phone"> -->
         </div>
         <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
-          <%= f.file_field :resume, class:"form-control input-box", placeholder: "First Name" %>
+          <%= f.text_field :email, class:"form-control input-box", placeholder: "Email" %>
+        </div>
+        <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
+          <%= f.text_field :phone, class:"form-control input-box", placeholder: "Phone" %>
+        </div>
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.label :resmue %>
+          <br>
+          <%= f.file_field :resume, class:"", placeholder: "First Name" %>
           <!-- <input type="text" class="form-control input-box" placeholder="First name"> -->
         </div>
-        <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
-          <input type="text" class="form-control input-box" placeholder="Email">
-        </div>
-        <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
-          <input type="text" class="form-control input-box" placeholder="Phone">
-        </div>
-        <div class="col-sm-6 margin-bottom-11" style="padding-left: 0px;">
-          <input type="text" class="form-control input-box" placeholder="Email">
-        </div>
-        <div class="col-sm-6 margin-bottom-11" style="padding-right: 0px;">
-          <input type="text" class="form-control input-box" placeholder="Phone">
-        </div>
+
         <div>
           <%= f.collection_select :job_category_id, JobCategory.all, :id, :title %>
         </div>
@@ -59,9 +56,9 @@
       <%= tinymce %>
       <!-- <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea> -->
     </div>
-    <div class="col-sm-12 card-margin-top">
+    <!-- <div class="col-sm-12 card-margin-top">
       <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea>
-    </div>
+    </div> -->
     <div class="col-sm-12 card-margin-top">
       <%= f.submit "Save", class:"admin-button-gray" %>
       <!-- <button class="admin-button-blue">Save As Draft</button> -->
