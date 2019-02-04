@@ -68,6 +68,6 @@ class AdminTeamsController < ApplicationController
   private
 
   def admin_team_params
-    params.require(:admin_team).permit(:first_name, :last_name, :title, :occupation, :bio, :archived, :job_category_id, :image)
+    params.require(:admin_team).permit(:first_name, :last_name, :title, :occupation, :bio, :archived, :job_category_id, :image, :resume)
   end
 end

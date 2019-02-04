@@ -79,7 +79,7 @@
               <%= raw(@admin_team.bio) %>
             </p>
             <div class="row padding-top-50">
-              <div class="cta-see-team"> Download CV</div>
+              <%= link_to "Download CV", @admin_team.resume.url, class:"cta-see-team", target:"_blank" %>
             </div>
 
           </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190127001540) do
+ActiveRecord::Schema.define(version: 20190204190511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20190127001540) do
     t.bigint "job_category_id"
     t.string "image"
     t.boolean "published"
+    t.string "resume"
     t.index ["job_category_id"], name: "index_admin_teams_on_job_category_id"
   end
 
