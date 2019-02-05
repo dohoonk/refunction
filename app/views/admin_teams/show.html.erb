@@ -16,13 +16,17 @@
                 <span class="font-lb bold"><%= @admin_team.first_name %> <%= @admin_team.last_name %></span>
                 <p class="card-text font-size-sm"><%= @admin_team.title %></p>
                 <p class="card-text font-size-sm"><%= @admin_team.occupation %></p>
+                <p class="card-text font-size-sm" style="margin-bottom: 0px;">Phone: <%= @admin_team.phone %></p>
+                <p class="card-text font-size-sm">Email: <%= @admin_team.email %></p>
               </div>
             </div>
           </div>
           <div class="col-sm-8 mg-bt-20">
             <p class="about-us-header" style="margin-bottom: 2px;"><%= @admin_team.first_name %> <%= @admin_team.last_name %>
-            <br>
-            <span class="font-lb font-title"><%= @admin_team.title %></span></p>
+            </p>
+            <p>
+              <span class="font-lb font-title"><%= @admin_team.title %></span>
+            </p>
             <p class="card-text font-size-sm"><%= @admin_team.occupation %></p>
             <p>
               <%= raw(@admin_team.bio) %>
