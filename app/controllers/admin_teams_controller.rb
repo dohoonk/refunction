@@ -46,6 +46,9 @@ class AdminTeamsController < ApplicationController
     end
     @admin_team.save
     redirect_to index_original_path
+
+
+    
   end
 
 
