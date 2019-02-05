@@ -20,61 +20,10 @@
             </div>
           </div>
           <div class="col-sm-8 mg-bt-20">
-            <p class="about-us-header" style="margin-bottom: 2px;"><%= @admin_team.first_name %> <%= @admin_team.last_name %> <span class="font-lb"><%= @admin_team.title %></span></p>
+            <p class="about-us-header" style="margin-bottom: 2px;"><%= @admin_team.first_name %> <%= @admin_team.last_name %>
+            <br>
+            <span class="font-lb font-title"><%= @admin_team.title %></span></p>
             <p class="card-text font-size-sm"><%= @admin_team.occupation %></p>
-            <!-- <p>
-              Edgar graduated in 1999 with a Bachelor of Science degree in Occupational Therapy. He is a Certified Work Capacity Evaluator (Roy Matheson and Associates). His current practice encompasses medical legal consultations, including Functional Capacity Evaluations, Cost of Future Care Assessments, and File Reviews.
-            </p>
-            <p>
-              Edgar strives to maintain a balance between referrals from both Plaintiff and Defense counsels. He has qualified as an Expert Witness in the Supreme Court of British Columbia in the areas of Functional Capacity Evaluation, Work Capacity Evaluation, Cost of Future Care Analysis, Functional Analysis, Occupational Therapy and Ergonomics.
-            </p>
-
-
-            <div class="mg-top-20 section-desc">
-              <p class="section-desc">
-                Credentials
-              </p>
-            </div>
-            <div>
-              <div class="blue-dot"></div>Bachelor of Science, Occupational Therapy, <span class="bold-mx">University of British Columbia</span>, Vancouver, BC; 1999
-            </div>
-            <div>
-              <div class="blue-dot"></div>Diploma, Business Administration, <span class="bold-mx">British Columbia Institute of Technology</span>, Burnaby, BC; 1996
-            </div>
-            <div>
-              <div class="blue-dot"></div>Bachelor of Science, Biochemistry,<span class="bold-mx">University of British Columbia</span>, BC; 1993
-            </div>
-            <div class="mg-top-20 section-desc">
-              <p class="section-desc">
-                Current Practice Areas
-              </p>
-            </div>
-            <div>
-              <div class="blue-dot"></div>Medical Legal Functional Capacity Evaluations
-            </div>
-            <div>
-              <div class="blue-dot"></div>Cost of Future Care Assessments
-            </div>
-            <div>
-              <div class="blue-dot"></div>Medical Legal Consultations/File Reviews
-            </div>
-            <div>
-              <div class="blue-dot"></div>Return to Work Support Services
-            </div>
-            <div class="mg-top-20 section-desc">
-              <p class="section-desc">
-                Current Practice Areas
-              </p>
-            </div>
-            <div>
-              <div class="blue-dot"></div>Full-time Registration, College Of Occupational Therapists of British Columbia
-            </div>
-            <div>
-              <div class="blue-dot"></div>Full-time Member, Canadian Association of Occupational Therapists
-            </div>
-            <div>
-              <div class="blue-dot"></div>Full-time Member, World Federation of Occupational Therapists
-            </div> -->
             <p>
               <%= raw(@admin_team.bio) %>
             </p>
