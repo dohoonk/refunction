@@ -27,7 +27,7 @@
             <div class="highlight"></div>
             <ul>
               <% @careers.each do |f| %>
-              <li><span class="current-listing-header"><%= f.posting_position %> Position</span>
+              <li><span class="current-listing-header"><%= link_to "#{f.posting_position} Position", career_path(f) %> </span>
                 <span class="current-listing-header-sub"><%= f.location %></span>
               </li>
               <% end %>
