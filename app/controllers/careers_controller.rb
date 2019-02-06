@@ -4,6 +4,7 @@ class CareersController < ApplicationController
   end
 
   def show
-    # @career = AdminCareer.find(params[:id])
+    @careers = AdminCareer.all
+    @career = AdminCareer.find(params[:id])
   end
 end

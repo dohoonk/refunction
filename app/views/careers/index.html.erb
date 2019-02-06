@@ -26,15 +26,11 @@
             <h5>Learn about our services</h5>
             <div class="highlight"></div>
             <ul>
-              <li><span class="current-listing-header">Kinesiologist Position</span>
-                <span class="current-listing-header-sub">Lower Mainland & Nanaimo</span>
+              <% @careers.each do |f| %>
+              <li><span class="current-listing-header"><%= f.posting_position %> Position</span>
+                <span class="current-listing-header-sub"><%= f.location %></span>
               </li>
-              <li><span class="current-listing-header">Occupational Therapist</span>
-                <span class="current-listing-header-sub">Lower Mainland</span>
-              </li>
-              <li><span class="current-listing-header">Occupational Therapist</span>
-                <span class="current-listing-header-sub">Nanaimo</span>
-              </li>
+              <% end %>
             </ul>
           </div>
         </div>
@@ -84,30 +80,6 @@
           </div>
 
           <% end %>
-
-          <div class="col-sm-6 careers-box">
-            <div class="row ">
-              <div class="col-sm-5 careers-image" style="padding-left: 0px; padding-right: 0px;">
-                <%= image_tag("oct_job.png", class:"mb-dp-none") %>
-              </div>
-              <div class="col-sm-7 reset" style="padding-left: 5px;padding-right: 0px;">
-                <div class="card-body reset" style="padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
-                  <div>
-                    <span class="careers-posting-date">Posted June 30, 2018</span>
-                  </div>
-                  <div>
-                    <span class="careers-posting-title bold">Occupational Therapist</span>
-                  </div>
-
-                  <div class="highlight-thin careers-posting-highlight"></div>
-                  <p class="card-text" style="font-size: 0.7em; margin-bottom: 3px;">We have an opportunity for an Occupational Therapist to join our Lower Mainland group in either
-a full time or part time contractor capacity.
-                  </p>
-                  <a href="/careers/2">Apply for this position</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
 

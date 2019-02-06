@@ -25,15 +25,12 @@
             <h5>Learn about our services</h5>
             <div class="highlight"></div>
             <ul>
-              <li><span class="current-listing-header">Kinesiologist Position</span>
-                <span class="current-listing-header-sub">Lower Mainland & Nanaimo</span>
+              <% @careers.each do |f| %>
+              <li><span class="current-listing-header"><%= link_to "#{f.posting_position} Position", career_path(f) %> </span>
+                <span class="current-listing-header-sub"><%= f.location %></span>
               </li>
-              <li><span class="current-listing-header">Occupational Therapist</span>
-                <span class="current-listing-header-sub">Lower Mainland</span>
-              </li>
-              <li><span class="current-listing-header">Occupational Therapist</span>
-                <span class="current-listing-header-sub">Nanaimo</span>
-              </li>
+              <% end %>
+
             </ul>
           </div>
         </div>
