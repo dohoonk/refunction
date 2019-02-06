@@ -99,14 +99,14 @@
                           <div class="col-sm-8 reset" style="padding-left: 5px;padding-right: 0px;">
                             <div class="card-body reset" style="padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
                               <div>
-                                <span class="careers-posting-date">Posted June 30, 2018</span>
+                                <span class="careers-posting-date"><%= f.created_at.strftime("%m/%d/%Y") %></span>
                               </div>
                               <div>
-                                <span class="careers-posting-title bold"><%= f.title %></span>
+                                <span class="careers-posting-title bold"><%= f.posting_position %></span>
                               </div>
 
                               <div class="highlight-thin careers-posting-highlight"></div>
-                              <p class="card-text text-pd-right" style="font-size: 0.7em; margin-bottom: 3px;"><%= f.preview_description.truncate(200) %>
+                              <p class="card-text text-pd-right" style="font-size: 0.7em; margin-bottom: 3px;"><%= f.preview_description %>
                               </p>
 
                             </div>

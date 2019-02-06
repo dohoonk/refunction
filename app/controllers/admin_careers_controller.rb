@@ -59,6 +59,6 @@ class AdminCareersController < ApplicationController
   private
 
   def admin_career_params
-    params.require(:admin_career).permit(:title,:location,:description,:preview_description,:career)
+    params.require(:admin_career).permit(:title,:location,:description,:preview_description,:career,:posting_position)
   end
 end

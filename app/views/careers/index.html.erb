@@ -57,29 +57,33 @@
           <div class="col-sm-12" style="padding-left:0px; font-size: 1.4em; font-weight: 550;">
             <p style="margin-bottom: 0px;">Featured Openings</p>
           </div>
+          <% @careers.each do |f| %>
           <div class="col-sm-6 careers-box">
             <div class="row ">
               <div class="col-sm-5 careers-image" style="padding-left: 0px; padding-right: 0px;">
-                <%= image_tag("oct_job.png", class:"mb-dp-none") %>
+                <%= image_tag f.career.portrait_v2.url, class:"mb-dp-none" %>
+                <!-- <#%= image_tag("oct_job.png", class:"mb-dp-none") %> -->
               </div>
               <div class="col-sm-7 reset" style="padding-left: 5px;padding-right: 0px;">
                 <div class="card-body reset" style="padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
                   <div>
-                    <span class="careers-posting-date">Posted June 30, 2018</span>
+                    <span class="careers-posting-date">Posted <%= f.created_at.strftime("%m/%d/%Y") %></span>
                   </div>
                   <div>
-                    <span class="careers-posting-title bold">Kinesiologist</span>
+                    <span class="careers-posting-title bold"><%= f.posting_position %></span>
                   </div>
 
                   <div class="highlight-thin careers-posting-highlight"></div>
-                  <p class="card-text" style="font-size: 0.7em; margin-bottom: 3px;">We have an opportunity for a Kinesiologist to join our Lower Mainland group in either a full time
-or part time contractor capacity.
+                  <p class="card-text" style="font-size: 0.7em; margin-bottom: 3px;">
+                    <%= f.preview_description %>
                   </p>
-                  <a href="/careers/1">Apply for this position</a>
+                  <%= link_to "Apply for this position", career_path(f) %>
                 </div>
               </div>
             </div>
           </div>
+
+          <% end %>
 
           <div class="col-sm-6 careers-box">
             <div class="row ">
@@ -99,7 +103,7 @@ or part time contractor capacity.
                   <p class="card-text" style="font-size: 0.7em; margin-bottom: 3px;">We have an opportunity for an Occupational Therapist to join our Lower Mainland group in either
 a full time or part time contractor capacity.
                   </p>
-                  <a href="#">Apply for this position</a>
+                  <a href="/careers/2">Apply for this position</a>
                 </div>
               </div>
             </div>
@@ -115,7 +119,8 @@ a full time or part time contractor capacity.
               <option value="saab">Kinesiologist</option>
               <option value="opel">Physiotherapist</option>
               <option value="audi">Administration</option>
-              <option value="audi">Clinical Counsellor</option>
+              <option value="audi">Registered Clinical Counsellor</option>
+              <option value="audi">Psychologists</option>
               <option value="audi">Other</option>
             </select>
 
