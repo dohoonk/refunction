@@ -12,9 +12,24 @@
 
 @media screen and (max-width: 575px) {
 // @media screen and (max-width: 991px) {
+  .mb-margin-top-25 {
+    margin-top: 25px;
+  }
+
+  .mb-margin-top-40 {
+    margin-top: 45px;
+  }
 
   .full-dp-none {
     display: block;
+  }
+
+  .mb-color-bl {
+    color: black;
+  }
+
+  .message_from_director {
+    background-image: none;
   }
 
   // home page
@@ -24,6 +39,11 @@
   // 3 description cards
   .sc-mobile-top {
     margin-top: 20px;
+  }
+
+  .mobile-our-team-card {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .sc-mobile {
@@ -56,7 +76,8 @@
   .mb-nav {
     height: 59px;
     width: 100%;
-    background-image: image-url('nav-top-banner.png');
+    background-color: #1BB2EB;
+    // background-image: image-url('nav-top-banner.png');
     background-size: 336px;
   }
 
