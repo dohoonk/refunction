@@ -61,10 +61,10 @@
       <h1 class="bold how_we_can_help_title">How we can help you</h1>
     </div>
     <div class="row justify-content-center font-gray pd-bottom-31 mg-bottom-15">
-      <p class="font-gray">We all need assistance from time to time. Let us put our skills to work so you can Re:Function.</p>
+      <p class="font-gray mb-text-center">We all need assistance from time to time. Let us put our skills to work so you can Re:Function.</p>
     </div>
     <div class="row">
-      <div class="col-sm-6 text-center">
+      <div class="col-sm-6 text-center mg-top-50">
         <i class="fas fa-search mb-fa-index" style="font-size: 56px"></i>
         <h3>Re:<span class="font-lb">View</span></h3>
           <div>
@@ -98,7 +98,7 @@
           </div>
       </div>
       <div class="col-sm-6 col-xs-6 text-center mg-top-50">
-        <%= image_tag("brain.svg", style:"width: 62px;") %>
+        <%= image_tag("noun-brain.png", style:"width: 62px;") %>
         <!-- <i class="fas fa-brain mb-fa-index" style="font-size: 56px"></i> -->
         <h3>Re:<span class="font-lb">Think</span></h3>
         <div>
@@ -412,7 +412,7 @@
       <div class= "col-md-6 col-lg-3 col-xs-8 mb-mg-bottom mobile-our-team-card">
         <div class="card">
           <%= image_tag f.image.url, class:"img-fluid" %>
-          <div class="card-body">
+          <div class="card-body" style="min-height: 220px;">
             <span class="font-lb bold"><%= f.first_name %> <%= f.last_name %></span>
             <p class="card-text font-size-sm"><%= f.title %></p>
             <p class="card-text font-size-sm"><%= f.occupation %></p>
@@ -579,10 +579,12 @@
           <%= f.text_field :phone, class:"form-control text-area-box", placeholder: "Phone" %>
 
         <div class="form-group">
-
           <%= f.text_area :content, class:"form-control text-area-box", rows:"5"  %>
         </div>
         <button class="footer-submit-btn">Submit</button>
+        <div style="padding-top: 15px;">
+          <%= recaptcha_tags %>
+        </div>
         <% end %>
       </div>
     </div>
