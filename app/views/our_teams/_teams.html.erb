@@ -2,7 +2,7 @@
   <% @teams.each do |f| %>
   <div class="col-sm-4 col-lg-6 col-xl-4 mg-bt-20">
     <div class="card">
-      <%= image_tag f.image.url, class:"img-fluid border-color" %>
+      <%= image_tag f.image.url, class:"img-fluid border-color min-height-profile" %>
       <div class="card-body" style="min-height: 210px;">
         <span class="font-lb bold"><%= f.first_name %> <%= f.last_name %></span>
         <p class="card-text font-size-sm"><%= f.title %></p>
