@@ -15,7 +15,13 @@
               <div class="card-body">
                 <span class="font-lb bold"><%= @admin_team.first_name %> <%= @admin_team.last_name %></span>
                 <p class="card-text font-size-sm"><%= @admin_team.title %></p>
-                <p class="card-text font-size-sm"><%= @admin_team.occupation %></p>
+
+                <% if @admin_team.second_title != nil %>
+                  <p class="card-text font-size-sm" style="margin-bottom: 0px;"><%= @admin_team.occupation %></p>
+                  <p class="card-text font-size-sm"><%= @admin_team.second_title %></p>
+                <% else %>
+                  <p class="card-text font-size-sm"><%= @admin_team.occupation %></p>
+                <% end %>
                 <p class="card-text font-size-sm" style="margin-bottom: 0px;">Phone: <%= @admin_team.phone %></p>
                 <p class="card-text font-size-sm">Email: <%= @admin_team.email %></p>
               </div>
@@ -27,7 +33,14 @@
             <p>
               <span class="font-lb font-title"><%= @admin_team.title %></span>
             </p>
-            <p class="card-text font-size-sm"><%= @admin_team.occupation %></p>
+
+            <% if @admin_team.second_title != nil %>
+              <p class="card-text font-size-sm" style="margin-bottom: 0px;"><%= @admin_team.occupation %></p>
+              <p class="card-text font-size-sm"><%= @admin_team.second_title %></p>
+            <% else %>
+              <p class="card-text font-size-sm"><%= @admin_team.occupation %></p>
+            <% end %>
+        
             <p>
               <%= raw(@admin_team.bio) %>
             </p>

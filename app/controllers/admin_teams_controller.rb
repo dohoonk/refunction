@@ -48,7 +48,7 @@ class AdminTeamsController < ApplicationController
     redirect_to index_original_path
 
 
-    
+
   end
 
 
@@ -71,6 +71,6 @@ class AdminTeamsController < ApplicationController
   private
 
   def admin_team_params
-    params.require(:admin_team).permit(:first_name, :last_name, :title, :occupation, :bio, :archived, :job_category_id, :image, :resume, :email, :phone)
+    params.require(:admin_team).permit(:first_name, :last_name, :title, :occupation, :bio, :archived, :job_category_id, :image, :resume, :email, :phone, :second_title)
   end
 end
