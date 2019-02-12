@@ -2,8 +2,8 @@
 
 <div class="home_main_card">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-5 home_cta_card main-margin">
+    <div class="row tablet-section-height">
+      <div class="col-sm-12 col-md-12 col-lg-6 home_cta_card main-margin">
         <p class="tag-line-top">Exceptional People.</p>
         <p class="tag-line-bottom">Exceptional Service.</p>
         <p class="tag-line-bottom-sub">Function is our Focus</p>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="row home_main_card_sub_cards ">
-      <div class="col-sm-4 services-card bg-lb sc-mobile-top">
+      <div class="col-sm-4 services-card bg-lb sc-mobile-top table-margin-top-0">
         <div class="card-body">
           <h5 class="card-title">Our Teams</h5>
           <div class="highlight-white"></div>
@@ -115,34 +115,11 @@
 <div class="our_services main-card-padding mb-side-pd">
   <div class="container">
     <div class="row justify-content-between align-items-center ">
-      <div class="list_of_services_box">
+      <div class="list_of_services_box full">
         <h5>Learn about our services</h5>
         <div class="highlight"></div>
         <ul>
-          <!-- <li>Community Rehabilitation Services</li>
-          <li>Physiotherapy Services</li>
-          <li>Actve & Functional Conditioning Programs</li>
-          <li>Psychology Assessment & Counselling Services</li>
-          <li>Interdisciplinary Rehabilitation Assessments</li>
-          <li>Functional Capacity Evaluations</li>
-          <li>Cost of Future Care Evaluations</li>
-          <li>Medical Legal Consultations</li>
-          <li>Job Demand Analyses</li>
-          <li>Ergonomic and Risk Factor Analyses</li>
-          <li>Brain Injury Assessment and Treatment</li>
-          <li>Return to Work Support</li> -->
-          <!-- <li>Functional Capacity Evaluations</li>
-          <li>Cost of Future Care Evaluations</li>
-          <li>Medical Legal Consultations</li>
-          <li>Community Rehabilitation Services</li>
-          <li>Physiotherapy Services</li>
-          <li>Active & Functional Conditioning Programs</li>
-          <li>Interdisciplinary Rehabilitation Assessments</li>
-          <li>Job Demands Analyses</li>
-          <li>Ergonomic and Risk Factor Analyses</li> -->
-          <!-- <li>Ergonomic and Risk Factor Analyses</li>
-          <li>Brain Injury Assessment and Treatment</li>
-          <li>Return to Work Support</li> -->
+
           <li><a href="/functional_evaluation">Functional Capacity Evaluations</a></li>
           <li><a href="/cost_of_future_care">Cost of Future Care Evaluations</a></li>
           <li><a href="/medical_legal_consultation">Medical Legal Consultations</a></li>
@@ -158,6 +135,38 @@
         </ul>
       </div>
 
+      <div class="list_of_services_box list_of_services_box_tablet ">
+        <div class="row">
+          <div class="col-sm-12">
+            <h5>Learn about our services</h5>
+            <div class="highlight"></div>
+          </div>
+        </div>
+        <div class= "row">
+          <div class="col-sm-6">
+
+            <ul>
+              <li><a href="/functional_evaluation">Functional Capacity Evaluations</a></li>
+              <li><a href="/cost_of_future_care">Cost of Future Care Evaluations</a></li>
+              <li><a href="/medical_legal_consultation">Medical Legal Consultations</a></li>
+              <li><a href="/community_rehabilitation">Community Rehabilitation Services</a></li>
+              <li><a href="clinical_counselling_services">Clinical Counselling Services</a></li>
+              <li><a href="/physiotherapy">Physiotherapy Services</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul>
+
+              <li><a href="/functional_conditioning">Active & Functional Conditioning Programs</a></li>
+              <li><a href="/interdisciplinary_rehabilitation">Interdisciplinary Rehabilitation Assessments</a></li>
+              <li><a href="job_demands_analyses">Job Demands Analyses</a></li>
+              <li><a href="ergononmic_risk_factor_analyses">Ergonomic and Risk Factor Analyses</a></li>
+
+              <li><a href="/services">Visit the Services Page</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="card mb-dp-none" style="width: 15rem;">
         <!-- <img class="card-img-top" src="/images/home_logov2.png" alt="Card image cap"> -->
@@ -208,7 +217,7 @@
     <div class="row">
 
 
-      <div id="carouselExampleIndicators" class="carousel slide full-dp-none" data-ride="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide full-dp-none tablet-dp-none" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -325,6 +334,31 @@
       <% end %>
 
 
+      <% @published_testimonials.first(2).each do |f| %>
+      <div class="col-sm-6 mb-dp-none tablet-dp-show tablet-dp-none">
+        <div class="card">
+          <div class="card-top">
+            <div class="row align-items-center mb-pd-left-21">
+              <div class="col-sm-1">
+              </div>
+              <div class="col-sm-10">
+                <div class="row">
+                  <span class="card-top-desc"><%= f.first_name %> <%= f.last_name %></span>
+                </div>
+                <div class="row">
+                  <span class="card-top-desc-sub"><%= f.title %></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body" style="border: 1px solid #35B4E6;">
+            <%= image_tag("quotation_mark_blue.png", class:"mg-right-13") %>
+            <span class="card-text"><%= truncate(f.description, length: 250) %> </span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
 
       <!-- <div class= "col-sm-4">
         <div class="card">
@@ -359,7 +393,7 @@
           <p class="title">6,941</p>
         </div>
         <div class="row justify-content-center">
-          <p class="body">Clients Re:Functioning</p>
+          <p class="body" style="text-align: center;">Clients Re:Functioning</p>
         </div>
       </div>
       <div class="col-md-4 col-lg-2">
@@ -409,7 +443,7 @@
     </div>
     <div class="row">
       <% @featured_teams.each do |f| %>
-      <div class= "col-md-6 col-lg-3 col-xs-8 mb-mg-bottom mobile-our-team-card">
+      <div class= "col-md-6 col-lg-6 col-xl-3 col-xs-8 mb-mg-bottom mobile-our-team-card">
         <div class="card">
           <%= image_tag f.image.url, class:"img-fluid" %>
           <div class="card-body" style="min-height: 220px;">
@@ -433,7 +467,7 @@
   </div>
 </div>
 
-<!-- <div class="faqs main-card-padding">
+<div class="faqs main-card-padding">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -445,9 +479,9 @@
           <div class="card">
             <div class="card-header faq-card-top" id="headingOne">
               <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <span class="bold font-size-medium" style="word-wrap: break-word;">What can I expect during my first Physiotherapy assessment?</span>
-                </button>
+                <!-- <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> -->
+                  <span class="font-size-medium" style="word-wrap: break-word; color: #19B2EB; cursor: pointer;"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What can I expect during my first Physiotherapy assessment?</span>
+                <!-- </button> -->
 
               </h5>
             </div>
@@ -462,9 +496,9 @@
           <div class="card faq-card-top">
             <div class="card-header" id="headingTwo">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <span class="bold font-size-medium">How should I prepare for my initial visit?</span>
-                </button>
+                <!-- <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> -->
+                  <span class="font-size-medium" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="word-wrap: break-word; color: #19B2EB; cursor: pointer;">How should I prepare for my initial visit?</span>
+                <!-- </button> -->
               </h5>
             </div>
 
@@ -487,9 +521,9 @@
           <div class="card">
             <div class="card-header faq-card-top" id="headingThree">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <span class="bold font-size-medium">Do I need a Doctor’s referral to see a Physiotherapist?</span>
-                </button>
+                <!-- <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> -->
+                  <span class="font-size-medium" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="word-wrap: break-word; color: #19B2EB; cursor: pointer;">Do I need a Doctor’s referral to see a Physiotherapist?</span>
+                <!-- </button> -->
               </h5>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -502,9 +536,9 @@
           <div class="card">
             <div class="card-header faq-card-top" id="headingFour">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <span class="bold font-size-medium">Do you direct bill to third-party insurance providers?</span>
-                </button>
+                <!-- <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> -->
+                  <span lass=" font-size-medium" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="word-wrap: break-word; color: #19B2EB; cursor: pointer;">Do you direct bill to third-party insurance providers?</span>
+                <!-- </button> -->
               </h5>
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
@@ -517,9 +551,9 @@
           <div class="card">
             <div class="card-header faq-card-top" id="headingFive">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  <span class="bold font-size-medium">What is your cancellation policy?</span>
-                </button>
+                <!-- <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> -->
+                  <span class=" font-size-medium" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="word-wrap: break-word; color: #19B2EB; cursor: pointer;">What is your cancellation policy?</span>
+                <!-- </button> -->
               </h5>
             </div>
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
@@ -536,12 +570,12 @@
 
     </div>
   </div>
-</div> -->
+</div>
 
 <div class="footer main-card-padding">
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-3 col-xl-3 col-lg-12">
         <h5 class="bold">Contact Information</h5>
         <div class="highlight-small"></div>
         <ul>
@@ -552,7 +586,7 @@
         </ul>
       </div>
 
-      <div class="col-sm-3 mb-margin-top-25">
+      <div class="col-sm-3 col-xl-3 col-lg-12 mb-margin-top-25">
         <h5 class="bold">Locations</h5>
         <div class="highlight-small"></div>
         <ul>
@@ -565,7 +599,7 @@
           <li><span class="dot"></span><a href="nanaimo" style="color: grey">Nanaimo Clinic</a></li>
         </ul>
       </div>
-      <div class="col-sm-6 mb-margin-top-25">
+      <div class="col-sm-6  col-xl-6 col-lg-12 mb-margin-top-25">
         <%= form_for(@admin_enquiry) do |f| %>
         <h5 class="bold">Contact Us</h5>
         <div class="highlight-small"></div>
