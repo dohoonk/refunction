@@ -7,6 +7,10 @@
   display: none;
 }
 
+.full-max-height {
+  max-height: 171px;
+}
+
 // .tablet-dp-none {
 //   display: none;
 // }
@@ -22,8 +26,18 @@
     display: none;
   }
 
+
+
+  .banner_top_deco {
+    background: none;
+  }
+
   .list_of_services_box_tablet {
     display: block;
+  }
+
+  .full-max-height {
+    max-height: auto;
   }
 
   .tablet-margin-padding-reset {
@@ -315,6 +329,12 @@
 // @media screen and (max-width: 1258px) {
 @media screen and (max-width: 575px) {
 // @media screen and (max-width: 991px) {
+
+
+  .full-max-height {
+    max-height: auto;
+  }
+
   .mb-margin-top-25 {
     margin-top: 25px;
   }
