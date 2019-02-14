@@ -23,11 +23,11 @@
   <div class="container">
     <div class="row">
       <%= render 'side_link' %>
-      <div class="col-sm-9">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9">
         <p class="about-us-header">Re:Function Team</p>
         <div class="row">
           <% @teams.each do |f| %>
-          <div class="col-sm-6 col-lg-6 col-xl-4 mg-bt-20 mobile-our-team-card">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mg-bt-20 mobile-our-team-card teams_card">
             <div class="card">
               <%= image_tag f.image.url, class:"img-fluid border-color min-height-profile"%>
               <div class="card-body" style="min-height: 220px;">
