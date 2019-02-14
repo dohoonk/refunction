@@ -54,9 +54,9 @@
             <p style="margin-bottom: 0px;">Featured Openings</p>
           </div>
           <% @careers.each do |f| %>
-          <div class="col-sm-6 careers-box">
+          <div class="col-sm-12 careers-box">
             <div class="row ">
-              <div class="col-sm-5 careers-image" style="padding-left: 0px; padding-right: 0px;">
+              <div class="col-sm-4 careers-image" style="padding-left: 0px; padding-right: 0px;">
                 <%= image_tag f.career.portrait_v2.url, class:"mb-dp-none" %>
                 <!-- <#%= image_tag("oct_job.png", class:"mb-dp-none") %> -->
               </div>
@@ -73,12 +73,13 @@
                   <p class="card-text" style="font-size: 0.7em; margin-bottom: 3px;">
                     <%= f.preview_description %>
                   </p>
-                  <div style="font-size: 8px;opacity: 0.7;color: grey;">© Re:Function Health Group All Rights Reserved</div>
+
                   <%= link_to "Apply for this position", career_path(f) %>
                 </div>
               </div>
             </div>
           </div>
+          <div style="font-size: 8px;opacity: 0.7;color: grey;">© Re:Function Health Group All Rights Reserved</div>
 
           <% end %>
 
