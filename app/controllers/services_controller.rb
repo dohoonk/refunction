@@ -1,6 +1,8 @@
 class ServicesController < ApplicationController
   def index
     @admin_enquiry = AdminEnquiry.new
+    @services = Service.all
+    @services = @services.sort_by {|x| x.display_number}
   end
 
   def index_admin
@@ -10,7 +12,8 @@ class ServicesController < ApplicationController
 
   def show
     @service = Service.find(params[:id])
-
+    @services = Service.all
+    @services = @services.sort_by {|x| x.display_number}
   end
 
   def new
