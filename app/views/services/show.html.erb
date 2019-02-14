@@ -10,30 +10,21 @@
       <%= render 'link' %>
 
       <div class="offset-sm-1 col-sm-8">
-        <div class="row">
-          <%= image_tag("Functional Capacity Evaluations.jpg", class:"card-img-top", style:"height: 400px;") %>
+        <div class="row mb-padding-top-15">
+            <%= image_tag @service.picture.url, class:"img-fluid" ,style:"height: 450px;"%>
           <div style="font-size: 8px;opacity: 0.7;color: grey;">© Re:Function Health Group All Rights Reserved</div>
         </div>
-        <div class="row">
-          <p class="show-header">Functional Capacity Evaluations</p>
-          <p class="show-font">
-            Customized Functional Capacity Evaluations address the features of the client and his or her situation. Lengthy evaluations are conducted to examine tolerance for functions over time and, if applicable, include relevant testing to examine a client’s productivity for work functions. Work or activity simulations, which we believe are an important aspect of functional testing, are included in the customized testing methodology.
-
-            <br>
-            <br>
-            Re:Function’s expert clinicians, or Certified Work Capacity Evaluators, regularly perform over 500 Functional Capacity Evaluations per year.
-            <br>
-            <br>
-            Cost of future care analysis and recommendations may be facilitated or substantiated with the information measured from the Functional Capacity Evaluation; Legal customers may want to request this service in combination with a Functional Capacity Evaluation to optimize breadth of opinion while capitalizing efficiency and cost effectiveness.
-
-
+          <p class="show-header"><%= @service.title %></p>
+          <p style="color: black;">
+            <%= raw(@service.content) %>
           </p>
-        </div>
+
       </div>
 
     </div>
   </div>
 </div>
+
 
 <%= render "layouts/bottom_cta_card" %>
 <%= render "layouts/footer" %>

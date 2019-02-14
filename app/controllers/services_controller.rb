@@ -5,10 +5,12 @@ class ServicesController < ApplicationController
 
   def index_admin
     @services = Service.all
+    # binding.pry
   end
 
   def show
-    @service = Service.first
+    @service = Service.find(params[:id])
+
   end
 
   def new
@@ -18,7 +20,7 @@ class ServicesController < ApplicationController
   def create
     @service = Service.new(service_params)
     if @service.save
-
+      redirect_to service_index_admin_path
     else
       render 'new'
     end
@@ -31,7 +33,7 @@ class ServicesController < ApplicationController
   def update
     @service = Service.find(params[:id])
     if @service.update(service_params)
-
+      redirect_to service_index_admin_path
     else
       render 'edit'
     end
@@ -79,6 +81,6 @@ class ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:title,:content,:picture)
+    params.require(:service).permit(:title,:content,:picture,:description)
   end
 end

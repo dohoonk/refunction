@@ -11,7 +11,7 @@
         <div class="row">
           <div class="col-lg-5 col-xl-4 mg-bt-20">
             <div class="card">
-              <%= image_tag @admin_team.image.portrait_v2.url %>
+              <%= image_tag @admin_team.image.url, class:"img-fluid border-color min-height-profile"%>
               <div class="card-body">
                 <span class="font-lb bold"><%= @admin_team.first_name %> <%= @admin_team.last_name %></span>
                 <p class="card-text font-size-sm"><%= @admin_team.title %></p>
