@@ -1,6 +1,7 @@
 class TestimonialsController < ApplicationController
   def index
-    @published_testimonials = AdminTestimonial.where(published: true)
+    # @published_testimonials = AdminTestimonial.where(published: true).paginate
+    @published_testimonials = AdminTestimonial.paginate(:page => params[:page], :per_page => 6)
   end
 
   def show
