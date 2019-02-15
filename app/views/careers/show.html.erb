@@ -37,14 +37,17 @@
 
       <div class="col-md-12 offset-xl-1 col-xl-8">
 
-        <div class="row">
+    
           <p class="show-header">
             <%= @career.title + "-" + @career.location %>
+            <br>
+            <%= @career.type_of_job %>
           </p>
           <p class="show-font">
           <%= raw(@career.description) %>
           </p>
-        </div>
+
+
 
 
         <div class="row careers-featured-opening-empty">
