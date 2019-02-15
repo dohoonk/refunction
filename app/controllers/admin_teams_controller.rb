@@ -2,13 +2,16 @@ class AdminTeamsController < ApplicationController
   def index
     @search = AdminTeam.search(params[:q])
     @teams = @search.result
+    @teams = @teams.sort_by {|x| x.first_name}
   end
 
   def index_original
     @search = AdminTeam.search(params[:q])
     @admin_teams = @search.result
     @published_admin_teams = AdminTeam.where(published: true)
+    @published_admin_teams = @published_admin_teams.sort_by {|x| x.first_name}
     @archived_admin_teams = AdminTeam.where(published: false)
+    @archived_admin_teams = @archived_admin_teams.sort_by {|x| x.first_name}
   end
 
   def show
