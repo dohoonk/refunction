@@ -380,9 +380,13 @@ border-right: 0.5px solid gainsboro;
   }
 }
 
-@media only screen and (max-width: 990px) and (min-width: 768px)  {
+@media only screen and (max-width: 767px) and (min-width: 578px)  {
   .mb-about-us-building {
     height: 173px !important;
+  }
+
+  .services-show {
+    height: 312px;
   }
 }
 
@@ -391,7 +395,7 @@ border-right: 0.5px solid gainsboro;
 // @media screen and (max-width: 991px) {
 
   .services-show {
-    height: 348px;
+    height: 270px;
    }
 
   .full-max-height {
