@@ -35,8 +35,12 @@
                 <% else %>
                   <p class="card-text font-size-sm" style="font-weight: 600;"><%= @admin_team.occupation %></p>
                 <% end %>
-                <p class="card-text font-size-sm" style="margin-bottom: 0px;">Phone: <%= @admin_team.phone %></p>
-                <p class="card-text font-size-sm">Email: <%= @admin_team.email %></p>
+                <p class="card-text font-size-sm" style="margin-bottom: 0px;">Phone:
+                <a href="tel:+<%= @admin_team.phone %>" ><%= @admin_team.phone %></a>
+                </p>
+                <p class="card-text font-size-sm">Email:
+                <a href="mailto:<%= @admin_team.email %>" ><%= @admin_team.email %></a>
+                </p>
               </div>
             </div>
           </div>
