@@ -1,4 +1,6 @@
-
+.services-show {
+  height: 450px;
+}
 .pd-bottom-40 {
   padding-bottom: 40px;
 }
@@ -73,7 +75,6 @@ border-right: 0.5px solid gainsboro;
   .full {
     display: none;
   }
-
 
 
   .banner_top_deco {
@@ -373,11 +374,25 @@ border-right: 0.5px solid gainsboro;
 
 }
 
+@media only screen and (max-width: 990px) and (min-width: 768px)  {
+  .mb-about-us-building {
+    height: 239px !important;
+  }
+}
+
+@media only screen and (max-width: 990px) and (min-width: 768px)  {
+  .mb-about-us-building {
+    height: 173px !important;
+  }
+}
 
 // @media screen and (max-width: 1258px) {
 @media screen and (max-width: 575px) {
 // @media screen and (max-width: 991px) {
 
+  .services-show {
+    height: 348px;
+   }
 
   .full-max-height {
     max-height: auto;
