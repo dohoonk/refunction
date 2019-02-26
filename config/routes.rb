@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   resources :admin_careers
   resources :admin_testimonials
   resources :admin_enquiries
+  resources :job_applications
 
   post 'testimonial_archive/:id', to: "admin_testimonials#archive", as:'testimonial_archive'
   post 'careers_archive/:id', to: "admin_careers#archive", as:'career_archive'
