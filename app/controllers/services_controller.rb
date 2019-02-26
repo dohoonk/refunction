@@ -3,10 +3,12 @@ class ServicesController < ApplicationController
     @admin_enquiry = AdminEnquiry.new
     @services = Service.all
     @services = @services.sort_by {|x| x.display_number}
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def index_admin
     @services = Service.all
+    @admin_enquiry = AdminEnquiry.new
     # binding.pry
   end
 
@@ -14,6 +16,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
     @services = Service.all
     @services = @services.sort_by {|x| x.display_number}
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def new

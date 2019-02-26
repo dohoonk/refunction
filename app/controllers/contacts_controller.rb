@@ -1,30 +1,37 @@
 class ContactsController < ApplicationController
   def index
     @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def surrey
     @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def vancouver
     @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def coquitlam
     @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def abbotsford
     @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def victoria
     @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def nanaimo
     @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def create

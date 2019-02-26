@@ -1,9 +1,11 @@
 class MembersController < ApplicationController
   def show
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def new
     @member = Member.new
+    @admin_enquiry = AdminEnquiry.new
   end
 
   def create
