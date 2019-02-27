@@ -1,0 +1,65 @@
+<div class="admin-nav">
+  <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
+  </a>
+  <button class="admin-log-out-btn"> Log out</button>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <%= render 'layouts/admin_nav' %>
+
+
+    <div class="admin-body col-sm-10" >
+      <div class="admin-team-search-bar" style="min-height: 900px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="search-top col-sm-12">
+              <p>Enquiries</p>
+            </div>
+          </div>
+          <div class="row admin-search-padding">
+            <div class="col-sm-12">
+              <div class="row">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Position</th>
+                      <th scope="col">First Name</th>
+                      <th scope="col">Last Name</th>
+                      <th scope="col">Phone</th>
+                      <th scope="col">Email</th>
+                      <th scope="col" style="width: 50%">Message</th>
+                      <th scope="col">Resume</th>
+                      <th scope="col">View</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @job_applications.each do |f| %>
+                      <tr>
+                        <th scope="row"><%= f.created_at.to_date %></th>
+                        <td><%= f.position %></td>
+                        <td><%= f.first_name %></td>
+                        <td><%= f.last_name %></td>
+                        <td><%= f.phone %></td>
+                        <td><%= f.email %></td>
+                        <td><%= truncate(f.message, length: 40) %></td>
+                        <td><%= link_to "Download CV", f.resume.url , target:"_blank"%></td>
+                        <td><%= link_to "Show", job_application_path(f) %></td>
+                        <td><%= link_to "Delete", job_application_path(f), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                      </tr>
+                    <% end %>
+
+                  </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

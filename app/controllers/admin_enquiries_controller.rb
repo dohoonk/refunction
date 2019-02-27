@@ -9,13 +9,14 @@ class AdminEnquiriesController < ApplicationController
 
   def create
     @enquiry = AdminEnquiry.new(admin_enquiry_params)
-    if @enquiry.save
+    if verify_recaptcha(model: @enquiry) && @enquiry.save
       EnquiryNotifierMailer.send_signup_email(@enquiry).deliver
       EnquiryNotifierMailer.send_received_email(@enquiry).deliver
       flash[:notice] = 'Thank you for contacting us!'
-      redirect_back(fallback_location: root_path)
+      # redirect_back(fallback_location: root_path)
+      redirect_to request.referrer
     else
-      render 'contacts/index'
+      redirect_to request.referrer
     end
   end
 

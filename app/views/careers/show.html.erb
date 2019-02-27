@@ -53,42 +53,48 @@
         <div class="row careers-featured-opening-empty">
 
         </div>
-
-        <div class="row">
-            <p style="padding-top: 10px; font-weight: 700;">Send your information and CV</p>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-            <input type="text" class="form-control input-box" placeholder="First name">
-          </div>
-          <div class="col-sm-6 margin-bottom-11 career-pd-right-0" >
-            <input type="text" class="form-control input-box" placeholder="Last name">
-          </div>
-          <div class="col-sm-6 margin-bottom-11 career-pd-left-0" >
-            <input type="text" class="form-control input-box" placeholder="Email">
-          </div>
-          <div class="col-sm-6 margin-bottom-11 career-pd-right-0" >
-            <input type="text" class="form-control input-box" placeholder="Phone">
-          </div>
-          <div class="form-group col-sm-12 career-pd-left-0 career-pd-right-0" >
-            <textarea class="form-control" style="height: 339px; width: 100%;" id="exampleFormControlTextarea1" placeholder="Leave us a message"></textarea>
-          </div>
-        </div>
-
+        <%= form_for @job_application do |f| %>
           <div class="row">
-            <div class="col-3" style="padding-left: 0px;">
-              <button class="cta-see-team">Upload CV</button>
+            <p style="padding-top: 10px; font-weight: 700;">Choose a position that you’re interested in applying</p>
+            <%= f.select :position,  ["Occupational Therapist", "Kinesiologist", "Physiotherapist", "Administration","Clinical Counsellor", "Psychologist", "Other"], {},{class: 'col-sm-12 input-box margin-bottom-11', style:"height: 37px;"} %>
+
+              <p style="padding-top: 10px; font-weight: 700;">Send your information and CV</p>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+              <%= f.text_field :first_name, class:"form-control input-box", placeholder:"First Name"%>
             </div>
-            <div class="col-3">
-              <button class="cta-see-team" style="width: 181px;">Submit</button>
+            <div class="col-sm-6 margin-bottom-11 career-pd-right-0" >
+              <%= f.text_field :last_name, class:"form-control input-box", placeholder:"Last Name"%>
+            </div>
+            <div class="col-sm-6 margin-bottom-11 career-pd-left-0" >
+              <%= f.text_field :email, class:"form-control input-box", placeholder:"Email"%>
+            </div>
+            <div class="col-sm-6 margin-bottom-11 career-pd-right-0" >
+              <%= f.text_field :phone, class:"form-control input-box", placeholder:"Phone Number"%>
+            </div>
+            <div class="form-group col-sm-12 career-pd-left-0 career-pd-right-0" >
+              <%= f.text_area :message, class:"form-control", style: "height: 339px; width: 100%",
+              placeholder: "Leave us a message" %>
             </div>
           </div>
 
-          <div clas="row" style="margin-left: -15px;">
-            <div style="padding-top: 15px; width: 271px !important; overflow: hidden;">
-              <%= recaptcha_tags %>
+            <div class="row">
+              <div class="col-sm-12 col-md-5 mb-dp-none" style="padding-left: 0px;">
+                <p class="upload-cv-label">Upload CV</p>
+                <%= f.file_field :resume %>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                  <%= f.submit "Submit", class:"cta-see-team", style:"width: 181px;" %>
+              </div>
             </div>
-          </div>
+
+            <div clas="row" style="margin-left: -15px;">
+              <div style="padding-top: 15px; overflow: hidden;">
+                <%= recaptcha_tags %>
+              </div>
+            </div>
+         <% end %>
 
       </div>
 

@@ -87,15 +87,7 @@
       <%= form_for @job_application do |f| %>
         <div class="row">
           <p style="padding-top: 10px; font-weight: 700;">Choose a position that you’re interested in applying</p>
-            <select class="col-sm-12 input-box margin-bottom-11" style="height: 37px;">
-              <option value="volvo">Occupational Therapist</option>
-              <option value="saab">Kinesiologist</option>
-              <option value="opel">Physiotherapist</option>
-              <option value="audi">Administration</option>
-              <option value="audi">Clinical Counsellor</option>
-              <option value="audi">Psychologist</option>
-              <option value="audi">Other</option>
-            </select>
+          <%= f.select :position,  ["Occupational Therapist", "Kinesiologist", "Physiotherapist", "Administration","Clinical Counsellor", "Psychologist", "Other"], {},{class: 'col-sm-12 input-box margin-bottom-11', style:"height: 37px;"} %>
 
             <p style="padding-top: 10px; font-weight: 700;">Send your information and CV</p>
         </div>
@@ -119,16 +111,17 @@
         </div>
 
           <div class="row">
-            <div class="col-3" style="padding-left: 0px;">
-              <button class="cta-see-team">Upload CV</button>
+            <div class="col-sm-12 col-md-5 mb-dp-none" style="padding-left: 0px;">
+              <p class="upload-cv-label">Upload CV</p>
+              <%= f.file_field :resume %>
             </div>
-            <div class="col-3">
+            <div class="col-sm-12 col-md-3">
                 <%= f.submit "Submit", class:"cta-see-team", style:"width: 181px;" %>
             </div>
           </div>
 
           <div clas="row" style="margin-left: -15px;">
-            <div style="padding-top: 15px; width: 271px !important; overflow: hidden;">
+            <div style="padding-top: 15px; overflow: hidden;">
               <%= recaptcha_tags %>
             </div>
           </div>
