@@ -4,7 +4,7 @@ class EnquiryNotifierMailer < ApplicationMailer
   # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_signup_email(enquiry)
     @enquiry = enquiry
-    mail( :to => 'tonykim.tech@gmail.com',
+    mail( :to => 'info@refunction.ca',
     :subject => 'Customer Enquiry' )
   end
 
