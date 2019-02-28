@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New Job Appliation from refunction.ca</h1>
+
+    <p>Job Title: <%= @job_application.position %></p>
+    <p>First Name: <%= @job_application.first_name %></p>
+    <p>Last Name: <%= @job_application.last_name %></p>
+    <p>Phone: <%= @job_application.phone %></p>
+    <p>Phone: <%= @job_application.email %></p>
+    <p>Content: <%= @job_application.message %></p>
+    <p>Resume: <%= @job_application.resume.url %></p>
+  </body>
+</html>

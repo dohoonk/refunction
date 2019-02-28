@@ -6,6 +6,8 @@ class JobApplicationsController < ApplicationController
   def create
     @job_application = JobApplication.new(job_application_params)
     if verify_recaptcha(model: @job_application) && @job_application.save
+      JobMailer.send_signup_email(@job_application).deliver
+      JobMailer.send_received_email(@job_application).deliver
       redirect_to request.referrer
     else
       rendircet_to :back

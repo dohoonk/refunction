@@ -64,7 +64,7 @@
                 <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
                   <p> Address</p>
                   <div class="form-control">
-                    <%=  @referral.company %>
+                    <%=  @referral.address %>
                   </div>
                 </div>
 
@@ -99,7 +99,9 @@
                 <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
                   <p> Birth Day</p>
                   <div class="form-control">
+                  <% if @referral.client_birthday != nil %>
                     <%= (@referral.client_birthday).strftime("%d/%m/%Y") %>
+                  <% end %>
                   </div>
                 </div>
 
@@ -107,13 +109,6 @@
                   <p> Phone</p>
                   <div class="form-control">
                     <%=  @referral.client_phone %>
-                  </div>
-                </div>
-
-                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
-                  <p> Email</p>
-                  <div class="form-control">
-                    <%=  @referral.email %>
                   </div>
                 </div>
 
@@ -133,7 +128,7 @@
                 </div>
 
                 <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
-                  <p> City</p>
+                  <p> Address </p>
                   <div class="form-control">
                     <%=  @referral.client_address %>
                   </div>
@@ -153,17 +148,27 @@
                   </div>
                 </div>
 
+
                 <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
                   <p> Client Sex</p>
                   <div class="form-control">
-                    <%=  @referral.client_sex %>
+                    <%= @referral.client_sex %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Client Sex Other</p>
+                  <div class="form-control">
+                    <%=  @referral.client_sex_other %>
                   </div>
                 </div>
 
                 <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
                   <p> Date Of Injury</p>
                   <div class="form-control">
-                    <%=  @referral.date_of_injury.strftime("%d/%m/%Y")%>
+                    <% if @referral.date_of_injury != nil %>
+                      <%=  @referral.date_of_injury.strftime("%d/%m/%Y")%>
+                    <% end %>
                   </div>
                 </div>
 
@@ -207,6 +212,13 @@
                 <p> Advertising</p>
                 <div class="form-control">
                   <%= @referral.advertisement %>
+                </div>
+              </div>
+
+              <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                <p> Advertising Additional Info</p>
+                <div class="form-control">
+                  <%= @referral.client_advertisement_other %>
                 </div>
               </div>
 
