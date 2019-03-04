@@ -1,4 +1,6 @@
 class AdminCareersController < ApplicationController
+  before_action :logged_in_check
+  
   def index
     @admin_careers_published = AdminCareer.where(published: true)
     @admin_careers_archived = AdminCareer.where(published: false)

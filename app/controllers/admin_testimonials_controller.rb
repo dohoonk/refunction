@@ -1,4 +1,6 @@
 class AdminTestimonialsController < ApplicationController
+  before_action :logged_in_check
+  
   def index
     @published_testimonials = AdminTestimonial.where(published: true)
     @archived_testimonials = AdminTestimonial.where(published: false)

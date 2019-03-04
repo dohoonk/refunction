@@ -1,0 +1,81 @@
+<div class="admin-nav">
+  <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
+  </a>
+  <%= link_to "Log Out", logout_path, class:"btn admin-log-out-btn", method: :delete %>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <%= render 'layouts/admin_nav' %>
+
+
+    <div class="admin-body col-sm-10" >
+      <div class="admin-team-search-bar" style="min-height: 900px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="search-top col-sm-12">
+              <p>Job Application Details</p>
+            </div>
+          </div>
+
+          <div class="row admin-search-padding">
+            <div class="col-sm-12">
+              <div class="row">
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Position </p>
+                  <div class="form-control">
+                    <%= @job_application.position %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> First Name</p>
+                  <div class="form-control">
+                    <%=  @job_application.first_name %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Last Name</p>
+                  <div class="form-control">
+                    <%=  @job_application.last_name %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Email</p>
+                  <div class="form-control">
+                    <%=  @job_application.email %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Phone</p>
+                  <div class="form-control">
+                    <%=  @job_application.phone %>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                  <p> message</p>
+                  <div class="form-control" style="word-wrap: break-word; min-height: 400px;">
+                    <%= @job_application.message %>
+                  </div>
+                </div>
+
+                  <%= link_to "Download CV", @job_application.resume.url , target:"_blank"%>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

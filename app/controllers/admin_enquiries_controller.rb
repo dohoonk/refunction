@@ -1,4 +1,6 @@
 class AdminEnquiriesController < ApplicationController
+  before_action :logged_in_check
+  
   def index
     @enquiries = AdminEnquiry.all
   end

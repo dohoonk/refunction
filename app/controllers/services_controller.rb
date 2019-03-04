@@ -1,4 +1,6 @@
 class ServicesController < ApplicationController
+  before_action :logged_in_check, only: [:index_admin, :new, :edit]
+
   def index
     @admin_enquiry = AdminEnquiry.new
     @services = Service.all

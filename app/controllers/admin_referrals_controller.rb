@@ -1,4 +1,6 @@
 class AdminReferralsController < ApplicationController
+  before_action :logged_in_check
+  
   def index
     @referrals = AdminReferral.all
   end

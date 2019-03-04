@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  before_action :logged_in_check
+  
   def index
     @locations = Location.all
   end

@@ -1,4 +1,6 @@
 class AdminTeamsController < ApplicationController
+  before_action :logged_in_check, only: [:index_original, :new, :archive, :edit]
+
   def index
     @search = AdminTeam.search(params[:q])
     @teams = @search.result
