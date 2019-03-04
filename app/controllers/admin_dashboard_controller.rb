@@ -8,7 +8,6 @@ class AdminDashboardController < ApplicationController
     Ahoy::Event.all.each do |f|
       @array << f.properties["controller"]
     end
-
     @visits_today = Ahoy::Visit.where(started_at: Date.today...Date.today + 2).count
 
     @visits_this_week = Ahoy::Visit.where(started_at: Date.today - 7...Date.today + 2).count
