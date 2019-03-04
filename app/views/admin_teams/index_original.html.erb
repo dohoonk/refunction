@@ -1,7 +1,8 @@
 <div class="admin-nav">
   <a class="navbar-brand" href="#"><%= image_tag("refunction_nav_logo.svg", class:"admin-logo") %>
   </a>
-  <button class="admin-log-out-btn"> Log out</button>
+  <%= link_to "Log Out", logout_path, class:"btn admin-log-out-btn", method: :delete %>
+
 </div>
 
 <div class="container-fluid">

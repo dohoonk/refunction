@@ -1,3 +1,15 @@
+<% if @testimonial.errors.any? %>
+  <div id="error_explanation">
+   <h2><%= pluralize(@testimonial.errors.count, "error") %> prohibited this testimonial from being saved:</h2>
+
+   <ul>
+   <% @testimonial.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+  </div>
+<% end %>
+
 <%= form_for(@testimonial) do |f| %>
 <div class="container card-inner-padding">
   <div class="row justify-content-between mg-left card-margin-bottom">

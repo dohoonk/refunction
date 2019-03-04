@@ -1,3 +1,15 @@
+<% if @admin_team.errors.any? %>
+  <div id="error_explanation">
+   <h2><%= pluralize(@admin_team.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+   <ul>
+   <% @admin_team.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+  </div>
+<% end %>
+
 <div class="container card-inner-padding">
   <%= form_for (@admin_team) do |f| %>
   <div class="row justify-content-between mg-left card-margin-bottom">

@@ -56,30 +56,30 @@
               <p class="section-desc">Where you can find us</p>
             </div>
             <div style="padding-bottom: 20px;">
-              <a href="">Richmond: Head Office</a>
+              <a href=""><%= @location.name %></a>
             </div>
             <div style="font-weight: bold">
-              Mail, courier packages and all hard copy correspondence is to be directed to Richmond Head Office.
+              <%= @location.message %>
             </div>
             <div class="mg-top-20">
-              #148 - 21300 Gordon Way
+              <%= @location.address %>
             </div>
             <div>
-              Richmond, BC V6W 1M2
+              <%= @location.address_2 %>
             </div>
             <div>
-              <a href="tel:+1604-233-2210">Tel: 604.233.2210</a>
+              <a href="tel:+1<%= @location.phone %>">Tel: <%= @location.phone %></a>
             </div>
             <div>
-              <a href="tel:+1604-233-2211">Fax: 604.233.2211</a></
+              <a href="tel:+1604-233-2211">Fax: <%= @location.fax %></a></
             </div>
             <div>
-              <a href="mailto:info@refunction.ca">Email: info@refunction.ca</a>
+              <a href="mailto:info@refunction.ca">Email: <%= @location.email %></a>
             </div>
             <div class="mg-top-20">
-              <strong>Office Hours</strong>
+              <%= raw(@location.description) %>
             </div>
-            <div>
+            <!-- <div>
               Monday to Friday
             </div>
             <div>
@@ -95,7 +95,7 @@
             </div>
             <div>
               <div class="blue-dot"></div>Accessible by public transportation
-            </div>
+            </div> -->
         </div>
           </div>
         </div>

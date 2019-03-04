@@ -15,36 +15,32 @@
         <div class="container-fluid">
           <div class="row">
             <div class="search-top col-sm-12">
-              <p>Published Job Posting</p>
+              <p>Published Locations Posting</p>
             </div>
           </div>
           <div class="row admin-search-padding">
             <div class="col-sm-12">
               <div class="row">
                 <div class="offset-sm-9 col-sm-3">
-                    <a href="/services/new"><div class="admin-search-button mg-bottom"> Add New</div></a>
+                    <a href="/locations/new"><div class="admin-search-button mg-bottom"> Add New</div></a>
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
-                    <% @services.each do |f| %>
+                    <% @locations.each do |f| %>
                     <div class="col-sm-6 mg-bottom">
-                      <div class="careers-box">
+                      <div class="">
                         <div class="row">
-                          <div class="col-sm-4 careers-image" style="padding-left: 0px; padding-right: 0px;">
-                            <!-- <#%= image_tag("refunction_home_services.png") %> -->
-                            <%= image_tag f.picture.url, style:"max-height: 200px;"%>
-                          </div>
                           <div class="col-sm-8 reset" style="padding-left: 5px;padding-right: 0px;">
-                            <div class="card-body reset" style="padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
+                            <div class="card-body reset careers-box" style="padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
                               <div>
-                                <span class="careers-posting-date">Posted June 30, 2018</span>
+                                <span class="careers-posting-date"><%= f.address %></span>
                               </div>
                               <div>
-                                <span class="careers-posting-title bold"><%= f.title %></span>
+                                <span class="careers-posting-title bold"><%= f.name %></span>
                               </div>
 
                               <div class="highlight-thin careers-posting-highlight"></div>
-                              <p class="card-text text-pd-right" style="font-size: 0.7em; margin-bottom: 3px;"><%= f.content.truncate(200) %>
+                              <p class="card-text text-pd-right" style="font-size: 0.7em; margin-bottom: 3px;"><%= raw(f.description) %>
                               </p>
 
                             </div>
@@ -53,11 +49,11 @@
                       </div>
                       <div class="admin-staff-image-button">
                         <div class="btn btn-primary font-white">
-                          <%= link_to "Edit", edit_service_path(f) %>
+                          <%= link_to "Edit", edit_location_path(f) %>
                         </div>
 
                         <div class="btn btn-danger font-white">
-                          <%= link_to "Delete", service_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
+                          <%= link_to "Delete", locations_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
                         </div>
                       </div>
                     </div>

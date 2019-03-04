@@ -1,3 +1,14 @@
+<% if @service.errors.any? %>
+  <div id="error_explanation">
+   <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+   <ul>
+   <% @service.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+  </div>
+<% end %>
 <%= form_for(@service) do |f| %>
 <div class="container card-inner-padding">
   <div class="row justify-content-between mg-left card-margin-bottom">

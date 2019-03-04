@@ -1,0 +1,49 @@
+<% if @location.errors.any? %>
+  <div id="error_explanation">
+   <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+   <ul>
+   <% @location.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+  </div>
+<% end %>
+<%= form_for(@location) do |f| %>
+
+<div class="container card-inner-padding">
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :name, class:"form-control input-box", placeholder: "Location Name" %>
+        </div>
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_area :message, class:"form-control input-box", placeholder: "Correspond Message" %>
+        </div>
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :address, class:"form-control input-box", placeholder: "Address(Unit and Street)" %>
+        </div>
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :address_2, class:"form-control input-box", placeholder: "Address(City, Province and Postal Code)" %>
+        </div>
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :phone, class:"form-control input-box", placeholder: "Phone" %>
+        </div>
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :fax, class:"form-control input-box", placeholder: "Fax" %>
+        </div>
+        <div class="col-sm-12 margin-bottom-11" style="padding-left: 0px;">
+          <%= f.text_field :email, class:"form-control input-box", placeholder: "Email" %>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <%= f.text_area :description, :class => "tinymce", :rows => 40, :cols => 30 %>
+      <%= tinymce %>
+    </div>
+    <div class="col-sm-12 card-margin-top">
+      <%= f.submit "Save", class:"admin-button-blue" %>
+    </div>
+  </div>
+<% end %>
