@@ -46,6 +46,8 @@ gem "pry"
 gem 'ransack'
 gem "fog-aws"
 gem 'recaptcha', require: 'recaptcha/rails'
+gem 'ahoy_matey'
+gem "chartkick"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -10,173 +10,44 @@
     <%= render 'layouts/admin_nav' %>
 
 
-    <div class="admin-body col-sm-10">
-      <div class="admin-team-search-bar">
+    <div class="admin-body col-sm-10" >
+      <div class="admin-team-search-bar" style="min-height: 900px;">
         <div class="container-fluid">
           <div class="row">
-            <div class="search-top col-sm-12">
-              <p>New Member</p>
+            <div class="search-top col-sm-6">
+              <h3>Device Type</h3>
+              <%= pie_chart @visits.group(:device_type).count %>
             </div>
-          </div>
-          <div class="row admin-search-padding">
-            <div class="col-sm-12">
-              <div class="row">
-                <div class="col-sm-9 admin-search-bar-search">
-                  <input type="text" class="form-control" placeholder="First name">
-                  <div class="admin-search-bar-button">
-                    <p class="admin-search-bar-desc"> Filter By Department </p>
-                    <div class="container">
-                      <div class="row justify-content-between">
-                        <div class="admin-search-button col-sm-3">All</div>
-                        <div class="admin-search-button col-sm-3">Office & Administration</div>
-                        <div class="admin-search-button col-sm-3">All</div>
-                        <div class="admin-search-button col-sm-3">All</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-3">
-                  <div class="admin-search-button"> Add New</div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="admin-card">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="search-top col-sm-12">
-              <p class="pd-top-11">Archived Members / Office & Administration </p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image", style:"    width:256px;") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  <p>
-                    Registered Occupational Therapist
-                  </p>
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image", style:"    width:256px;") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  <p>
-                    Registered Occupational Therapist
-                  </p>
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image", style:"    width:256px;") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  <p>
-                    Registered Occupational Therapist
-                  </p>
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image", style:"    width:256px;") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  <p>
-                    Registered Occupational Therapist
-                  </p>
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
+            <div class="search-top col-sm-6">
+              <h3>Browser Type</h3>
+              <%= pie_chart @visits.group(:browser).count %>
             </div>
 
-            <div class="col-sm-3">
-              <div class="admin-staff-image-card">
-                <div class="admin-staff-picture">
-                  <%= image_tag("admin-staff.jpg", class:"admin-staff-picture-image", style:"    width:256px;") %>
-                </div>
-                <div class="admin-staff-image-card-desc">
-                  <span class="card-desc"> Edgar Emnacen </span>
-                  <p>
-                    Registered Occupational Therapist
-                  </p>
-                </div>
-                <div class="admin-staff-image-button">
-                  <div class="btn btn-primary">
-                    Edit
-                  </div>
-                  <div class="btn btn-success">
-                    Publish
-                  </div>
-                  <div class="btn btn-danger">
-                    Delete
-                  </div>
-                </div>
-              </div>
+            <div class="search-top col-sm-6">
+              <ul>
+                <h4> Last 20 Visits IP Address</h4>
+                <% @visits_last_ten.each do |f| %>
+                  <li><%= f.ip %></li>
+                <% end %>
+              </ul>
+            </div>
+
+            <div class="search-top col-sm-6">
+              <ul>
+                <h4> Last 20 Visits Landing Page</h4>
+                <% @visits_last_ten.each do |f| %>
+                  <li><%= f.landing_page %></li>
+                <% end %>
+              </ul>
+            </div>
+
+            <div class="search-top col-sm-6">
+              <ul>
+                <h4> Total Page Visits</h4>
+                <% @b.each do |k, v| %>
+                  <li><%= k %>: <%= v %></li>
+                <% end %>
+              </ul>
             </div>
 
           </div>
