@@ -4,6 +4,7 @@ class AdminTeamsController < ApplicationController
   def index
     @search = AdminTeam.search(params[:q])
     @teams = @search.result
+    @teams = @teams.where(published: true)
     @teams = @teams.sort_by {|x| x.first_name}
     @admin_enquiry = AdminEnquiry.new
   end
