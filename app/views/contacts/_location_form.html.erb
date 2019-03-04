@@ -1,0 +1,29 @@
+<div class="col-sm-6">
+  <div>
+    <p class="section-desc">Where you can find us</p>
+  </div>
+  <div style="padding-bottom: 20px;">
+    <a href=""><%= @location.name %></a>
+  </div>
+  <div style="font-weight: bold">
+    <%= @location.message %>
+  </div>
+  <div class="mg-top-20">
+    <%= @location.address %>
+  </div>
+  <div>
+    <%= @location.address_2 %>
+  </div>
+  <div>
+    <a href="tel:+1<%= @location.phone %>">Tel: <%= @location.phone %></a>
+  </div>
+  <div>
+    <a href="tel:+1604-233-2211">Fax: <%= @location.fax %></a></
+  </div>
+  <div>
+    <a href="mailto:info@refunction.ca">Email: <%= @location.email %></a>
+  </div>
+  <div class="mg-top-20">
+    <%= raw(@location.description) %>
+  </div>
+</div>
