@@ -38,6 +38,6 @@ class LocationsController < ApplicationController
   private
 
   def locations_params
-    params.require(:location).permit(:name, :message, :address, :phone, :fax, :email, :description)
+    params.require(:location).permit(:name, :message, :address, :address_2, :phone, :fax, :email, :description)
   end
 end
