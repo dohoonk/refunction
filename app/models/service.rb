@@ -4,5 +4,4 @@ class Service < ApplicationRecord
   validates :title, presence: true
   validates :picture, presence: true
   validates :content, presence: true
-  validates :description, presence: true
 end
