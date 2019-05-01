@@ -58,6 +58,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :admin_referrals
+  resources :info_referrals
   resources :locations
 
   get '*path' => redirect('/')

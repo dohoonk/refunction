@@ -1,0 +1,230 @@
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="admin-body col-sm-12" >
+
+    <%= link_to 'Print', 'your_link_here',class:"btn btn-primary", :onclick => 'window.print();return false;'%>
+      <div class="admin-team-search-bar" style="min-height: 900px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="search-top col-sm-12">
+              <p>Customer Referral Details</p>
+            </div>
+          </div>
+
+          <div class="row admin-search-padding">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                  <p style="font-size: 30px; font-weight: 800;">Referring Person Detail</p>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Name</p>
+                  <div class="form-control">
+                    <%= @referral.name %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Phone</p>
+                  <div class="form-control">
+                    <%=  @referral.phone %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Email</p>
+                  <div class="form-control">
+                    <%=  @referral.email %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Fax</p>
+                  <div class="form-control">
+                    <%=  @referral.client_fax %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Company</p>
+                  <div class="form-control">
+                    <%=  @referral.company %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Address</p>
+                  <div class="form-control">
+                    <%=  @referral.address %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Relationship with Client</p>
+                  <div class="form-control">
+                    <%=  @referral.realation_to_client %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Client Aware</p>
+                  <div class="form-control">
+                    <%=  @referral.client_aware %>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                  <p style="font-size: 30px; font-weight: 800;">Referred Person Detail</p>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Name</p>
+                  <div class="form-control">
+                    <%= @referral.client_name %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Birth Day</p>
+                  <div class="form-control">
+                  <% if @referral.client_birthday != nil %>
+                    <%= (@referral.client_birthday).strftime("%d/%m/%Y") %>
+                  <% end %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Phone</p>
+                  <div class="form-control">
+                    <%=  @referral.client_phone %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Address</p>
+                  <div class="form-control">
+                    <%=  @referral.client_address %>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Claim/File Number</p>
+                  <div class="form-control">
+                    <%=  @referral.claim_number %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Address </p>
+                  <div class="form-control">
+                    <%=  @referral.client_address %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Postal Code</p>
+                  <div class="form-control">
+                    <%=  @referral.client_postal_code %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Languages</p>
+                  <div class="form-control">
+                    <%=  @referral.client_language %>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Client Sex</p>
+                  <div class="form-control">
+                    <%= @referral.client_sex %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Client Sex Other</p>
+                  <div class="form-control">
+                    <%=  @referral.client_sex_other %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Date Of Injury</p>
+                  <div class="form-control">
+                    <% if @referral.date_of_injury != nil %>
+                      <%=  @referral.date_of_injury.strftime("%d/%m/%Y")%>
+                    <% end %>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                  <p> Relationship with Client</p>
+                  <div class="form-control">
+                    <%=  @referral.realation_to_client %>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                  <p>Concern</p>
+                  <div class="form-control" style="word-wrap: break-word; min-height: 100px;">
+                    <%= @referral.concerns %>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                  <p>Additional Comment</p>
+                  <div class="form-control" style="word-wrap: break-word; min-height: 200px;">
+                    <%= @referral.content %>
+                  </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                <p style="font-size: 30px; font-weight: 800;">Other Details</p>
+              </div>
+
+              <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                <p> Category</p>
+                <div class="form-control">
+                  <%= @referral.category %>
+                </div>
+              </div>
+
+              <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                <p> Advertising</p>
+                <div class="form-control">
+                  <%= @referral.advertisement %>
+                </div>
+              </div>
+
+              <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+                <p> Advertising Additional Info</p>
+                <div class="form-control">
+                  <%= @referral.client_advertisement_other %>
+                </div>
+              </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
