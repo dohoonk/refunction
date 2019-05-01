@@ -7,6 +7,8 @@
     <h1>New Referral from refunction.ca</h1>
 
     <p>Please click the below link to see the details.</p>
-    <p><a href="https://refunction.ca/info_referral/<%= @referral.id %>">View/Print</a></p>
+    <%= link_to "View/Print", :controller => "info_referrals", :action => "show",
+:only_path => false, :id => @referral.id, :host => "refunction.ca" %>
+   
   </body>
 </html>
