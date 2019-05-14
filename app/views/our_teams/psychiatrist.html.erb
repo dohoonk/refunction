@@ -1,0 +1,34 @@
+<%= render "layouts/nav" %>
+<div class="banner_top_deco">
+  <div class="banner-top-deco-inner-text">
+    <div class="container" style="padding-bottom: 10px;">
+      <div class="row mb-dp-none">
+        <div class="banner-top-deco-header col-sm-12">
+          Our Team
+        </div>
+        <div class="banner-top-deco-sub col-sm-12">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= render 'filter' %>
+
+
+<div class="our-teams pages-card-padding">
+  <div class="container">
+    <div class="row">
+        <%= render 'side_link' %>
+      <div class="col-sm-9">
+        <p class="about-us-header">Psychiatrist</p>
+        <%= render 'teams' %>
+      </div>
+
+    </div>
+  </div>
+</div>
+<%= render "layouts/bottom_cta_card" %>
+<%= render "layouts/footer" %>

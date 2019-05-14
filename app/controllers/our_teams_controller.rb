@@ -11,7 +11,7 @@ class OurTeamsController < ApplicationController
   end
 
   def office_administration
-      @search = AdminTeam.search(params[:q])
+    @search = AdminTeam.search(params[:q])
     @teams = AdminTeam.where(job_category_id: 1)
     @teams = @teams.where(published: true)
     @teams = @teams.sort_by {|x| x.first_name}
@@ -27,7 +27,7 @@ class OurTeamsController < ApplicationController
   end
 
   def physiotherapists
-      @search = AdminTeam.search(params[:q])
+    @search = AdminTeam.search(params[:q])
     @teams = AdminTeam.where(job_category_id: 3)
     @teams = @teams.where(published: true)
     @teams = @teams.sort_by {|x| x.first_name}
@@ -35,7 +35,7 @@ class OurTeamsController < ApplicationController
   end
 
   def kinesiologist
-      @search = AdminTeam.search(params[:q])
+    @search = AdminTeam.search(params[:q])
     @teams = AdminTeam.where(job_category_id: 4)
     @teams = @teams.where(published: true)
     @teams = @teams.sort_by {|x| x.first_name}
@@ -43,7 +43,7 @@ class OurTeamsController < ApplicationController
   end
 
   def psychology
-      @search = AdminTeam.search(params[:q])
+    @search = AdminTeam.search(params[:q])
     @teams = AdminTeam.where(job_category_id: 5)
     @teams = @teams.where(published: true)
     @teams = @teams.sort_by {|x| x.first_name}
@@ -51,8 +51,16 @@ class OurTeamsController < ApplicationController
   end
 
   def counsellors
-      @search = AdminTeam.search(params[:q])
+    @search = AdminTeam.search(params[:q])
     @teams = AdminTeam.where(job_category_id: 6)
+    @teams = @teams.where(published: true)
+    @teams = @teams.sort_by {|x| x.first_name}
+    @admin_enquiry = AdminEnquiry.new
+  end
+
+  def psychiatrist
+    @search = AdminTeam.search(params[:q])
+    @teams = AdminTeam.where(job_category_id: 7)
     @teams = @teams.where(published: true)
     @teams = @teams.sort_by {|x| x.first_name}
     @admin_enquiry = AdminEnquiry.new
