@@ -1,5 +1,5 @@
 class AdminReferralsController < ApplicationController
-  before_action :logged_in_check
+  before_action :logged_in_check, except: [:create]
   
   def index
     @referrals = AdminReferral.all
@@ -10,6 +10,7 @@ class AdminReferralsController < ApplicationController
   end
 
   def create
+    binding.pry
     @referral = AdminReferral.new(admin_referral_params)
     if verify_recaptcha(model: @referral) && @referral.save
       ReferralMailer.send_signup_email(@referral).deliver
