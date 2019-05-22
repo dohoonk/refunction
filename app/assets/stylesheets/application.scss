@@ -25,3 +25,18 @@
 p {
   font-size: 1em;
 }
+
+
+@media screen and (min-width: 1200px) {
+  .our-teams-card-img {
+    max-height: 168px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px)  {
+    .our-teams-card-img {
+    max-height: 297px;
+    overflow: hidden;
+  }
+}
