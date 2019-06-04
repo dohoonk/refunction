@@ -4,7 +4,6 @@ default :from => 'info@refunction.ca'
 def send_signup_email(referral)
   @referral = referral
   mail( :to => 'info@refunction.ca,rhginfo@refunction.ca',
-  # mail( :to => 'tonykim.tech@gmail.com',
   :subject => 'Referral Received' )
 end
 
