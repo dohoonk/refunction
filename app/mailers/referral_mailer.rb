@@ -1,5 +1,5 @@
 class ReferralMailer < ApplicationMailer
-default :from => 'info@refunction.ca'
+default :from => 'referrals@refunction.ca'
 # send a signup email to the user, pass in the user object that   contains the user's email address
 def send_signup_email(referral)
   @referral = referral
