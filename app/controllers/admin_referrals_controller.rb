@@ -18,6 +18,7 @@ class AdminReferralsController < ApplicationController
       flash[:success] = "Thank you for we will contact you shortly"
       redirect_to referrals_path
     else
+      
       flash[:danger] = "Plese fill the required fields!"
       redirect_to referrals_path
     end
