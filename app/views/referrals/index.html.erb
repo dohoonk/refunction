@@ -38,14 +38,49 @@
       <div style="font-size: 16px;opacity: 0.7;color: grey;">Required boxes are indicated with *</div>
     </div>
     <div class="row">
-
-      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>I am inquiring about?</p>
-          <%= f.select :category,  ["Active & Functional Conditioning", "Brain Injury Assessment and Treatment", "Community Rehabilitation Services", "Cost of Future Care Assessment","Ergonomic and Risk Factor Analysis", "Functional Capacity Evaluation", "FCE with Cognitive Component", "FCE with Cost of Future Care", "Home Assessment", "Interdisciplinary Rehabilitation Services", "Job Demands Analysis (JDA)", "Medical Legal File Review","Physiotherapy","Psychology Assessment and Counselling Services", "Return to Work Support Services", "Work Simulation", "Other"], {},{class: 'form-control input-box'} %>
+      <div class="col-sm-12 margin-bottom-12 career-pd-left-0">
+        Referral Info
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 margin-bottom-12 career-pd-left-0">
+          Client Info
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>I am inquiring about?</p>
+          <%= f.select :category,  ["1 Day Functional Capacity Evaluation", 
+          "2 Day Functional Capacity Evaluation",
+          "Active & Functional Conditioning",
+          "Brain Injury Assessment & Treatment",
+          "Cognitive Functional Capacity Evaluation (2 Day)",
+          "Cost of Future Care Assessment",
+          "Ergonomic or Risk Factor Analyses",
+          "FCE w/Cost of Future of Care",
+          "Home Assessment",
+          "Independent Medical Examination",
+          "Interdisciplinary Rehab Assessment",
+          "Job Demands Analyses (JDA)",
+          "MedLegal File Review",
+          "Physiotherapy",
+          "Psychological Assessment",
+          "Return to Work Support Services",
+          "Other"], {},{class: 'form-control input-box'} %>
+      </div>
+
+      
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* Client Name</p>
+        <%= f.text_field :client_name, required: true, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>* Client Email</p>
+        <%= f.text_field :client_name, required: true, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>* Referral Source Name</p>
         <%= f.text_field :client_name, required: true, class:"form-control input-box" %>
       </div>
 
