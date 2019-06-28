@@ -1,0 +1,245 @@
+<div class="testimonials_container pages-card-padding">
+  <div class="container">
+    <%= form_for @referral do |f| %>
+    <div class="row">
+      <div style="font-size: 16px;opacity: 0.7;color: grey;">Required boxes are indicated with *</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-4">
+       
+        <h3>Referral Source Information </h3>
+        <div class="highlight"></div>
+        
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>I am inquiring about?</p>
+          <%= f.select :category,  ["1 Day Functional Capacity Evaluation", 
+          "2 Day Functional Capacity Evaluation",
+          "Active & Functional Conditioning",
+          "Brain Injury Assessment & Treatment",
+          "Cognitive Functional Capacity Evaluation (2 Day)",
+          "Cost of Future Care Assessment",
+          "Ergonomic or Risk Factor Analyses",
+          "FCE w/Cost of Future of Care",
+          "Home Assessment",
+          "Independent Medical Examination",
+          "Interdisciplinary Rehab Assessment",
+          "Job Demands Analyses (JDA)",
+          "MedLegal File Review",
+          "Physiotherapy",
+          "Psychological Assessment",
+          "Return to Work Support Services",
+          "Other"], {},{class: 'form-control input-box'} %>
+      </div>
+
+      
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>* Lawyer Name</p>
+        <%= f.text_field :rs_name, required: true, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>* Lawyer Phone #</p>
+        <%= f.text_field :rs_phone, required: true, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Lawyer Fax</p>
+        <%= f.text_field :rs_fax, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Lawyer Email</p>
+        <%= f.text_field :rs_email, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>* Law Firm Name</p>
+        <%= f.text_field :rs_office_name, required: true, class:"form-control input-box" %>
+      </div>
+      
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Adress of Law Office</p>
+        <%= f.text_field :rs_office_address, class:"form-control input-box" %>
+      </div>
+      
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>City </p>
+        <%= f.text_field :rs_city, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Postal Code</p>
+        <%= f.text_field :rs_postal_code, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Assistant/Paralegal</p>
+        <%= f.text_field :rs_assistant_name, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Assistant/Paralegal Phone #</p>
+        <%= f.text_field :rs_assistant_phone, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Assistant/Paralegal Email</p>
+        <%= f.text_field :rs_assistant_email, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>* Do you represent Plaintiff or Defense?</p>
+        <%= f.select :rs_represents,  ["Plaintiff", 
+          "Defense"], {},{class: 'form-control input-box'} %>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
+       
+        <h3>Client Info Section </h3>
+        <div class="highlight"></div>
+        
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Client name (Incl. English name where applicable)</p>
+        <%= f.text_field :client_name, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Date of Birth</p>
+        <%= f.date_field :client_birthday, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Client Address (If CFC is required)</p>
+        <%= f.text_field :client_address, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>City</p>
+        <%= f.text_field :client_city, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Postal Code</p>
+        <%= f.text_field :client_postal_code, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Claim/File No.</p>
+        <%= f.text_field :client_file_number, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Report Deadline</p>
+        <%= f.date_field :client_report_deadline, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Trial Date</p>
+        <%= f.date_field :client_trial_date, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Trial Duration</p>
+        <%= f.text_field :client_trial_duration_in_days, class:"form-control input-box", placeholder: "Please specify in days" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Date of Injury</p>
+        <%= f.date_field :client_date_of_injury, class:"form-control input-box" %>
+      </div>
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Interpreter Required?</p>
+        <%= f.text_field :client_interpreter_required, class:"form-control input-box" %>
+      </div>
+
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>(If yes) Language required</p>
+        <%= f.text_field :client_language_required, class:"form-control input-box" %>
+      </div>
+
+
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+        <p>Gender of the Client</p>
+
+        <div class="radio-inline">
+          <label><%= f.radio_button :client_sex, "Male" %> Male</label>
+        </div>
+        <div class="radio-inline">
+          <label><%= f.radio_button :client_sex, "Female" %> Female</label>
+        </div>
+        <div class="radio-inline">
+          <label><%= f.radio_button :client_sex, "Ohter" %> Other</label>
+        </div>
+
+          <%= f.text_field :client_sex_other, class:"form-control input-box", placeholder: "If others please specify" %>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
+        
+        <h3>**If referring for a consult </h3>
+        <div class="highlight"></div>
+        <div class="col-sm-12 margin-bottom-11 career-pd-left-0 career-pd-right-0 mt-4">
+          <p>Please provide a list of reports to be reviewed, along with their corresponding clinicians</p>
+          <%= f.text_area :concerns, class:"form-control", style: "height: 209px; width: 100%", placeholder: "Please provide a list of reports to be reviewed, along with their corresponding clinicians" %>
+        </div>
+
+        <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+          <p>Will a rebuttal report be required, or only a verbal opinion/aid with trial prep?</p>
+ 
+          <%= f.text_area :client_rebuttal_needed, class:"form-control", style: "height: 209px; width: 100%", placeholder: "Will a rebuttal report be required, or only a verbal opinion/aid with trial prep?" %>
+     
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
+       
+        <h3>Extra Info Section </h3>
+        <div class="highlight"></div>
+        
+      </div>
+
+      <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
+        <p>* How did you hear about us?</p>
+
+        <%= f.select :advertisement,  ["Advertising", "Brochure", "Family/Friend","Health Care Provider", "Returning Customer", "Social Media","Word of Mouth", "Other"], {},{class: 'form-control input-box'} %>
+        <%= f.text_field :client_advertisement_other, class:"form-control input-box mt-2", placeholder: "Please Specify" %>
+      </div>
+
+
+      <div class="form-group col-sm-12 career-pd-left-0 career-pd-right-0 mt-4" >
+        <p>Additional Comments</p>
+        <%= f.text_area :content, class:"form-control", style: "height: 209px; width: 100%",
+        placeholder: "Additional Comment" %>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <%= f.submit "Submit", class:"cta-see-team", style:"width: 181px; margin-bottom: 20px;" %>
+        </div>
+        <div class="col-12 padding-top: 15px; width: 271px !important; overflow: hidden;">
+          <%= recaptcha_tags %>
+        </div>
+
+      </div>
+      <%= f.hidden_field :referral_form_type, value: "medlegal" %>
+    </div>
+  </div>
+  <% end %>
+</div>

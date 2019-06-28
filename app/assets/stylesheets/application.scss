@@ -21,6 +21,8 @@
 @import "font-awesome";
 @import "admin_nav";
 @import "mobile";
+@import "choose_your_plan";
+@import "referrals";
 
 p {
   font-size: 1em;
@@ -39,4 +41,19 @@ p {
     max-height: 297px;
     overflow: hidden;
   }
+}
+
+@media print {
+  #printPageButton {
+    display: none;
+  }
+}
+
+.referral_print_button {
+  margin-left: 35px;
+  margin-top: 40px;
+  padding: 11px 46px;
+  border-radius: 9px;
+  background-color: $blue;
+  color: white;
 }

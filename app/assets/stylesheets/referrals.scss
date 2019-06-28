@@ -1,3 +1,46 @@
 // Place all the styles related to the referrals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.choose_your_plan_card {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  button {
+    display: inline-block;
+    position: relative;
+    background: #292B2C;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+    z-index: 1;
+    color: white;
+    height: 41px;
+    margin-bottom: 10px;
+    font-weight: bold
+  }
+
+  li {
+    margin: 10px 0px;
+  }
+
+  .choose_your_plan_card_innner {
+    border-radius: 4px;
+    border: 1px solid #5bc0de;
+  }
+
+  .choose_your_box {
+    min-height: 519px;
+    padding: 15px;
+    margin-bottom: 5px;
+    
+  }
+
+  .choose_your_box_font {
+    font-size: 0.9em;
+    color: rgba($color: #000000, $alpha: 0.8)
+  }
+}

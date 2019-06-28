@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190617232026) do
+ActiveRecord::Schema.define(version: 20190626002220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,31 @@ ActiveRecord::Schema.define(version: 20190617232026) do
     t.string "referral_source_name"
     t.string "assistant_phone"
     t.string "assistant_email"
+    t.string "city"
+    t.string "rs_office_address"
+    t.string "rs_name"
+    t.string "rs_phone"
+    t.string "rs_fax"
+    t.string "rs_email"
+    t.string "rs_represents"
+    t.string "rs_city"
+    t.string "rs_postal_code"
+    t.string "rs_assistant_name"
+    t.string "rs_assistant_phone"
+    t.string "rs_assistant_email"
+    t.string "client_id"
+    t.string "client_file_number"
+    t.datetime "client_date_of_birth"
+    t.datetime "client_report_deadline"
+    t.datetime "client_trial_date"
+    t.string "client_trial_duration_in_days"
+    t.datetime "client_date_of_injury"
+    t.string "client_gender"
+    t.string "client_interpreter_required"
+    t.string "client_language_required"
+    t.string "referral_form_type"
+    t.string "rs_office_name"
+    t.string "client_rebuttal_needed"
   end
 
   create_table "admin_teams", force: :cascade do |t|

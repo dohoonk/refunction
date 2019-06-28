@@ -1,0 +1,239 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12" >
+      <div class="" style="min-height: 900px;">
+        <div class="container-fluid">
+          <div class="row admin-search-padding">
+            <div class="col-sm-12">
+              <div class="row" style="page-break-after: always;">
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0 pt-1">
+                  <p style="font-size: 30px; font-weight: 800;">REFERRAL SOURCE INFORMATION</p>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Category</p>
+                  <div class="form-control">
+                    <%= @referral.category %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>CM/Employer Contact Name</p>
+                  <div class="form-control">
+                    <%= @referral.rs_name %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>CM/Employer Contact Phone</p>
+                  <div class="form-control">
+                    <%= @referral.rs_phone %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>CM/Employer Contact Fax</p>
+                  <div class="form-control">
+                    <%= @referral.rs_fax %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>CM/Employer Contact Email</p>
+                  <div class="form-control">
+                    <%=  @referral.rs_email %>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Company/Organization</p>
+                  <div class="form-control">
+                    <%= @referral.rs_office_name %>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Address</p>
+                  <div class="form-control">
+                    <%=  @referral.rs_office_address %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>City</p>
+                  <div class="form-control">
+                    <%=  @referral.rs_city %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Postal Code</p>
+                  <div class="form-control">
+                    <%=  @referral.rs_postal_code %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Assistant Name</p>
+                  <div class="form-control">
+                    <%=  @referral.rs_assistant_name %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Assistant Email</p>
+                  <div class="form-control">
+                    <%=  @referral.rs_assistant_email %>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row mt-4" style="page-break-after: always;">
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                  <p style="font-size: 30px; font-weight: 800;">CLIENT INFORMATION</p>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Client Name</p>
+                  <div class="form-control">
+                    <%= @referral.client_name %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Client Address </p>
+                  <div class="form-control">
+                    <%= @referral.client_address %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Date of Birth</p>
+                  <div class="form-control">
+                  <% if @referral.client_birthday != nil %>
+                    <%= (@referral.client_birthday).strftime("%d/%m/%Y") %>
+                  <% end %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>City</p>
+                  <div class="form-control">
+                    <%=  @referral.client_city %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Client Phone</p>
+                  <div class="form-control">
+                    <%= @referral.client_phone %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Postal Code</p>
+                  <div class="form-control">
+                    <%= @referral.client_postal_code %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Client Email</p>
+                  <div class="form-control">
+                    <%= @referral.client_email %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Policy/Client ID No</p>
+                  <div class="form-control">
+                    <%= @referral.client_file_number %>
+                  </div>
+                </div>
+
+                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p> Client Gender</p>
+                  <div class="form-control">
+                    <%= @referral.client_sex %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p> Client Gender(other)</p>
+                  <div class="form-control">
+                    <%= @referral.client_sex_other %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p> Date Of Injury</p>
+                  <div class="form-control">
+                    <% if @referral.client_date_of_injury != nil %>
+                      <%=  @referral.client_date_of_injury.strftime("%d/%m/%Y")%>
+                    <% end %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Interpreter Required?</p>
+                  <div class="form-control">
+                    <%=  @referral.client_interpreter_required %>
+                  </div>
+                </div>
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>(If yes) Language required:</p>
+                  <div class="form-control">
+                    <%=  @referral.client_language_required %>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                  <p>Concern</p>
+                  <div class="form-control" style="word-wrap: break-word; min-height: 200px;">
+                    <%= @referral.concerns %>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                <p style="font-size: 30px; font-weight: 800;">Extra Information</p>
+              </div>
+
+
+              <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                <p> Advertising</p>
+                <div class="form-control">
+                  <%= @referral.advertisement %>
+                </div>
+              </div>
+
+              <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                <p> Advertising Additional Info</p>
+                <div class="form-control">
+                  <%= @referral.client_advertisement_other %>
+                </div>
+              </div>
+
+              <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
+                <p>Additional Comment</p>
+                <div class="form-control" style="word-wrap: break-word; min-height: 400px;">
+                  <%= @referral.content %>
+                </div>
+              </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

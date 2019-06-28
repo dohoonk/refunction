@@ -38,6 +38,8 @@ Rails.application.routes.draw do
   get '/psychology', to: "our_teams#psychology"
   get '/psychiatrist', to: "our_teams#psychiatrist"
   get '/counsellors', to: "our_teams#counsellors"
+  get '/medlegal', to: "referrals#medlegal"
+  get '/employer', to: "referrals#employer"
   resources :users
   resources :admin_teams
   get '/index_original', to: "admin_teams#index_original"

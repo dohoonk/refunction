@@ -25,18 +25,14 @@
                   <thead>
                     <tr>
                       <th scope="col">Date</th>
+                      <th scope="col">Type</th>
                       <th scope="col">Name</th>
                       <th scope="col">Email</th>
                       <th scope="col">Phone</th>
-                      <th scope="col">Fax</th>
                       <th scope="col">Company</th>
-                      <th scope="col">Client Name</th>
-
-                      <th scope="col"">Client Phone</th>
-                      <th scope="col"">Client Aware</th>
-                      <th scope="col"">Category</th>
-                      <th scope="col"">Advertisement</th>
-                      <th scope="col">view</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Advertisement</th>
+                      <th scope="col">View</th>
                       <th scope="col">Delete</th>
                     </tr>
                   </thead>
@@ -44,16 +40,13 @@
                     <% @referrals.each do |f| %>
                       <tr>
                         <th scope="row"><%= f.created_at.to_date %></th>
-                        <td><%= f.name %></td>
-                        <td><%= f.email %></td>
-                        <td><%= f.phone %></td>
-                        <td><%= f.client_fax %></td>
-                        <td><%= f.company %></td>
-                        <td><%= f.client_name %></td>
+                        <td><%= f.referral_form_type %></td>
+                         <td><%= f.rs_name %></td>
+                        <td><%= f.rs_email %></td>
+                        <td><%= f.rs_phone %></td>
+                        <td><%= f.rs_fax %></td>
+                        <td><%= f.rs_office_name %></td>
 
-                        <td><%= f.client_phone %></td>
-                        <td><%= f.client_aware %></td>
-                        <td><%= f.category%></td>
                         <td><%= f.advertisement%></td>
                         <td><%= link_to "Show", admin_referral_path(f) %></td>
                         <td><%= link_to "Delete", admin_referral_path(f), method: :delete, data: {confirm: 'Are you sure?'} %></td>

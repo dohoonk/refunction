@@ -20,22 +20,16 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="page-desc">
-        <h1>Re:Function Referral / Booking </h1>
+        <h1>Re:Function Referral – Medical Legal Services</h1>
       </div>
     </div>
     <div class="row justify-content-center margin-bottom-30">
       <div class="page-desc-sub">
-        <p class="">Which service would you like to refer to/book an appointment for?</p>
+        <p class="">How can we help?</p>
       </div>
     </div>
-    
-     <% flash.each do |key, value| %>
-      <div class="row">
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      </div>
-    <% end %>
 
-    <%= render 'choose_your_plan' %>
+    <%= render 'medical_legal_referral_form' %>
 
   </div>
 </div>
