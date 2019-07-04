@@ -9,7 +9,7 @@ class ReferralMailer < ApplicationMailer
 
   def send_received_email(referral)
     @referral = referral
-    mail( :to => @referral.email,
+    mail( :to => @referral.rs_email,
     :subject => 'Thank you for contacting us' )
   end
 end
