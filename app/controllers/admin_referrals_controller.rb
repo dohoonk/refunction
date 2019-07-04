@@ -25,7 +25,7 @@ class AdminReferralsController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy 
     @referral = AdminReferral.find(params[:id])
     @referral.destroy
     redirect_to admin_referrals_path
