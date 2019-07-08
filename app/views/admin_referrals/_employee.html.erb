@@ -114,7 +114,7 @@
                   <p>Date of Birth</p>
                   <div class="form-control">
                   <% if @referral.client_birthday != nil %>
-                    <%= (@referral.client_birthday).strftime("%d/%m/%Y") %>
+                    <%= (@referral.client_birthday).strftime("%B %d, %Y") %>
                   <% end %>
                   </div>
                 </div>
@@ -172,7 +172,7 @@
                   <p> Date Of Injury</p>
                   <div class="form-control">
                     <% if @referral.client_date_of_injury != nil %>
-                      <%=  @referral.client_date_of_injury.strftime("%d/%m/%Y")%>
+                      <%=  @referral.client_date_of_injury.strftime("%B %d, %Y")%>
                     <% end %>
                   </div>
                 </div>

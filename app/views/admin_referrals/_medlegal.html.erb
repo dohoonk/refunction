@@ -120,7 +120,7 @@
                   <p>Date of Birth</p>
                   <div class="form-control">
                   <% if @referral.client_birthday != nil %>
-                    <%= (@referral.client_birthday).strftime("%d/%m/%Y") %>
+                    <%= (@referral.client_birthday).strftime("%B %d, %Y") %>
                   <% end %>
                   </div>
                 </div>
@@ -157,7 +157,7 @@
                   <p>Report Deadline</p>
                   <div class="form-control">
                   <% if @referral.client_report_deadline != nil %>
-                      <%=  @referral.client_report_deadline.strftime("%d/%m/%Y")%>
+                      <%=  @referral.client_report_deadline.strftime("%B %d, %Y")%>
                     <% end %>
                   </div>
                 </div>
@@ -166,7 +166,7 @@
                   <p>Trial Date</p>
                   <div class="form-control">
                     <% if @referral.client_trial_date != nil %>
-                      <%=  @referral.client_trial_date.strftime("%d/%m/%Y")%>
+                      <%=  @referral.client_trial_date.strftime("%B %d, %Y")%>
                     <% end %>
                   </div>
                 </div>
@@ -182,7 +182,7 @@
                   <p> Date Of Injury</p>
                   <div class="form-control">
                     <% if @referral.client_date_of_injury != nil %>
-                      <%=  @referral.client_date_of_injury.strftime("%d/%m/%Y")%>
+                      <%=  @referral.client_date_of_injury.strftime("%B %d, %Y")%>
                     <% end %>
                   </div>
                 </div>

@@ -13,6 +13,7 @@ class AdminReferralsController < ApplicationController
     # binding.pry
     @referral = AdminReferral.new(admin_referral_params)
 
+
     if verify_recaptcha(model: @referral) && @referral.save
       ReferralMailer.send_signup_email(@referral).deliver
       ReferralMailer.send_received_email(@referral).deliver

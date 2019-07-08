@@ -104,7 +104,15 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Date of Birth</p>
-        <%= f.date_field :client_birthday, class:"form-control input-box" %>
+        <%= f.date_select :client_birthday, 
+        {
+          order: [ :month, :day, :year],
+          start_year: Date.today.year - 90,
+          end_year: Date.today.year,
+        }, 
+        {
+          class:"date-picker-form input-box"
+         } %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -129,12 +137,26 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Report Deadline</p>
-        <%= f.date_field :client_report_deadline, class:"form-control input-box" %>
+        <%= f.date_select :client_report_deadline, 
+        {
+          order: [ :month, :day, :year],
+          end_year: Date.today.year + 1,
+        }, 
+        {
+          class:"date-picker-form input-box"
+         } %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Trial Date</p>
-        <%= f.date_field :client_trial_date, class:"form-control input-box" %>
+        <%= f.date_select :client_trial_date, 
+        {
+          order: [ :month, :day, :year]
+        }, 
+        {
+          class:"date-picker-form input-box"
+         } %>
+       
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -144,7 +166,15 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Date of Injury</p>
-        <%= f.date_field :client_date_of_injury, class:"form-control input-box" %>
+         <%= f.date_select :client_date_of_injury, 
+        {
+          order: [ :month, :day, :year],
+          end_year: Date.today.year,
+        }, 
+        {
+          class:"date-picker-form input-box"
+         } %>
+       
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -234,3 +264,4 @@
   </div>
   <% end %>
 </div>
+
