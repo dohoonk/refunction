@@ -25,14 +25,14 @@
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Lawyer Phone </p>
+                  <p>Lawyer Phone #</p>
                   <div class="form-control">
                     <%= @referral.rs_phone %>
                   </div>
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Lawyer Fax Fax</p>
+                  <p>Lawyer Fax #</p>
                   <div class="form-control">
                     <%= @referral.rs_fax %>
                   </div>
@@ -46,14 +46,14 @@
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Law Firm Name </p>
+                  <p>Law Firm Name</p>
                   <div class="form-control">
                     <%=  @referral.rs_office_name %>
                   </div>
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Address of Law Office </p>
+                  <p>Law Office Address</p>
                   <div class="form-control">
                     <%=  @referral.rs_office_address %>
                   </div>
@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Do you represent Plaintiff or Defense?</p>
+                  <p>Do you represent Plaintiff or Defence?</p>
                   <div class="form-control">
                     <%=  @referral.rs_represents %>
                   </div>
@@ -110,7 +110,7 @@
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Client name (Incl. English name where applicable):</p>
+                  <p>Client Name (include English name, where applicable)</p>
                   <div class="form-control">
                     <%= @referral.client_name %>
                   </div>
@@ -179,7 +179,7 @@
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p> Date Of Injury</p>
+                  <p>Date Of Injury</p>
                   <div class="form-control">
                     <% if @referral.client_date_of_injury != nil %>
                       <%=  @referral.client_date_of_injury.strftime("%B %d, %Y")%>
@@ -188,21 +188,21 @@
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Interpreter Required?</p>
+                  <p>Is an Interpreter Required?</p>
                   <div class="form-control">
                     <%=  @referral.client_interpreter_required %>
                   </div>
                 </div>
 
                 <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
-                  <p>(If yes) Language required:</p>
+                  <p>If Yes, Language Required</p>
                   <div class="form-control">
                     <%=  @referral.client_language_required %>
                   </div>
                 </div>  
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p> Client Gender</p>
+                  <p>Client Gender</p>
                   <div class="form-control">
                     <%= @referral.client_sex %>
                   </div>
@@ -238,14 +238,14 @@
 
 
               <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                <p> Advertising</p>
+                <p>Advertising</p>
                 <div class="form-control">
                   <%= @referral.advertisement %>
                 </div>
               </div>
 
               <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                <p> Advertising Additional Info</p>
+                <p>Advertising Additional Info</p>
                 <div class="form-control">
                   <%= @referral.client_advertisement_other %>
                 </div>

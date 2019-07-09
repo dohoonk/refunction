@@ -40,7 +40,7 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>CM/Employer Contact Fax</p>
+        <p>CM/Employer Contact Fax #</p>
         <%= f.text_field :rs_fax, class:"form-control input-box" %>
       </div>
 
@@ -70,12 +70,12 @@
       </div>
       
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Assistant Name(when applicable)</p>
+        <p>Assistant’s Name</p>
         <%= f.text_field :rs_assistant_name, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Assistant Email</p>
+        <p>Assistant’s Email</p>
         <%= f.text_field :rs_assistant_email, class:"form-control input-box" %>
       </div>
 
@@ -90,7 +90,7 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>* Client name </p>
+        <p>* Client Name </p>
         <%= f.text_field :client_name, required: true, class:"form-control input-box" %>
       </div>
 
@@ -101,6 +101,7 @@
           order: [ :month, :day, :year],
           start_year: Date.today.year - 90,
           end_year: Date.today.year,
+          :include_blank => true,
         }, 
         {
           class:"date-picker-form input-box"
@@ -109,7 +110,7 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Client Phone</p>
+        <p>Client Phone #</p>
         <%= f.text_field :client_phone, class:"form-control input-box" %>
       </div>
 
@@ -135,7 +136,7 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Policy/Client ID No</p>
+        <p>Policy/Client ID #</p>
         <%= f.text_field :client_file_number, class:"form-control input-box" %>
       </div>
 
@@ -146,6 +147,7 @@
         {
           order: [ :month, :day, :year],
           end_year: Date.today.year,
+          :include_blank => true,
         }, 
         {
           class:"date-picker-form input-box"
@@ -153,12 +155,12 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Interpreter Required?</p>
+        <p>Is an Interpreter Required?</p>
         <%= f.text_field :client_interpreter_required, class:"form-control input-box" %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>(If yes) Language required</p>
+        <p>If Yes, Language Required</p>
         <%= f.text_field :client_language_required, class:"form-control input-box" %>
       </div>
 
@@ -180,7 +182,7 @@
           <label><%= f.radio_button :client_sex, "Ohter" %> Other</label>
         </div>
 
-        <%= f.text_field :client_sex, class:"form-control input-box", placeholder: "If others please specify" %>
+        <%= f.text_field :client_sex, class:"form-control input-box", placeholder: "If other, please specify" %>
 
       </div>
     </div>
@@ -217,7 +219,7 @@
       <div class="form-group col-sm-12 career-pd-left-0 career-pd-right-0 mt-4" >
         <p>Additional Comments</p>
         <%= f.text_area :content, class:"form-control", style: "height: 209px; width: 100%",
-        placeholder: "Additional Comment" %>
+        placeholder: "Additional Comments" %>
       </div>
 
       <div class="row">

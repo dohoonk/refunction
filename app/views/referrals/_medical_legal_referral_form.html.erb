@@ -18,7 +18,7 @@
           "2 Day Functional Capacity Evaluation (FCE)",
           "Cognitive Functional Capacity Evaluation (2 Day)",
           "Cost of Future Care Assessment",
-          "FCE w/Cost of Future of Care",
+          "FCE w/Cost of Future Care",
           "Home Assessment",
           "Medical Legal File Review",
           "Other"], {},{class: 'form-control input-box'} %>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Lawyer Fax</p>
+        <p>Lawyer Fax #</p>
         <%= f.text_field :rs_fax, class:"form-control input-box" %>
       </div>
 
@@ -51,7 +51,7 @@
       </div>
       
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Adress of Law Office</p>
+        <p>Law Office Address</p>
         <%= f.text_field :rs_office_address, class:"form-control input-box" %>
       </div>
       
@@ -67,7 +67,7 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Assistant/Paralegal</p>
+        <p>Assistant/Paralegal Name</p>
         <%= f.text_field :rs_assistant_name, class:"form-control input-box" %>
       </div>
 
@@ -82,9 +82,9 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>* Do you represent Plaintiff or Defense?</p>
+        <p>* Do you represent Plaintiff or Defence?</p>
         <%= f.select :rs_represents,  ["Plaintiff", 
-          "Defense"], {},{class: 'form-control input-box'} %>
+          "Defence"], {},{class: 'form-control input-box'} %>
       </div>
 
     </div>
@@ -98,7 +98,7 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Client name (Incl. English name where applicable)</p>
+        <p>Client Name (include English name, where applicable)</p>
         <%= f.text_field :client_name, class:"form-control input-box" %>
       </div>
 
@@ -109,6 +109,7 @@
           order: [ :month, :day, :year],
           start_year: Date.today.year - 90,
           end_year: Date.today.year,
+          :include_blank => true,
         }, 
         {
           class:"date-picker-form input-box"
@@ -141,6 +142,7 @@
         {
           order: [ :month, :day, :year],
           end_year: Date.today.year + 1,
+          :include_blank => true
         }, 
         {
           class:"date-picker-form input-box"
@@ -151,7 +153,8 @@
         <p>Trial Date</p>
         <%= f.date_select :client_trial_date, 
         {
-          order: [ :month, :day, :year]
+          order: [ :month, :day, :year],
+          :include_blank => true
         }, 
         {
           class:"date-picker-form input-box"
@@ -170,6 +173,7 @@
         {
           order: [ :month, :day, :year],
           end_year: Date.today.year,
+          :include_blank => true
         }, 
         {
           class:"date-picker-form input-box"
@@ -178,13 +182,13 @@
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>Interpreter Required?</p>
+        <p>Is an Interpreter Required?</p>
         <%= f.text_field :client_interpreter_required, class:"form-control input-box" %>
       </div>
 
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>(If yes) Language required</p>
+        <p>If Yes, Language Requiredd</p>
         <%= f.text_field :client_language_required, class:"form-control input-box" %>
       </div>
 
@@ -202,7 +206,7 @@
           <label><%= f.radio_button :client_sex, "Ohter" %> Other</label>
         </div>
 
-          <%= f.text_field :client_sex_other, class:"form-control input-box", placeholder: "If others please specify" %>
+          <%= f.text_field :client_sex_other, class:"form-control input-box", placeholder: "If other, please specify" %>
 
       </div>
     </div>
@@ -247,7 +251,7 @@
       <div class="form-group col-sm-12 career-pd-left-0 career-pd-right-0 mt-4" >
         <p>Additional Comments</p>
         <%= f.text_area :content, class:"form-control", style: "height: 209px; width: 100%",
-        placeholder: "Additional Comment" %>
+        placeholder: "Additional Comments" %>
       </div>
 
       <div class="row">
