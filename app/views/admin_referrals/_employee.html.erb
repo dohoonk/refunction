@@ -1,13 +1,13 @@
-<div class="container-fluid">
-  <div class="row">
+<div class="container-fluid main-container">
+  <div class="row print-firefox">
     <div class="col-sm-12" >
       <div class="" style="min-height: 900px;">
         <div class="container-fluid">
-          <div class="row admin-search-padding">
+          <div class="row admin-search-padding print-firefox pdt-0">
             <div class="col-sm-12">
-              <div class="row" style="page-break-after: always;">
-                <div class="col-sm-12 margin-bottom-11 career-pd-left-0 pt-1">
-                  <p style="font-size: 30px; font-weight: 800;">REFERRAL SOURCE INFORMATION</p>
+              <div class="row print-firefox-inline" style="page-break-after: always;">
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0 pt-1 print-firefox-size">
+                  <p class="print-firefox-fontsize" style="font-size: 30px; font-weight: 800;">REFERRAL SOURCE INFORMATION</p>
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -91,9 +91,9 @@
 
               </div>
 
-              <div class="row mt-4" style="page-break-after: always;">
+              <div class="row mt-4 print-firefox" style="page-break-after: always;">
                 <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
-                  <p style="font-size: 30px; font-weight: 800;">CLIENT INFORMATION</p>
+                  <p class="print-firefox-fontsize " style="font-size: 30px; font-weight: 800;">CLIENT INFORMATION</p>
                 </div>
 
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -183,12 +183,17 @@
                     <%=  @referral.client_interpreter_required %>
                   </div>
                 </div>
-                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0" style="page-break-after: always;">
                   <p>If Yes, Language Required</p>
                   <div class="form-control">
                     <%=  @referral.client_language_required %>
                   </div>
                 </div>
+
+                <div class="col-sm-12 margin-bottom-11 career-pd-left-0 print-show" style="display: none;">
+                  <p class="print-firefox-fontsize" style="font-size: 30px; font-weight: 800;">CLIENT INFORMATION</p>
+                </div>
+
 
                 <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
                   <p>Concern</p>
@@ -200,7 +205,7 @@
 
             <div class="row mt-4">
               <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
-                <p style="font-size: 30px; font-weight: 800;">Extra Information</p>
+                <p class="print-firefox-fontsize" style="font-size: 30px; font-weight: 800;">Extra Information</p>
               </div>
 
 

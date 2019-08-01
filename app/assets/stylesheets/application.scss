@@ -1,6 +1,7 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 // @import "bootstrap-sprockets";
 @import "variables";
+@import "print";
 @import "navbar";
 @import "bootstrap";
 @import "home";
@@ -47,6 +48,22 @@ p {
 @media print {
   #printPageButton {
     display: none;
+  
+  }
+
+  body {
+    display: inline !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
+  .main-container {
+    height: auto;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    display: inline !important;
   }
 }
 

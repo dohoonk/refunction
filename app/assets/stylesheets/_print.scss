@@ -1,0 +1,47 @@
+@-moz-document url-prefix() { 
+//   .main-container {
+//     overflow:visible !important;
+//     overflow-x: visible !important;
+//     overflow-y: visible !important;
+//     display:block;
+//   }
+  @media print {
+      .print-firefox {
+        display: block !important
+      }
+      
+      .print-firefox-inline {
+        display: block !important
+      }
+
+      .print-firefox-size {
+        padding-top: 0px;
+        margin-top: 0px;
+      }
+
+      .print-firefox-fontsize {
+        font-size: 18px !important;
+      }
+
+      .pdt-0 {
+        padding-top: 0px !important;
+      }
+
+      p {
+        margin-bottom: 0px !important;
+      }
+
+      .col-sm-6 {
+        max-width: 200% !important;
+      }
+
+      .print-show {
+        display: block !important;
+      }
+
+      .mgb-1 {
+        margin-bottom: 1px !important;
+      }
+
+    }
+}
