@@ -146,6 +146,7 @@
           <%= f.date_select :client_date_of_injury, 
         {
           order: [ :month, :day, :year],
+          start_year: Date.today.year - 65,
           end_year: Date.today.year,
           :include_blank => true,
         }, 
