@@ -141,7 +141,7 @@
         <%= f.date_select :client_report_deadline, 
         {
           order: [ :month, :day, :year],
-          end_year: Date.today.year + 1,
+          end_year: Date.today.year + 5,
           :include_blank => true
         }, 
         {
@@ -154,6 +154,8 @@
         <%= f.date_select :client_trial_date, 
         {
           order: [ :month, :day, :year],
+          start_year: Date.today.year - 7,
+          end_year: Date.today.year + 7,
           :include_blank => true
         }, 
         {
@@ -172,6 +174,7 @@
          <%= f.date_select :client_date_of_injury, 
         {
           order: [ :month, :day, :year],
+          start_year: Date.today.year - 65,
           end_year: Date.today.year,
           :include_blank => true
         }, 
