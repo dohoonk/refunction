@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200107004240) do
+ActiveRecord::Schema.define(version: 20200107172246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20200107004240) do
     t.string "rs_office_name"
     t.string "client_rebuttal_needed"
     t.string "public_uid"
+    t.string "client_sub_file_number"
     t.index ["public_uid"], name: "index_admin_referrals_on_public_uid"
   end
 
