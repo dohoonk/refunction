@@ -3,7 +3,7 @@
     <div class="col-sm-12" >
       <div class="" style="min-height: 900px;">
         <div class="container-fluid">
-          <div class="row  print-firefox pdt-0">
+          <div class="row  print-firefox pdt-0" id='showReferral'>
             <div class="col-sm-12">
               <div class="row print-firefox" style="page-break-after: always;">
                 <div class="col-sm-12 margin-bottom-11 career-pd-left-0 pt-1">
@@ -101,7 +101,7 @@
                     <%=  @referral.rs_represents %>
                   </div>
                 </div>
-                
+
               </div>
 
               <div class="row mt-4 print-firefox" style="page-break-after: always;">
@@ -187,19 +187,20 @@
                   </div>
                 </div>
 
-                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0 interpreter-required-result">
                   <p>Is an Interpreter Required?</p>
                   <div class="form-control">
                     <%=  @referral.client_interpreter_required %>
                   </div>
                 </div>
-
-                <div class="col-sm-4 margin-bottom-11 career-pd-left-0" style="page-break-after: always;">
-                  <p>If Yes, Language Required</p>
-                  <div class="form-control">
-                    <%=  @referral.client_language_required %>
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0 interpreter-required-language" style="page-break-after: always;">
+                  <div class='d-none'>
+                    <p>Required Langauge</p>
+                    <div class="form-control">
+                      <%=  @referral.client_language_required %>
+                    </div>
                   </div>
-                </div>  
+                </div>
 
                 <div class="col-sm-12 margin-bottom-11 career-pd-left-0 print-show" style="display: none;">
                   <p class="print-firefox-fontsize" style="font-size: 30px; font-weight: 800;">CLIENT INFORMATION</p>
@@ -218,7 +219,7 @@
                     <%#= @referral.client_sex_other %>
                   </div>
                 </div> -->
-                
+
                 <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
                   <p>Will a rebuttal report be required, or only a verbal opinion/aid with trial prep?</p>
                   <div class="form-control">
@@ -232,7 +233,7 @@
                     <%=  @referral.concerns %>
                   </div>
                 </div>
-                
+
             </div>
 
             <div class="row mt-4">
@@ -254,7 +255,7 @@
                   <%= @referral.client_advertisement_other %>
                 </div>
               </div>
-              
+
               <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
                 <p>Additional Comment</p>
                 <div class="form-control" style="word-wrap: break-word; min-height: 400px;">
