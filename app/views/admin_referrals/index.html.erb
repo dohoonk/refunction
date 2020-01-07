@@ -28,8 +28,8 @@
                       <th scope="col">Conf #</th>
                       <th scope="col">Type</th>
                       <th scope="col">Name</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Phone</th>
+                      <th scope="col">Claim/Policy #</th>
+                      <th scope="col">File/Client ID#</th>
                       <th scope="col">Company</th>
                       <th scope="col">Advertisement</th>
                       <th scope="col">View</th>
@@ -43,13 +43,13 @@
                         <td><%= f.public_uid %></td>
                         <td><%= f.referral_form_type %></td>
                         <td><%= f.rs_name %></td>
-                        <td><%= f.rs_email %></td>
-                        <td><%= f.rs_phone %></td>
+                        <td><%= f.client_file_number %></td>
+                        <td><%= f.client_sub_file_number %></td>
                         <td><%= f.rs_office_name %></td> <!-- This is "Category" -->
 
                         <td><%= f.advertisement%></td>
-                        <td><%= link_to "Show", admin_referral_path(f) %></td>
-                        <td><%= link_to "Delete", admin_referral_path(f), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                        <td><%= link_to "Show", admin_referral_path(f.public_uid) %></td>
+                        <td><%= link_to "Delete", admin_referral_path(f.public_uid), method: :delete, data: {confirm: 'Are you sure?'} %></td>
                       </tr>
                     <% end %>
 

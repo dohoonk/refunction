@@ -12,7 +12,7 @@
     <p>If you have any questions please call Terry Hillhouse at 604 233 2210.</p>
 
     <%= link_to "View/Print", :controller => "info_referrals", :action => "show",
-:only_path => false, :id => @referral.id, :host => " https://www.refunction.ca" %>
+:only_path => false, :id => @referral.public_uid, :host => " https://www.refunction.ca" %>
 
   </body>
 </html>

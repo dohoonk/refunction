@@ -9,7 +9,7 @@
 
     <p>Please click the below link to see the details.</p>
     <%= link_to "View/Print", :controller => "info_referrals", :action => "show",
-:only_path => false, :id => @referral.id, :host => " https://www.refunction.ca" %>
+:only_path => false, :id => @referral.public_uid, :host => " https://www.refunction.ca" %>
 
   </body>
 </html>
