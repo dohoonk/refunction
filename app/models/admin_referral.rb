@@ -7,5 +7,18 @@ class AdminReferral < ApplicationRecord
   # validates :client_phone, presence: true
   # validates :advertisement, presence: true
 
-  generate_public_uid.prepend('M')
+  generate_public_uid
+
+  after_save :add_categorizer_to_confirmation_code
+
+  private
+
+  def add_categorizer_to_confirmation_code
+    public_uid = self.public_uid
+    public_uid = public_uid.prepend('M') if self.referral_form_type == 'medlegal'
+    public_uid = public_uid.prepend('E') if self.referral_form_type == 'employer'
+
+    self.update_column(:public_uid, public_uid)
+  end
+
 end
