@@ -64,16 +64,3 @@
     </div>
   </div>
 </div>
-
-refs.each do |ref|
-  if ref.public_uid.nil?
-    if ref.category == 'medlegal'
-      ref.public_uid = ref.generate_uid.prepend('M')
-    elsif ref.category = 'employer'
-      ref.public_uid = ref.generate_uid.prepend('E')
-    else
-      ref.public_uid = 'no category'
-    end
-    ref.save
-  end
-end
