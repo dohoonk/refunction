@@ -6,6 +6,9 @@ class AdminReferralsController < ApplicationController
   end
 
   def show
+
+    # find_param is from the AdminReferral Modal where it searches it based on the public_uid
+    # of the record
     @referral = AdminReferral.find_param(params[:id])
   end
 
@@ -13,9 +16,7 @@ class AdminReferralsController < ApplicationController
     # binding.pry
     @referral = AdminReferral.new(admin_referral_params)
 
-
-    if @referral.save
-    # if verify_recaptcha(model: @referral) && @referral.save
+    if verify_recaptcha(model: @referral) && @referral.save
       ReferralMailer.send_signup_email(@referral).deliver
       ReferralMailer.send_received_email(@referral).deliver
       flash[:success] = "Thank you for your referral. We will contact you shortly"

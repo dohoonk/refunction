@@ -3,10 +3,11 @@ class ReferralMailer < ApplicationMailer
   # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_signup_email(referral)
     @referral = referral
-    # mail( :to => 'info@refunction.ca,referrals@refunction.ca,referral@refunction.ca',
-    # :subject => 'Referral Received' )
     subject = "Referral Received"
     subject += add_email_header(@referral)
+
+    # mail( :to => 'info@refunction.ca,referrals@refunction.ca,referral@refunction.ca',
+    # :subject => 'Referral Received' )
 
     mail( :to => 'peter.h.9002@gmail.com',
     :subject => subject )
