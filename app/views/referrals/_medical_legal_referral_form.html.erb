@@ -193,15 +193,16 @@
 
       </div>
 
-      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0 interpreter-required">
         <p>Is an Interpreter Required?</p>
-        <%= f.text_field :client_interpreter_required, class:"form-control input-box" %>
+          <%= f.select  :client_interpreter_required, ['Yes', 'No'], selected: 'No', class:"form-control input-box" %>
       </div>
 
-
-      <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>If Yes, Language Required</p>
-        <%= f.text_field :client_language_required, class:"form-control input-box" %>
+      <div class="col-sm-6 margin-bottom-11 career-pd-left-0 interpreter-language">
+        <div class='d-none'>
+          <p>Language Required</p>
+          <%= f.text_field :client_language_required, class:"form-control input-box" %>
+        </div>
       </div>
 
 
