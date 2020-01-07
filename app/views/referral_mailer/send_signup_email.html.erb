@@ -5,10 +5,11 @@
   </head>
   <body>
     <h1>New Referral from refunction.ca</h1>
+    <p>Referral confirmation code: <%= @referral.public_uid %> </p>
 
     <p>Please click the below link to see the details.</p>
     <%= link_to "View/Print", :controller => "info_referrals", :action => "show",
 :only_path => false, :id => @referral.id, :host => " https://www.refunction.ca" %>
-   
+
   </body>
 </html>
