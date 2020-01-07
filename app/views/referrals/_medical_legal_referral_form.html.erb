@@ -6,15 +6,15 @@
     </div>
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-4">
-       
+
         <h3>Referral Source Information </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>I am inquiring about?</p>
-          <%= f.select :category,  ["1 Day Functional Capacity Evaluation (FCE)", 
+          <%= f.select :category,  ["1 Day Functional Capacity Evaluation (FCE)",
           "2 Day Functional Capacity Evaluation (FCE)",
           "Cognitive Functional Capacity Evaluation (2 Day)",
           "Cost of Future Care Assessment",
@@ -25,7 +25,7 @@
           "Other"], {},{class: 'form-control input-box'} %>
       </div>
 
-      
+
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* Lawyer Name</p>
         <%= f.text_field :rs_name, required: true, class:"form-control input-box" %>
@@ -50,12 +50,12 @@
         <p>* Law Firm Name</p>
         <%= f.text_field :rs_office_name, required: true, class:"form-control input-box" %>
       </div>
-      
+
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Law Office Address</p>
         <%= f.text_field :rs_office_address, class:"form-control input-box" %>
       </div>
-      
+
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>City </p>
@@ -84,7 +84,7 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* Do you represent Plaintiff or Defence?</p>
-        <%= f.select :rs_represents,  ["Plaintiff", 
+        <%= f.select :rs_represents,  ["Plaintiff",
           "Defence"], {},{class: 'form-control input-box'} %>
       </div>
 
@@ -92,10 +92,10 @@
 
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
-       
+
         <h3>Client Info Section </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -105,13 +105,13 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Date of Birth</p>
-        <%= f.date_select :client_birthday, 
+        <%= f.date_select :client_birthday,
         {
           order: [ :month, :day, :year],
           start_year: Date.today.year - 90,
           end_year: Date.today.year,
           :include_blank => true,
-        }, 
+        },
         {
           class:"date-picker-form input-box"
          } %>
@@ -139,12 +139,12 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Report Deadline</p>
-        <%= f.date_select :client_report_deadline, 
+        <%= f.date_select :client_report_deadline,
         {
           order: [ :month, :day, :year],
           end_year: Date.today.year + 5,
           :include_blank => true
-        }, 
+        },
         {
           class:"date-picker-form input-box"
          } %>
@@ -152,17 +152,17 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Trial Date</p>
-        <%= f.date_select :client_trial_date, 
+        <%= f.date_select :client_trial_date,
         {
           order: [ :month, :day, :year],
           start_year: Date.today.year - 7,
           end_year: Date.today.year + 7,
           :include_blank => true
-        }, 
+        },
         {
           class:"date-picker-form input-box"
          } %>
-       
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -172,17 +172,17 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Date of Injury</p>
-         <%= f.date_select :client_date_of_injury, 
+         <%= f.date_select :client_date_of_injury,
         {
           order: [ :month, :day, :year],
           start_year: Date.today.year - 65,
           end_year: Date.today.year,
           :include_blank => true
-        }, 
+        },
         {
           class:"date-picker-form input-box"
          } %>
-       
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -192,7 +192,7 @@
 
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-        <p>If Yes, Language Requiredd</p>
+        <p>If Yes, Language Required</p>
         <%= f.text_field :client_language_required, class:"form-control input-box" %>
       </div>
 
@@ -217,7 +217,7 @@
 
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
-        
+
         <h3>**If referring for a consult </h3>
         <div class="highlight"></div>
         <div class="col-sm-12 margin-bottom-11 career-pd-left-0 career-pd-right-0 mt-4">
@@ -227,9 +227,9 @@
 
         <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
           <p>Will a rebuttal report be required, or only a verbal opinion/aid with trial prep?</p>
- 
+
           <%= f.text_area :client_rebuttal_needed, class:"form-control", style: "height: 209px; width: 100%", placeholder: "Will a rebuttal report be required, or only a verbal opinion/aid with trial prep?" %>
-     
+
         </div>
 
       </div>
@@ -238,10 +238,10 @@
 
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
-       
+
         <h3>Extra Info Section </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
       <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
