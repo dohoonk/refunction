@@ -6,7 +6,7 @@ class AdminReferralsController < ApplicationController
   end
 
   def show
-    @referral = AdminReferral.find(params[:id])
+    @referral = AdminReferral.find_param(params[:id])
   end
 
   def create

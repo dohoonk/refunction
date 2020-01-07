@@ -9,6 +9,10 @@ class AdminReferral < ApplicationRecord
 
   generate_public_uid
 
+  def self.find_param(param)
+    find_by! public_uid: param.split('-').first
+  end
+
   after_save :add_categorizer_to_confirmation_code
 
   private
