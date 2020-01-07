@@ -6,4 +6,6 @@ class AdminReferral < ApplicationRecord
   # validates :email, presence: true
   # validates :client_phone, presence: true
   # validates :advertisement, presence: true
+
+  generate_public_uid.prepend('M')
 end

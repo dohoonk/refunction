@@ -6,15 +6,15 @@
     </div>
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-4">
-       
+
         <h3>Referral Source Information </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>I am inquiring about?</p>
-          <%= f.select :category,  ["1 Day Functional Capacity Evaluation", 
+          <%= f.select :category,  ["1 Day Functional Capacity Evaluation",
           "2 Day Functional Capacity Evaluation",
           "Cognitive Functional Capacity Evaluation (2 Day)",
           "Psychiatric Independent Medical Examination",
@@ -26,10 +26,9 @@
           "Return to Work Support Services",
           "Home Assessment",
           "Work Simulation",
-          "Cognitive FCE w/ CFC",
           "Other"], {},{class: 'form-control input-box'} %>
       </div>
-      
+
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* CM/Employer Contact Name</p>
         <%= f.text_field :rs_name, required: true, class:"form-control input-box" %>
@@ -49,7 +48,7 @@
         <p>* CM/Employer Contact Email</p>
         <%= f.text_field :rs_email, required: true, class:"form-control input-box" %>
       </div>
-      
+
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* Company/Organization</p>
         <%= f.text_field :rs_office_name, required: true, class:"form-control input-box" %>
@@ -69,7 +68,7 @@
         <p>Postal Code</p>
         <%= f.text_field :rs_postal_code, class:"form-control input-box" %>
       </div>
-      
+
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Assistant’s Name</p>
         <%= f.text_field :rs_assistant_name, class:"form-control input-box" %>
@@ -84,10 +83,10 @@
 
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
-       
+
         <h3>Client Info Section </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -97,13 +96,13 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* Date of Birth</p>
-        <%= f.date_select :client_birthday, 
+        <%= f.date_select :client_birthday,
         {
           order: [ :month, :day, :year],
           start_year: Date.today.year - 90,
           end_year: Date.today.year,
           :include_blank => true,
-        }, 
+        },
         {
           class:"date-picker-form input-box"
          } %>
@@ -120,7 +119,7 @@
         <%= f.text_field :client_email, class:"form-control input-box" %>
       </div>
 
-  
+
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Client Address</p>
         <%= f.text_field :client_address, class:"form-control input-box" %>
@@ -144,13 +143,13 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>Date of Injury</p>
-          <%= f.date_select :client_date_of_injury, 
+          <%= f.date_select :client_date_of_injury,
         {
           order: [ :month, :day, :year],
           start_year: Date.today.year - 65,
           end_year: Date.today.year,
           :include_blank => true,
-        }, 
+        },
         {
           class:"date-picker-form input-box"
          } %>
@@ -192,10 +191,10 @@
 
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
-       
+
         <h3>Extra Info Section </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
        <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
