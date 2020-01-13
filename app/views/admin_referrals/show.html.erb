@@ -1,4 +1,9 @@
-<button id="printPageButton", class="referral_print_button", onClick="window.print();">Print</button>
+<div class='row'>
+  <div class='col-md-12'>
+    <button id="printPageButton", class="referral_print_button", onClick="window.print();">Print</button>
+    <h2 class='header-confirmation-code'>Confirmation No. <%= @referral.public_uid %></h2>
+  </div>
+</div>
 
 <% if @referral.referral_form_type == "employer" %>
   <%= render "employee" %>

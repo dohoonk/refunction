@@ -3,7 +3,7 @@
     <div class="col-sm-12" >
       <div class="" style="min-height: 900px;">
         <div class="container-fluid">
-          <div class="row admin-search-padding print-firefox pdt-0">
+          <div class="row admin-search-padding print-firefox pdt-0" id='showReferral'>
             <div class="col-sm-12">
               <div class="row print-firefox-inline" style="page-break-after: always;">
                 <div class="col-sm-12 margin-bottom-11 career-pd-left-0 pt-1 print-firefox-size">
@@ -147,10 +147,19 @@
                   </div>
                 </div>
 
+                <div class='col-sm-6'></div>
+
                 <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
-                  <p>Policy/Client ID #</p>
+                  <p>Policy No.</p>
                   <div class="form-control">
                     <%= @referral.client_file_number %>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                  <p>Client ID No.</p>
+                  <div class="form-control">
+                    <%= @referral.client_sub_file_number %>
                   </div>
                 </div>
 
@@ -177,16 +186,18 @@
                   </div>
                 </div>
 
-                <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0 interpreter-required-result">
                   <p>Is an Interpreter Required?</p>
                   <div class="form-control">
                     <%=  @referral.client_interpreter_required %>
                   </div>
                 </div>
-                <div class="col-sm-6 margin-bottom-11 career-pd-left-0" style="page-break-after: always;">
-                  <p>If Yes, Language Required</p>
-                  <div class="form-control">
-                    <%=  @referral.client_language_required %>
+                <div class="col-sm-6 margin-bottom-11 career-pd-left-0 interpreter-required-language" style="page-break-after: always;">
+                  <div class='d-none'>
+                    <p>Required Langauge</p>
+                    <div class="form-control">
+                      <%=  @referral.client_language_required %>
+                    </div>
                   </div>
                 </div>
 

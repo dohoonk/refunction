@@ -154,6 +154,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (3.0.3)
+    public_uid (2.0.0)
+      activerecord (> 4.2)
     puma (3.12.0)
     rack (2.0.6)
     rack-test (1.1.0)
@@ -273,6 +275,7 @@ DEPENDENCIES
   mini_magick
   pg (~> 0.18)
   pry
+  public_uid
   puma (~> 3.7)
   rails (~> 5.1.4)
   ransack
@@ -290,4 +293,4 @@ DEPENDENCIES
   will_paginate-bootstrap4
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
