@@ -48,7 +48,7 @@ p {
 @media print {
   #printPageButton {
     display: none;
-  
+
   }
 
   body {
@@ -74,4 +74,11 @@ p {
   border-radius: 9px;
   background-color: $blue;
   color: white;
+}
+
+.header-confirmation-code {
+  float: right;
+  display: inline;
+  margin-top: 40px;
+  margin-right: 35px;
 }
