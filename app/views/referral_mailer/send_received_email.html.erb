@@ -8,9 +8,9 @@
     <p>We appreciate your business.</p>
     <p>Your referral will be reviewed as quickly as possible.</p>
     <p>Your Referral Confirmation Code is: <%= @referral.public_uid %> </p>
+    <p><%= @referral.client_name %></p>
     <%= render 'referral_mailer/file_info', referral: @referral %>
     <p>If you have any questions please call Terry Hillhouse at 604 233 2210.</p>
-
     <%= link_to "View/Print", :controller => "info_referrals", :action => "show",
 :only_path => false, :id => @referral.public_uid, :host => " https://www.refunction.ca" %>
 
