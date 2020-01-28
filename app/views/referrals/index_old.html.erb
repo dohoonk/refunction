@@ -39,15 +39,15 @@
     </div>
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-4">
-       
+
         <h3>Client Info Section </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>I am inquiring about?</p>
-          <%= f.select :category,  ["1 Day Functional Capacity Evaluation", 
+          <%= f.select :category,  ["1 Day Functional Capacity Evaluation",
           "2 Day Functional Capacity Evaluation",
           "Active & Functional Conditioning",
           "Brain Injury Assessment & Treatment",
@@ -66,7 +66,7 @@
           "Other"], {},{class: 'form-control input-box'} %>
       </div>
 
-      
+
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* Company/Organization</p>
         <%= f.text_field :company, class:"form-control input-box" %>
@@ -74,7 +74,7 @@
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
         <p>* Client Name</p>
-        <%= f.text_field :client_name, required: true, class:"form-control input-box" %>
+        <%= f.text_field :client_name, required: true, class:"form-control input-box", placeholder: 'First Last (ex. John Smith)'  %>
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -121,10 +121,10 @@
 
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
-       
+
         <h3>Referral Info Section </h3>
         <div class="highlight"></div>
-        
+
       </div>
 
       <div class="col-sm-6 margin-bottom-11 career-pd-left-0">
@@ -183,7 +183,7 @@
         <%= f.text_field :realation_to_client, class:"form-control input-box" %>
       </div>
 
-   
+
 
       <div class="col-sm-12 margin-bottom-11 career-pd-left-0">
         <p>Diagnosis/Medical Concerns</p>
@@ -192,10 +192,10 @@
     </div>
     <div class="row">
       <div class="col-sm-12 margin-bottom-12 career-pd-left-0 mt-5">
-       
+
         <h3>Extra Info Section </h3>
         <div class="highlight"></div>
-        
+
       </div>
       <div class="col-sm-4 margin-bottom-11 career-pd-left-0">
         <p>Client is aware of referral</p>
