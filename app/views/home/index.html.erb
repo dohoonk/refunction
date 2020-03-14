@@ -26,6 +26,28 @@
       </div>
     </div>
 
+    <!-- Temporary Popup -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body" style="padding: 2rem;">
+            <p class="font-black">Currently we are encouraging all clients who are ill or who are experiencing symptoms, such as a fever, trouble breathing, and/or coughing,to reschedule their appointments. 
+            <br>
+            <br>
+            For rescheduling FCE or CFC appointments, please phone <a href="tel:+1604-233-2210" style="color: #1BB2EB;">604.233.2210.</a>
+            <br>
+            For rescheduling PHYSIO appointments, please phone <a href="tel:+1778-732-1540" style="color: #1BB2EB;">778.732.1540.</a> 
+            <br>
+            <br>
+            During this time, we will be more understanding of late cancellations and rescheduling needs.</p>
+                    <form>
+                        <button type="button" data-dismiss="modal" class="btn btn-primary">I understand</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Temporary Popup End -->
     <div class="row home_main_card_sub_cards ">
       <div class="col-sm-4 services-card bg-lb sc-mobile-top table-margin-top-0">
         <div class="card-body">
@@ -636,3 +658,10 @@
   </div>
 
   </div>
+
+
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
