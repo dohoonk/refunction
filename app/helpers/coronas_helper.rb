@@ -1,0 +1,2 @@
+module CoronasHelper
+end

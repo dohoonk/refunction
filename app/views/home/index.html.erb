@@ -31,18 +31,23 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body" style="padding: 2rem;">
-            <p class="font-black">Currently we are encouraging all clients who are ill or who are experiencing symptoms, such as a fever, trouble breathing, and/or coughing,to reschedule their appointments. 
+            <p class="font-black">Currently we are encouraging all clients who are ill or who are experiencing symptoms, such as a fever, trouble breathing, and/or coughing, to reschedule their appointments.
             <br>
             <br>
             For rescheduling FCE or CFC appointments, please phone <a href="tel:+1604-233-2210" style="color: #1BB2EB;">604.233.2210.</a>
             <br>
-            For rescheduling PHYSIO appointments, please phone <a href="tel:+1778-732-1540" style="color: #1BB2EB;">778.732.1540.</a> 
+            For rescheduling PHYSIO appointments, please phone <a href="tel:+1778-732-1540" style="color: #1BB2EB;">778.732.1540.</a>
             <br>
             <br>
             During this time, we will be more understanding of late cancellations and rescheduling needs.</p>
-                    <form>
-                        <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
-                    </form>
+            <div class='d-flex'>
+              <form>
+                  <button type="button" data-dismiss="modal" class="btn button1">Close</button>
+              </form>
+              <%= link_to covid_19_path, class: 'btn button3 ml-2', style: 'width: fit-content;' do %>
+                COVID-19 Info
+              <% end %>
+              </div>
                 </div>
             </div>
         </div>
@@ -465,7 +470,7 @@
       <div class= "col-md-6 col-lg-6 col-xl-3 col-xs-8 mb-mg-bottom mobile-our-team-card">
         <div class="card">
           <!-- <#%= image_tag f.image.url, class:"img-fluid" %> -->
-          <%= image_tag f.image.url, class:"img-fluid border-color min-height-profile" %>
+
           <div class="card-body" style="min-height: 220px;">
             <span class="font-lb bold"><%= f.first_name %> <%= f.last_name %></span>
             <p class="card-text font-size-sm"><%= f.title %></p>

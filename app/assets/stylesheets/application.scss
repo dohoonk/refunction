@@ -24,6 +24,7 @@
 @import "mobile";
 @import "choose_your_plan";
 @import "referrals";
+@import "coronas";
 @import "bootstrap-datepicker3";
 
 p {
@@ -81,4 +82,26 @@ p {
   display: inline;
   margin-top: 40px;
   margin-right: 35px;
+}
+
+.main-notice {
+  background-color: $light-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-top: 26px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  h5 {
+    font-weight: 700;
+
+    &.underline {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
