@@ -105,3 +105,11 @@ p {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .main-notice {
+    h4 {
+      font-size: 1.0rem;
+    }
+  }
+}
