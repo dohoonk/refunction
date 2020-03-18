@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get '/counsellors', to: "our_teams#counsellors"
   get '/medlegal', to: "referrals#medlegal"
   get '/employer', to: "referrals#employer"
+  get '/covid_19', to: "coronas#index"
   resources :users
   resources :admin_teams
   get '/index_original', to: "admin_teams#index_original"
@@ -63,6 +64,7 @@ Rails.application.routes.draw do
   resources :admin_referrals
   resources :info_referrals
   resources :locations
+
 
   get '*path' => redirect('/')
 
