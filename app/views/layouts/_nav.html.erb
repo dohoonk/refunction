@@ -134,7 +134,7 @@
 
   </div>
 </nav>
-    <%= render 'layouts/main_notice' %>
+<%= render 'layouts/main_notice' %>
 
 
 
@@ -156,6 +156,8 @@ $("#nav-toggle-off").click(function() {
   $("#mb-nav-cta").css("top", "196px");
   $("#nav-toggle-off").css("display", "none");
   $("#nav-toggle-on").css("display", "block");
+  $(".main-notice").css("display", "none");
+  
 });
 
 function growShrinkLogo() {
