@@ -1,8 +1,10 @@
 class OurTeamsController < ApplicationController
+  MEMORIAL_JOB_CATEGORY_ID = JobCategory.find_by(title:'Memorial').id
+
   def index
     @search = AdminTeam.search(params[:q])
     @teams = @search.result
-    @teams = @teams.where(published: true)
+    @teams = @teams.where(published: true).where.not(job_category_id: MEMORIAL_JOB_CATEGORY_ID)
     @teams = @teams.sort_by {|x| x.first_name}
     @admin_enquiry = AdminEnquiry.new
   end
@@ -61,6 +63,15 @@ class OurTeamsController < ApplicationController
   def psychiatrist
     @search = AdminTeam.search(params[:q])
     @teams = AdminTeam.where(job_category_id: 7)
+    @teams = @teams.where(published: true)
+    @teams = @teams.sort_by {|x| x.first_name}
+    @admin_enquiry = AdminEnquiry.new
+  end
+
+  def memorial
+
+    @search = AdminTeam.search(params[:q])
+    @teams = AdminTeam.where(job_category_id: MEMORIAL_JOB_CATEGORY_ID)
     @teams = @teams.where(published: true)
     @teams = @teams.sort_by {|x| x.first_name}
     @admin_enquiry = AdminEnquiry.new

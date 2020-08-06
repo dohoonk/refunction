@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get '/occupational_therapists', to: "our_teams#occupational_therapists"
   get '/physiotherapists', to: "our_teams#physiotherapists"
   get '/kinesiologist', to: "our_teams#kinesiologist"
+  get '/memorials', to: "our_teams#memorial"
   get '/psychology', to: "our_teams#psychology"
   get '/psychiatrist', to: "our_teams#psychiatrist"
   get '/counsellors', to: "our_teams#counsellors"
