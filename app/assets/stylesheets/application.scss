@@ -31,6 +31,20 @@ p {
   font-size: 1em;
 }
 
+.col-2_4 {
+  position: relative;
+
+  @media screen and (min-width: 1199px) {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.container.extend-width {
+  @media screen and (min-width: 1200px) {
+    max-width: 1440px;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .our-teams-card-img {
