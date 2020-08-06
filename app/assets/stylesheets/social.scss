@@ -1,0 +1,39 @@
+
+.social-link-container {
+  display: flex;
+  position: fixed;
+  bottom: 20%;
+  right: 0;
+  flex-direction: column;
+  z-index: 99;
+
+  @media screen and (min-width: 1199px) {
+    top: 20%;
+  }
+}
+
+.social-link {
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: #fff;
+    opacity: 0.9;
+  }
+}
+
+#facebook {
+  background-color: #3B5998;
+}
+
+#instagram {
+  background-color: #fa55ca;
+}
