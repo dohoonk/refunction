@@ -27,26 +27,30 @@
               <%= image_tag @admin_team.image.url, class:"img-fluid border-color min-height-profile"%>
               <div class="card-body">
                 <span class="font-lb bold"><%= @admin_team.first_name %> <%= @admin_team.last_name %></span>
-                <p class="card-text font-size-sm" style="margin-bottom: 0px;font-weight: 600;"><%= @admin_team.title %></p>
+                <% unless @admin_team.memorial? %>
+                  <p class="card-text font-size-sm" style="margin-bottom: 0px;font-weight: 600;"><%= @admin_team.title %></p>
 
-                <% if @admin_team.second_title != nil %>
-                  <p class="card-text font-size-sm" style="margin-bottom: 0px; font-weight: 600;"><%= @admin_team.occupation %></p>
-                  <p class="card-text font-size-sm" style="font-weight: 600;"><%= @admin_team.second_title %></p>
-                <% else %>
-                  <p class="card-text font-size-sm" style="font-weight: 600;"><%= @admin_team.occupation %></p>
+                  <% if @admin_team.second_title != nil %>
+                    <p class="card-text font-size-sm" style="margin-bottom: 0px; font-weight: 600;"><%= @admin_team.occupation %></p>
+                    <p class="card-text font-size-sm" style="font-weight: 600;"><%= @admin_team.second_title %></p>
+                  <% else %>
+                    <p class="card-text font-size-sm" style="font-weight: 600;"><%= @admin_team.occupation %></p>
+                  <% end %>
+                  <p class="card-text font-size-sm" style="margin-bottom: 0px;">Phone:
+                  <a href="tel:+1<%= @admin_team.phone %>" ><%= @admin_team.phone %></a>
+                  </p>
+                  <p class="card-text font-size-sm">Email:
+                  <a href="mailto:<%= @admin_team.email %>" ><%= @admin_team.email %></a>
+                  </p>
                 <% end %>
-                <p class="card-text font-size-sm" style="margin-bottom: 0px;">Phone:
-                <a href="tel:+1<%= @admin_team.phone %>" ><%= @admin_team.phone %></a>
-                </p>
-                <p class="card-text font-size-sm">Email:
-                <a href="mailto:<%= @admin_team.email %>" ><%= @admin_team.email %></a>
-                </p>
               </div>
             </div>
           </div>
           <div class="col-lg-7 col-xl-8 mg-bt-20">
             <p class="about-us-header mb-padding-left-0" style="margin-bottom: -8px;"><%= @admin_team.first_name %> <%= @admin_team.last_name %>
             </p>
+
+            <% unless @admin_team.memorial? %>
             <p style="margin-bottom: 0px;">
               <span class="font-lb font-title"><%= @admin_team.title %></span>
             </p>
@@ -57,17 +61,20 @@
             <% else %>
               <p class="card-text font-size-sm" style="font-size: 15px;font-weight: 600;"><%= @admin_team.occupation %></p>
             <% end %>
+            <% end %>
 
             <p>
               <%= raw(@admin_team.bio) %>
             </p>
 
-            <div class="row padding-top-50">
-            <% if @admin_team.job_category_id != 1 && @admin_team.id != 44 %>
-              <%= link_to "Download CV", @admin_team.resume.url, class:"cta-see-team", target:"_blank", style:"margin-right: 20px;" %>
+            <% unless @admin_team.memorial? %>
+              <div class="row padding-top-50">
+              <% if @admin_team.job_category_id != 1 && @admin_team.id != 44 %>
+                <%= link_to "Download CV", @admin_team.resume.url, class:"cta-see-team", target:"_blank", style:"margin-right: 20px;" %>
+              <% end %>
+                <%= link_to "Back to Our Team", admin_teams_path, class:"cta-see-team"%>
+              </div>
             <% end %>
-              <%= link_to "Back to Our Team", admin_teams_path, class:"cta-see-team"%>
-            </div>
           </div>
         </div>
       </div>
