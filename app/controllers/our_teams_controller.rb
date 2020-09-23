@@ -4,6 +4,8 @@ class OurTeamsController < ApplicationController
   def index
     @search = AdminTeam.search(params[:q])
     @teams = @search.result
+    @memorial_teams = @teams.where(published: true).where(job_category_id: MEMORIAL_JOB_CATEGORY_ID)
+    @memorial_teams = @memorial_teams.sort_by {|x| x.first_name}
     @teams = @teams.where(published: true).where.not(job_category_id: MEMORIAL_JOB_CATEGORY_ID)
     @teams = @teams.sort_by {|x| x.first_name}
     @admin_enquiry = AdminEnquiry.new
