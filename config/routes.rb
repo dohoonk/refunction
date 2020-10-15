@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get '/abbotsford', to: "contacts#abbotsford"
   get '/victoria', to: "contacts#victoria"
   get '/nanaimo', to: "contacts#nanaimo"
+  get '/kelowna', to: "contacts#kelowna"
 
   resources :admin_dashboard, only: [:index]
   resources :our_teams

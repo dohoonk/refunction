@@ -41,6 +41,12 @@ class ContactsController < ApplicationController
     @location = Location.find_by_id(7)
   end
 
+  def kelowna
+    @enquiry = AdminEnquiry.new
+    @admin_enquiry = AdminEnquiry.new
+    @location = Location.find_by_name('Kelowna')
+  end
+
   def create
     @enquiry = AdminEnquiry.new(admin_enquiry_params)
     if @enquiry.save
