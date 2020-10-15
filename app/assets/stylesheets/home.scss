@@ -128,4 +128,31 @@
       }
     }
   }
+  
+}
+
+@media only screen and (max-width: 990px) and (min-width: 168px)  {
+  .main-notice-sub {
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 66px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    
+    h4 {
+      font-weight: 400;
+      font-size: 10px;
+      &.underline {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    
+  }
 }
