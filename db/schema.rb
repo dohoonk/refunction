@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20201221211611) do
     t.string "client_rebuttal_needed"
     t.string "public_uid"
     t.string "client_sub_file_number"
-    t.string "email_confirmation"
+    t.string "email_confirmation_address"
     t.index ["public_uid"], name: "index_admin_referrals_on_public_uid"
   end
 

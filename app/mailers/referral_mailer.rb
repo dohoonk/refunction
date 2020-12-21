@@ -20,7 +20,7 @@ class ReferralMailer < ApplicationMailer
     subject += add_email_header(@referral)
 
 
-    mail( :to => @referral.email_confirmation,
+    mail( :to => @referral.email_confirmation_address,
     :subject => subject )
     # mail( :to => @referral.rs_email,
     # :subject => 'Thank you for contacting us' )
