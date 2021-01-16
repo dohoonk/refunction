@@ -10,10 +10,10 @@ class ReferralMailer < ApplicationMailer
     subject = "Referral Received"
     subject += add_email_header(@referral)
 
-    # mail( :to => 'info@refunction.ca,referrals@refunction.ca,referral@refunction.ca',
-    # :subject => subject )
-    mail( :to => 'tonykim.tech@gmail.com',
-      :subject => subject )
+    mail( :to => 'info@refunction.ca,referrals@refunction.ca,referral@refunction.ca',
+    :subject => subject )
+    # mail( :to => 'tonykim.tech@gmail.com',
+    #   :subject => subject )
   end
 
   def send_received_email(referral)
