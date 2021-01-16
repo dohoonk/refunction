@@ -1,4 +1,7 @@
 class ReferralMailer < ApplicationMailer
+  require 'sendgrid-ruby'
+  include SendGrid
+  
   default :from => 'referrals@refunction.ca'
   # send a signup email to the user, pass in the user object that   contains the user's email address
   # info@refunction.ca,referrals@refunction.ca,referral@refunction.ca
@@ -7,8 +10,10 @@ class ReferralMailer < ApplicationMailer
     subject = "Referral Received"
     subject += add_email_header(@referral)
 
-    mail( :to => 'info@refunction.ca,referrals@refunction.ca,referral@refunction.ca',
-    :subject => subject )
+    # mail( :to => 'info@refunction.ca,referrals@refunction.ca,referral@refunction.ca',
+    # :subject => subject )
+    mail( :to => 'tonykim.tech@gmail.com',
+      :subject => subject )
   end
 
   def send_received_email(referral)

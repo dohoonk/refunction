@@ -5,12 +5,12 @@ require_relative 'application'
 Rails.application.initialize!
 
 
-ActionMailer::Base.smtp_settings = {
-  :user_name => 'info@refunction.com',
-  :password => ENV["SENDGRID_PASS"],
-  :domain => 'www.refunction.ca',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-}
+# ActionMailer::Base.smtp_settings = {
+#   :user_name => 'info@refunction.com',
+#   :password => ['SENDGRID_API_KEY'],
+#   :domain => 'www.refunction.ca',
+#   :address => 'smtp.sendgrid.net',
+#   :port => 587,
+#   :authentication => :plain,
+#   :enable_starttls_auto => true
+# }

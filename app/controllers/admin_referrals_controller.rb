@@ -17,6 +17,8 @@ class AdminReferralsController < ApplicationController
     @referral = AdminReferral.new(admin_referral_params)
 
     if verify_recaptcha(model: @referral) && @referral.save
+
+
       ReferralMailer.send_signup_email(@referral).deliver
       ReferralMailer.send_received_email(@referral).deliver
       flash[:success] = "Thank you for your referral. We will contact you shortly"

@@ -198,6 +198,7 @@ GEM
     request_store (1.4.1)
       rack (>= 1.4)
     ruby_dep (1.5.0)
+    ruby_http_client (3.5.2)
     rubyzip (1.2.2)
     safely_block (0.2.1)
       errbase
@@ -215,6 +216,11 @@ GEM
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
+    sendgrid-actionmailer (3.1.1)
+      mail (~> 2.7)
+      sendgrid-ruby (~> 6.0)
+    sendgrid-ruby (6.3.8)
+      ruby_http_client (~> 3.4)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -282,6 +288,8 @@ DEPENDENCIES
   recaptcha
   sass-rails (~> 5.0)
   selenium-webdriver
+  sendgrid-actionmailer
+  sendgrid-ruby
   spring
   spring-watcher-listen (~> 2.0.0)
   tinymce-rails
