@@ -108,12 +108,12 @@
 }
 
 .main-notice-sub {
-  background-color: $dark-blue;
+  background-color: #17243F;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 40px;
-  margin-top: 66px;
+  top: 0px;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -133,15 +133,16 @@
 
 @media only screen and (max-width: 990px) and (min-width: 168px)  {
   .main-notice-sub {
-    background-color: $dark-blue;
+    background-color: #17243F;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 103px;
     margin-top: 66px;
     position: fixed;
     width: 100%;
     z-index: 999;
+    flex-direction: column;
     
     h4 {
       font-weight: 400;
