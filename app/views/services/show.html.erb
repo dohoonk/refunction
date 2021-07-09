@@ -18,6 +18,19 @@
           <p style="color: black;">
             <%= raw(@service.content) %>
           </p>
+          <p style="color: black;">
+            <% if @service.referral_type == "legal" %>
+              <span> To proceed with this service, </span><span><a href="/medlegal">click here </a></span>
+            <% elsif @service.referral_type == "rehab" %>
+              <span> To proceed with this service, </span><span><a href="/employer">click here </a></span>
+            <% elsif @service.referral_type == "both" %>
+              <span> For medical legal evaluations, </span><span><a href="/medlegal">click here </a></span>
+              <br>
+              <span> For non-medical legal evaluations, </span><span><a href="/employer">click here </a></span>
+            <% else %>
+            <% end %>
+        
+          </p>
 
           <div class="row padding-top-50">
             <%= link_to "Back to Services", services_path, class:"cta-see-team"%>

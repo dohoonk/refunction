@@ -92,6 +92,6 @@ class ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:title,:content,:picture,:description,:display_number)
+    params.require(:service).permit(:title,:content,:picture,:description,:display_number,:referral_type)
   end
 end
