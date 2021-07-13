@@ -44,9 +44,9 @@ class ReferralsController < ApplicationController
   
      case @referral_page
      when "/5"
-      @referral_page = "Active Rehab Program"
+      @referral_page = "Community Rehabilitation Services"
      when "/3"
-      @referral_page = "Brain Injury Assessment & Treatment"
+      @referral_page = "Psychological Assessment"
      when "/9"
       @referral_page = "1 Day Functional Capacity Evaluation"
      when "18"
@@ -62,7 +62,9 @@ class ReferralsController < ApplicationController
      when "14"
       @referral_page = "Return to Work Support Services"
      when "17"
-      @referral_page = "Psychological Assessment"
+      @referral_page = "Psychiatric Independent Medical Examination"
+     when "10"
+      @referral_page = "Interdisciplinary Rehabilitation Assessments"
      else
       @referral_page = "1 Day Functional Capacity Evaluation (FCE)"
      end
