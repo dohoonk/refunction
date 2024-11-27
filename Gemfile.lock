@@ -51,14 +51,14 @@ GEM
       safely_block (>= 0.2.1)
       user_agent_parser
     arel (8.0.0)
-    autoprefixer-rails (9.4.5)
+    autoprefixer-rails (10.2.0.0)
       execjs
     bcrypt (3.1.12)
     bindex (0.5.0)
-    bootstrap (4.1.3)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
+    bootstrap (4.3.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     bootstrap-datepicker-rails (1.8.0.1)
       railties (>= 3.0)
     browser (2.5.3)
@@ -93,7 +93,7 @@ GEM
     erubi (1.8.0)
     excon (0.62.0)
     execjs (2.7.0)
-    ffi (1.10.0)
+    ffi (1.14.2)
     fog-aws (3.3.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -149,7 +149,7 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     pg (0.21.0)
-    popper_js (1.14.5)
+    popper_js (1.16.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -189,8 +189,8 @@ GEM
       activerecord (>= 5.0)
       activesupport (>= 5.0)
       i18n
-    rb-fsevent (0.10.3)
-    rb-inotify (0.10.0)
+    rb-fsevent (0.10.4)
+    rb-inotify (0.10.1)
       ffi (~> 1.0)
     recaptcha (4.13.1)
       json
@@ -202,7 +202,7 @@ GEM
     rubyzip (1.2.2)
     safely_block (0.2.1)
       errbase
-    sass (3.7.3)
+    sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -213,6 +213,14 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -266,7 +274,7 @@ PLATFORMS
 DEPENDENCIES
   ahoy_matey
   bcrypt (~> 3.1.7)
-  bootstrap (~> 4.1.3)
+  bootstrap (~> 4.3.1)
   bootstrap-datepicker-rails
   byebug
   capybara (~> 2.13)

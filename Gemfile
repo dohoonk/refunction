@@ -36,7 +36,7 @@ gem 'will_paginate-bootstrap4'
 # gem 'capistrano-rails', group: :development
 #-------------------------------
 # gem 'bootstrap-sass', '~> 3.3.7'
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'carrierwave'
 gem 'mini_magick'
